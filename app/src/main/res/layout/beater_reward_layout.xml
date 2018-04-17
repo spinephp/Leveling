@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    >
+    <!--打手奖励说明  -->
+    <include layout="@layout/title_layout"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="@dimen/y175"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:text="@string/beater_reward_guid"
+            >
+
+        </TextView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/y60"
+        android:layout_marginLeft="@dimen/x45"
+        android:layout_marginRight="@dimen/x45"
+        android:drawableBottom="@drawable/help_banner"
+        android:drawablePadding="@dimen/y30"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:text="@string/beater_reward_guid_title"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/y95"
+        android:layout_marginLeft="@dimen/x45"
+        android:layout_marginRight="@dimen/x45"
+        android:drawableBottom="@drawable/help_banner"
+        android:drawablePadding="@dimen/y30"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:text="@string/beater_reward_guid_exp"
+        />
+</LinearLayout>

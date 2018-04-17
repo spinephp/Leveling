@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/yaoqinghaoyou_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y120"
+        android:background="@color/colorPrimary"
+        android:paddingRight="10dp"
+        >
+        <LinearLayout
+            android:id="@+id/img_share_back"
+            android:layout_width="@dimen/x120"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="?android:attr/selectableItemBackground">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_centerVertical="true"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tx_title_name"
+            style="@style/BigTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="邀请好友"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            />
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            >
+        </android.support.design.widget.TabLayout>
+        <ImageView
+            android:id="@+id/img_title_right"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/qr_code"
+        android:layout_width="@dimen/x400"
+        android:layout_height="@dimen/y400"
+        android:layout_marginBottom="@dimen/x60"
+        android:src="@drawable/qr_code"
+        android:layout_above="@+id/tvMsg"
+        android:layout_centerHorizontal="true" />
+<View
+    android:layout_width="@dimen/x640"
+    android:layout_height="@dimen/y1"
+    android:layout_centerHorizontal="true"
+    android:background="@color/black"
+    android:layout_marginBottom="@dimen/y25"
+    android:layout_above="@+id/tvMsg"
+    />
+    <TextView
+        android:id="@+id/tvMsg"
+        style="@style/BigTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/y390"
+        android:text="http://crazypeople.cn"
+        android:textColor="@color/dark_gary"
+        android:textSize="16sp" />
+
+    <Button
+        style="@style/BaseBtnStyle"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/y80"
+        android:layout_marginLeft="@dimen/x110"
+        android:layout_marginRight="@dimen/x110"
+        android:layout_centerInParent="true"
+        android:onClick="onClickCopy"
+        android:text="复制网址分享给好友"
+        android:textColor="#7b3e07"
+        android:textSize="20sp"
+        android:id="@+id/button" />
+</RelativeLayout>

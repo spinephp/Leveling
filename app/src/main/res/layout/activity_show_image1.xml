@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_show_image"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y120"
+        android:background="@color/colorPrimary"
+        android:paddingRight="10dp"
+        >
+        <LinearLayout
+            android:id="@+id/img_jietu_back"
+            android:layout_width="@dimen/x120"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="?android:attr/selectableItemBackground">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_centerVertical="true"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tx_title_name"
+            style="@style/BigTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="铭文截图"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            />
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            >
+        </android.support.design.widget.TabLayout>
+        <ImageView
+            android:id="@+id/img_title_right"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            />
+
+
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/img_show1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <include layout="@layout/title_layout" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y195"
+            android:layout_marginTop="@dimen/y30"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/x75"
+            android:paddingRight="@dimen/x65">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+
+                android:text="可同时接单数" />
+
+            <com.leveling.AmountView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true">
+
+            </com.leveling.AmountView>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y330"
+            android:layout_marginLeft="@dimen/x30"
+            android:layout_marginRight="@dimen/x30"
+            android:layout_marginTop="@dimen/y30"
+            android:background="@drawable/shape_normal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y65"
+                android:gravity="center"
+                android:text="说明" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y2"
+                android:background="@color/bg_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/x35">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y65"
+                    android:text="1、最多可同时接5单" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y65"
+                    android:text="2、缴纳押金=对应段位单押金*可同时接单数量" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y65"
+                    android:text="3、提高可同时接单数后,保存设置后需要补缴押金" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        style="@style/BaseBtnStyle"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/y140"
+        android:text="确定" />
+</RelativeLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_height="@dimen/y460">
+        <!--<TextView-->
+            <!--android:id="@+id/tx_add_wc"-->
+            <!--style="@style/BlackTextStyle"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="@dimen/y155"-->
+            <!--android:gravity="center"-->
+            <!--android:textColor="#000000"-->
+            <!--android:text="添加新微信账号"-->
+            <!--/>-->
+        <TextView
+            android:id="@+id/tx_add_zfb"
+            style="@style/BlackTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y155"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:text="添加新支付宝账号"
+            />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/add_acount_bg_line"
+            />
+        <TextView
+            android:id="@+id/tx_add_bank"
+            style="@style/BlackTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y155"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:text="添加新银行卡账号"
+            />
+        <Button
+            style="@style/BaseBtnStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="取消"
+            />
+    </LinearLayout>
+
+</LinearLayout>

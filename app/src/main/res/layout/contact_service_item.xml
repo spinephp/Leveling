@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="@dimen/x460"
+    android:layout_height="@dimen/y590">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/shape_contact_bg"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_height="@dimen/y460"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+        <ImageView
+            android:layout_width="@dimen/x240"
+            android:layout_height="@dimen/x240"
+            android:layout_marginTop="@dimen/y100"
+            android:src="@drawable/qr_code"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y30"
+            android:textColor="#a3806c"
+            android:text="识别二维码联系客服"
+            android:textSize="10sp"
+            />
+    </LinearLayout>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="@dimen/x195"
+        android:layout_height="@dimen/x195"
+        android:src="@drawable/yaoqinghaoyou_bg"
+        android:layout_centerHorizontal="true"
+        />
+</RelativeLayout>

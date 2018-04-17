@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+    <!--打手中心  -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y120"
+        android:background="@color/colorPrimary"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        >
+        <ImageView
+            android:id="@+id/img_title_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:id="@+id/tx_title_name"
+            style="@style/BigTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="打手中心"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            />
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            >
+        </android.support.design.widget.TabLayout>
+        <ImageView
+            android:id="@+id/img_title_right"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y600"
+        android:background="@drawable/beater_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/y40">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/activity_open_vip_headicon"
+            android:layout_width="@dimen/x300"
+            android:layout_height="@dimen/y300"
+            app:civ_border_color="#c9b2b9"
+            app:civ_border_width="3dp" />
+
+        <TextView
+            android:id="@+id/namePP"
+            android:layout_width="@dimen/x260"
+            android:layout_height="@dimen/y50"
+            android:background="@drawable/beater_text_bg"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom">
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/y165"-->
+                <!--android:background="#70000000">-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/tv_beater_center_yjdd"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:gravity="center"-->
+                    <!--android:orientation="vertical">-->
+
+                    <!--<TextView-->
+
+                        <!--style="@style/BeaterCenterTextStyle"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="8" />-->
+
+                    <!--<TextView-->
+                        <!--style="@style/BigTextStyle"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="已接订单"-->
+                        <!--android:id="@+id/textView16" />-->
+
+
+                <!--</LinearLayout>-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/tv_beater_center_dqrdd"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:gravity="center"-->
+                    <!--android:orientation="vertical">-->
+
+                    <!--<TextView-->
+                        <!--style="@style/BeaterCenterTextStyle"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="8" />-->
+
+                    <!--<TextView-->
+                        <!--style="@style/BigTextStyle"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="待确认订单" />-->
+
+
+                <!--</LinearLayout>-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/tv_beater_center_kjdd"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:gravity="center"-->
+                    <!--android:orientation="vertical">-->
+
+                    <!--<TextView-->
+                        <!--style="@style/BeaterCenterTextStyle"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="8" />-->
+
+                    <!--<TextView-->
+                        <!--style="@style/BigTextStyle"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="可接订单" />-->
+                <!--</LinearLayout>-->
+            <!--</LinearLayout>-->
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y190"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/x50"
+        android:paddingRight="@dimen/x50"
+        >
+
+        <LinearLayout
+            android:id="@+id/tv_beater_center_mine_monery"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/y120"
+            android:layout_weight="1"
+            android:background="@drawable/shape_layout"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/beater_monery" />
+
+            <TextView
+                style="@style/BigTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/beater_monery" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tv_beater_center_mine_order"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/y120"
+            android:layout_marginLeft="@dimen/x90"
+            android:layout_weight="1"
+            android:background="@drawable/shape_other_layout"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/beater_order" />
+
+            <TextView
+                style="@style/BigTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/mine_orders" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/y20"
+
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y250">
+                <LinearLayout
+                    android:id="@+id/tv_beater_center_zijin_detial"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/beater_zijin_detial"
+                        />
+                    <TextView
+                        style="@style/BlackTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="资金明细"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/tv_beater_center_order_detial"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:gravity="center"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="1dp"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/beater_order_detile"
+                        />
+                    <TextView
+                        style="@style/BlackTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="订单明细"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/tv_beater_center_vip"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:layout_marginLeft="1dp"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/personal_contact"
+                        />
+                    <TextView
+                        style="@style/BlackTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="我的VIP"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y250"
+                android:layout_marginTop="1dp"
+                >
+                <LinearLayout
+                    android:id="@+id/tv_beater_center_kf"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/personal_contact"
+                        />
+                    <TextView
+                        style="@style/BlackTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="我的专属客服"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/tv_beater_center_yqhy"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:gravity="center"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="1dp"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/inviting_friends"
+                        />
+                    <TextView
+                        style="@style/BlackTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="邀请好友入驻"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/tv_beater_center_seting"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:layout_marginLeft="1dp"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/seting"
+                        />
+                    <TextView
+                        style="@style/BlackTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="设置"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y250"
+                android:layout_marginTop="1dp"
+                >
+                <LinearLayout
+                    android:id="@+id/tv_beater_center_upload_video"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/beater_upload_video"
+                        />
+                    <TextView
+                        style="@style/BlackTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="上传视频"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:gravity="center"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="1dp"
+                    android:layout_height="match_parent">
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:layout_marginLeft="1dp"
+                    android:layout_height="match_parent">
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+
+
+</LinearLayout>

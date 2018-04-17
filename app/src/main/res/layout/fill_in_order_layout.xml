@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+
+    <!--填写订单页面  -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/y120"
+        android:layout_marginBottom="@dimen/y160">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x130"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/x35"
+                android:paddingRight="@dimen/x35"
+
+                >
+
+                <TextView
+                    style="@style/GrayTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:drawableLeft="@drawable/order_account"
+                    android:drawablePadding="@dimen/x20"
+                    android:gravity="center_vertical"
+                    android:text="添加我的游戏账号?"
+
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/left" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y130"
+                android:layout_marginTop="@dimen/y1"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/x35"
+                android:paddingRight="@dimen/x35"
+
+
+                >
+
+                <TextView
+                    style="@style/GrayTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawableLeft="@drawable/order_password"
+                    android:drawablePadding="@dimen/x20"
+                    android:gravity="center_vertical"
+                    android:text="登录密码?"
+
+                    />
+
+                <EditText
+                    style="@style/DefaultEditStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/x25"
+                    android:hint="请输入密码"
+                    android:textSize="12sp" />
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/y35"
+                android:paddingTop="@dimen/y35">
+
+                <TextView
+                    style="@style/BlackTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x70"
+                    android:text="建议您在代练的时使用临时密码,并配置二级密码锁"
+                    android:textColor="@color/dark_gary"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/x30"
+                    android:text="如何配置?"
+                    android:textColor="#7bbfff"
+                    android:textSize="10sp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y400"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_marginRight="@dimen/x20"
+                android:background="@drawable/shape_normal"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/BigTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y75"
+
+                    android:background="@drawable/shape_fill_in_top"
+                    android:gravity="center"
+                    android:text="请上传段位截图"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/x40"
+                    android:paddingTop="@dimen/y15">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/feedback_addimg"
+                        android:gravity="center"
+                        android:text="段位截图" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/order_duanwei_exp"
+                        android:gravity="center"
+                        android:text="示例图" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y400"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_marginRight="@dimen/x20"
+                android:layout_marginTop="@dimen/y20"
+                android:background="@drawable/shape_normal"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/BigTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y75"
+                    android:background="@drawable/shape_fill_in_top"
+                    android:gravity="center"
+                    android:text="请上传铭文截图"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/x40"
+                    android:paddingTop="@dimen/y15">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/feedback_addimg"
+                        android:gravity="center"
+                        android:text="铭文截图" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/order_duanwei_exp"
+                        android:gravity="center"
+                        android:text="示例图" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y130"
+                android:layout_marginTop="@dimen/y20"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/x60">
+
+                    <TextView
+                        style="@style/BigTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="超时赔付"
+                        android:textColor="#ff5f11" />
+
+                    <TextView
+                        style="@style/DefaultTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x45"
+                        android:text="订单超时后，获得10元赔付"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        style="@style/DefaultTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x30"
+                        android:text="免费"
+                        android:textColor="#fec96b" />
+                </LinearLayout>
+
+                <com.kyleduo.switchbutton.SwitchButton
+                    android:layout_width="@dimen/x190"
+                    android:layout_height="@dimen/y90"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/x20"
+                    android:checked="true"
+                    app:kswBackColor="#72ca1c"
+                    app:kswBackRadius="5dp"
+                    app:kswThumbColor="@color/white"
+                    app:kswThumbRadius="5dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y130"
+                android:layout_marginTop="@dimen/y20"
+
+                android:background="@color/white">
+
+                <TextView
+                    style="@style/BlackTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x60"
+                    android:text="优惠券" />
+
+                <TextView
+                    style="@style/GrayTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x60"
+                    android:layout_marginRight="@dimen/x20"
+                    android:drawablePadding="@dimen/x20"
+                    android:drawableRight="@drawable/left"
+                    android:text="无可用优惠券" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+    <include layout="@layout/title_layout" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y160"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/x35">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="实付金额:" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x20"
+                android:text="￥500.00"
+                android:textColor="#fe0000"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <Button
+            style="@style/BigTextStyle"
+            android:layout_width="@dimen/x500"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="#fe0000"
+            android:text="立即支付" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

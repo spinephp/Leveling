@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y120"
+        android:background="@color/colorPrimary"
+        android:paddingRight="10dp"
+        >
+        <LinearLayout
+            android:id="@+id/img_cz_back"
+            android:layout_width="@dimen/x120"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="?android:attr/selectableItemBackground">
+            <ImageView
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back"
+                android:layout_centerVertical="true"
+                />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tx_title_name"
+            style="@style/BigTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="充值记录"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            />
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            >
+        </android.support.design.widget.TabLayout>
+        <ImageView
+            android:id="@+id/img_title_right"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            />
+
+
+    </RelativeLayout>
+    <!--充值历史  -->
+    <!--<LinearLayout-->
+       <!--style="@style/LeveingLieanLayouStyle"-->
+        <!--android:paddingLeft="@dimen/x50"-->
+        <!--android:paddingRight="@dimen/x50"-->
+        <!--android:paddingTop="@dimen/y15"-->
+        <!--android:paddingBottom="@dimen/y15"-->
+        <!--&gt;-->
+        <!--<EditText-->
+            <!--android:background="@drawable/shape_gray_line"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+
+            <!--android:paddingLeft="@dimen/x25"-->
+            <!--android:hint="更多查询"-->
+            <!--android:drawablePadding="@dimen/x40"-->
+            <!--android:textSize="12sp"-->
+            <!--android:drawableLeft="@drawable/tixian_find"-->
+            <!--/>-->
+    <!--</LinearLayout>-->
+    <ListView
+        android:id="@+id/chongzhi_lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    </ListView>
+</LinearLayout>

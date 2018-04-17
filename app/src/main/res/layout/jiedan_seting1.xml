@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+    <!--接单设置界面 -->
+    <include layout="@layout/title_layout" />
+
+    <RelativeLayout
+        style="@style/OrderetialLayouStyle"
+        android:layout_height="@dimen/y240"
+        android:paddingLeft="@dimen/x50"
+
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civ_order_detial_header"
+            android:layout_width="@dimen/x180"
+            android:layout_height="@dimen/y180"
+            android:layout_centerVertical="true"
+            android:src="@drawable/help_banner"
+            app:civ_border_color="#20000000"
+            app:civ_border_width="3dp" />
+
+        <Button
+            style="@style/RedBtnStyle"
+
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x20"
+            android:drawableLeft="@drawable/order_detial_lianximaijia"
+            android:paddingLeft="@dimen/x20"
+            android:text="暂停接单" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView10"
+        style="@style/LeftTextTipStyle"
+        android:text="我的接单设置"
+        android:textColor="@color/black" />
+
+    <RelativeLayout
+        style="@style/OrderetialLayouStyle"
+        android:layout_marginTop="@dimen/y2"
+        android:paddingLeft="@dimen/x55">
+
+        <TextView
+            style="@style/LeftTextStyle"
+
+            android:text="起始段位" />
+
+        <TextView
+            style="@style/LeftBlackTextStyle"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/x50"
+            android:text="钻石五3星" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/OrderetialLayouStyle"
+        android:layout_marginTop="@dimen/y2"
+        android:paddingLeft="@dimen/x55">
+
+        <TextView
+            style="@style/LeftTextStyle"
+
+            android:text="目标段位" />
+
+        <TextView
+            style="@style/LeftBlackTextStyle"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/x50"
+            android:text="钻石五3星" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/OrderetialLayouStyle"
+        android:layout_height="@dimen/y150"
+        android:layout_marginTop="@dimen/y2"
+        android:paddingLeft="@dimen/x55">
+
+        <TextView
+            style="@style/GrayTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="物理铭文要求" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/x45"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/y5"
+            android:paddingTop="@dimen/y5">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="@dimen/x215"
+                android:layout_height="wrap_content"
+                android:src="@drawable/order_duanwei_exp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_marginRight="@dimen/x10"
+                android:src="@drawable/a" />
+
+            <ImageView
+                android:layout_width="@dimen/x215"
+                android:layout_height="wrap_content"
+                android:src="@drawable/order_duanwei_exp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/OrderetialLayouStyle"
+        android:layout_height="@dimen/y150"
+        android:layout_marginTop="@dimen/y2"
+        android:paddingLeft="@dimen/x55">
+
+        <TextView
+            style="@style/GrayTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="法术铭文要求" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/x45"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/y5"
+            android:paddingTop="@dimen/y5">
+
+            <ImageView
+                android:layout_width="@dimen/x215"
+                android:layout_height="wrap_content"
+                android:src="@drawable/order_duanwei_exp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_marginRight="@dimen/x10"
+                android:src="@drawable/a" />
+
+            <ImageView
+                android:layout_width="@dimen/x215"
+                android:layout_height="wrap_content"
+                android:src="@drawable/order_duanwei_exp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        style="@style/LeveingLieanLayouStyle"
+        android:layout_height="@dimen/y192"
+        android:layout_marginTop="@dimen/y2"
+        android:paddingLeft="@dimen/x50"
+        android:paddingRight="@dimen/x50">
+
+        <TextView
+            style="@style/GrayTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="强势英雄" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right|center_vertical"
+
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="@dimen/x85"
+                android:layout_height="@dimen/y85"
+                android:src="@drawable/help_banner"
+                app:civ_border_color="#00000000"
+
+                app:civ_border_width="3dp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="@dimen/x85"
+                android:layout_height="@dimen/y85"
+                android:src="@drawable/help_banner"
+                app:civ_border_color="#00000000"
+
+                app:civ_border_width="3dp" />
+
+            <ImageView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x60"
+                android:src="@drawable/left" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right">
+
+            <TextView
+                style="@style/BlackTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="140级-190级" />
+
+            <ImageView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x60"
+                android:src="@drawable/left" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView11"
+        style="@style/LeftTextTipStyle"
+        android:text="可接系统"
+        android:textColor="@color/black" />
+
+    <LinearLayout style="@style/LeveingLieanLayouStyle">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/reg_phone"
+            android:drawablePadding="@dimen/x25"
+            android:gravity="center_vertical"
+
+            android:paddingLeft="@dimen/x50"
+            android:text="苹果" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/x195"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+
+                android:layout_height="match_parent"
+                android:button="@null"
+                android:drawableLeft="@drawable/order_seting_chooles_selector"
+                android:drawablePadding="@dimen/x10"
+                android:text="QQ" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/x100"
+                android:button="@null"
+                android:drawableLeft="@drawable/order_seting_chooles_selector"
+                android:drawablePadding="@dimen/x10"
+                android:text="微信"
+
+                />
+
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/LeveingLieanLayouStyle"
+        android:layout_marginTop="@dimen/y1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/reg_phone"
+            android:drawablePadding="@dimen/x25"
+            android:gravity="center_vertical"
+
+            android:paddingLeft="@dimen/x50"
+            android:text="安卓" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/x195"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+
+                android:layout_height="match_parent"
+                android:button="@null"
+                android:drawableLeft="@drawable/order_seting_chooles_selector"
+                android:drawablePadding="@dimen/x10"
+                android:text="QQ" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/x100"
+                android:button="@null"
+                android:drawableLeft="@drawable/order_seting_chooles_selector"
+                android:drawablePadding="@dimen/x10"
+                android:text="微信"
+
+                />
+
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/y30"
+        android:layout_marginTop="@dimen/y100"
+        android:gravity="center">
+
+        <Button
+            style="@style/BaseBtnStyle"
+            android:layout_width="@dimen/x860"
+            android:layout_height="@dimen/y120"
+            android:text="确定" />
+    </LinearLayout>
+
+</LinearLayout>

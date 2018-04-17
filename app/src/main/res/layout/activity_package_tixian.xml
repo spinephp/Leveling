@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y120"
+        android:background="@color/colorPrimary"
+        android:paddingRight="10dp"
+        >
+        <LinearLayout
+            android:id="@+id/img_back_from_peiliantixian1121"
+            android:layout_width="@dimen/x120"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="?android:attr/selectableItemBackground">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_centerVertical="true"
+                />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tx_get_money_name"
+            style="@style/BigTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="钱包押金提现"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            />
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            >
+        </android.support.design.widget.TabLayout>
+        <ImageView
+            android:id="@+id/img_title_right"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            style="@style/LeftTextTipStyle"
+            android:layout_width="wrap_content"
+            android:text="输入提现金额："
+            android:inputType="number"
+            android:id="@+id/textView9" />
+        <!--<TextView-->
+        <!--style="@style/LeftTextTipStyle"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:text="（最高可提现：" />-->
+        <!--<TextView-->
+        <!--style="@style/LeftTextTipStyle"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:text=""-->
+        <!--android:id="@+id/money_biggest_amount" />-->
+        <!--<TextView-->
+        <!--style="@style/LeftTextTipStyle"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:text="）"/>-->
+    </LinearLayout>
+
+
+    <LinearLayout style="@style/LeveingLieanLayouStyle">
+
+        <EditText
+            android:id="@+id/input_peilian_money1121"
+            style="@style/DefaultEditStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="number"
+            android:paddingLeft="@dimen/x60"
+            android:textSize="12sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/y95">
+
+        <Button
+            android:id="@+id/input_peilian_money_button1121"
+            style="@style/BaseBtnStyle"
+            android:text="确认提现" />
+    </LinearLayout>
+</LinearLayout>

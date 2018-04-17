@@ -1,0 +1,692 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--订单详情界面，根据不同状态进行修改或隐藏显示相应布局 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y120"
+        android:background="@color/colorPrimary"
+        android:paddingRight="10dp"
+        >
+        <LinearLayout
+            android:id="@+id/img_orderpp_back"
+            android:layout_width="@dimen/x120"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="?android:attr/selectableItemBackground">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_centerVertical="true"
+                />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tx_title_name"
+            style="@style/BigTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="订单详情"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            />
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            >
+        </android.support.design.widget.TabLayout>
+        <ImageView
+            android:id="@+id/img_title_right"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        style="@style/LeveingLieanLayouStyle"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/in_your_order_state"
+            style="@style/BigTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/order_detial_leveing"
+            android:drawablePadding="@dimen/x20"
+            android:text="代练中..."
+            android:textColor="#ff3535"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/in_your_details"
+        style="@style/OrderetialLayouStyle"
+        android:layout_height="@dimen/y240"
+        android:layout_marginTop="@dimen/y45"
+        android:paddingLeft="@dimen/x50"
+        >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/in_your_order_detial_header"
+            android:layout_width="@dimen/x180"
+            android:layout_height="@dimen/y180"
+            android:layout_centerVertical="true"
+            android:src="@drawable/userhead"
+            app:civ_border_color="#20000000"
+            app:civ_border_width="3dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/x30"
+
+            android:layout_toEndOf="@+id/in_your_order_detial_header"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/BlackTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="昵称:" />
+
+            <TextView
+                android:id="@+id/in_your_game_name"
+                style="@style/BlackTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y20"
+                android:text="清风荣耀战队" />
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/in_your_contact"
+            style="@style/BigTextStyle"
+            android:layout_width="@dimen/x300"
+            android:layout_height="@dimen/y85"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x20"
+            android:background="@drawable/shape_order_green_btn"
+            android:drawableLeft="@drawable/order_detial_lianximaijia"
+            android:paddingLeft="@dimen/x20"
+            android:text="联系发单者" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_gray"
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:visibility="gone"
+                    style="@style/OrderetialLayouStyle"
+                    android:layout_marginTop="@dimen/y20"
+                    android:paddingLeft="@dimen/x55">
+
+                    <TextView
+                        style="@style/LeftTextStyle"
+                        android:text="代练标题"
+
+                        />
+
+                    <TextView
+                        style="@style/LeftBlackTextStyle"
+                        android:id="@+id/in_your_order_title"
+                        android:text=" "
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/y2"
+                    style="@style/OrderetialLayouStyle"
+                    android:paddingLeft="@dimen/x55">
+
+                    <TextView
+                        style="@style/LeftTextStyle"
+                        android:text="代练游戏"
+                        />
+
+                    <TextView
+                        style="@style/LeftBlackTextStyle"
+                        android:id="@+id/in_your_game"
+                        android:text=""
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="@dimen/y2"
+                    style="@style/OrderetialLayouStyle"
+                    android:paddingLeft="@dimen/x55">
+
+                    <TextView
+                        style="@style/LeftTextStyle"
+
+                        android:text="代练类型"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/in_your_type"
+                        style="@style/LeftBlackTextStyle"
+                        android:text=""
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/OrderetialLayouStyle"
+                    android:layout_marginTop="@dimen/y2"
+                    android:paddingLeft="@dimen/x55">
+
+                    <TextView
+                        style="@style/LeftTextStyle"
+
+                        android:text="代练内容"
+
+                        />
+
+                    <TextView
+                        style="@style/LeftBlackTextStyle"
+                        android:id="@+id/in_your_content"
+                        android:text=""
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/OrderetialLayouStyle"
+                    android:layout_marginTop="@dimen/y2"
+                    android:paddingLeft="@dimen/x55">
+
+                    <TextView
+                        style="@style/LeftTextStyle"
+
+                        android:text="代练区服"
+                        />
+                    <TextView
+                        android:id="@+id/in_your_qufu"
+                        style="@style/LeftBlackTextStyle"
+                        android:text=""
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/OrderetialLayouStyle"
+                    android:layout_marginTop="@dimen/y2"
+                    android:paddingLeft="@dimen/x55">
+
+                    <TextView
+                        style="@style/LeftTextStyle"
+
+                        android:text="代练时间"
+                        android:id="@+id/in_textView4" />
+
+                    <TextView
+                        android:id="@+id/in_your_time"
+                        style="@style/LeftBlackTextStyle"
+                        android:text=""
+                        />
+                    <TextView
+                        style="@style/LeftBlackTextStyle"
+                        android:text="小时"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/y2"
+                    style="@style/OrderetialLayouStyle"
+                    android:paddingLeft="@dimen/x55">
+
+                    <TextView
+                        style="@style/LeftTextStyle"
+                        android:text="代练价格"
+                        android:id="@+id/textView7" />
+
+                    <TextView
+                        android:id="@+id/in_your_money"
+                        style="@style/LeftBlackTextStyle"
+                        android:text=""
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dwjt1"
+                    android:layout_marginTop="@dimen/y2"
+                    style="@style/OrderetialLayouStyle"
+                    android:paddingLeft="@dimen/x55"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/LeftTextStyle"
+                        android:text="段位截图"
+
+                        />
+                    <TextView
+                        android:id="@+id/in_your_hero_number"
+                        style="@style/LeftBlackTextStyle"
+                        android:text="点击查看详情"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/mwdj1"
+                    android:layout_marginTop="@dimen/y2"
+                    style="@style/OrderetialLayouStyle"
+                    android:paddingLeft="@dimen/x55"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/LeftTextStyle"
+                        android:text="铭文等级"
+
+                        />
+                    <TextView
+                        android:id="@+id/in_your_level"
+                        style="@style/LeftBlackTextStyle"
+                        android:text="点击查看详情"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="@dimen/y2"
+                    style="@style/OrderetialLayouStyle"
+                    android:paddingLeft="@dimen/x55">
+
+                    <TextView
+                        style="@style/LeftTextStyle"
+                        android:text="联系电话"/>
+
+                    <TextView
+                        android:id="@+id/in_your_zhanghao"
+                        style="@style/LeftBlackTextStyle"
+                        android:text=""
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/y2"
+                    style="@style/OrderetialLayouStyle"
+                    android:paddingLeft="@dimen/x55">
+
+                    <TextView
+                        style="@style/LeftTextStyle"
+                        android:text="微信号"/>
+
+                    <TextView
+                        android:id="@+id/in_your_mima"
+                        style="@style/LeftBlackTextStyle"
+                        android:text=""
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/zdyx"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/y2"
+                    style="@style/OrderetialLayouStyle"
+                    android:paddingLeft="@dimen/x55">
+
+                    <TextView
+                        style="@style/LeftTextStyle"
+                        android:text="指定英雄"/>
+
+                    <TextView
+                        android:id="@+id/in_your_hero"
+                        style="@style/LeftBlackTextStyle"
+                        android:text=""
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="@dimen/y2"
+                    android:visibility="gone"
+                    style="@style/OrderetialLayouStyle"
+                    android:paddingLeft="@dimen/x55">
+
+                    <TextView
+                        style="@style/LeftTextStyle"
+                        android:text="指定打手"/>
+
+                    <TextView
+                        android:id="@+id/in_your_beater"
+                        style="@style/LeftBlackTextStyle"
+                        android:text=""
+                        />
+                </LinearLayout>
+                <RelativeLayout
+                    style="@style/OrderetialLayouStyle"
+                    android:layout_marginTop="@dimen/y20"
+                    android:paddingLeft="@dimen/x55">
+
+                    <TextView
+                        style="@style/LeftTextStyle"
+                        android:text="发布时间" />
+
+                    <TextView
+                        android:id="@+id/in_your_release_time"
+                        style="@style/LeftBlackTextStyle"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/x20"
+                        android:textColor="@color/dark_gary"
+                        android:text="" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    style="@style/OrderetialLayouStyle"
+                    android:layout_marginTop="@dimen/y2"
+                    android:paddingLeft="@dimen/x55">
+
+                    <TextView
+                        style="@style/LeftTextStyle"
+                        android:text="订单编号"
+                        />
+                    <TextView
+                        android:id="@+id/in_your_order_numbers"
+                        style="@style/LeftBlackTextStyle"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/x20"
+                        android:textColor="@color/dark_gary"
+                        android:text="" />
+                </RelativeLayout>
+                <LinearLayout
+                    android:id="@+id/xxx1"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/y20"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y385"
+                    android:orientation="vertical">
+                    <TextView
+                        android:paddingLeft="@dimen/x55"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="退款原因"/>
+                    <TextView
+                        android:id="@+id/in_your_tkr"
+                        android:layout_marginTop="@dimen/y5"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/y385"
+                        android:gravity="left"
+                        android:paddingTop="@dimen/x25"
+                        android:paddingLeft="@dimen/x45"
+                        android:text=""
+                        style="@style/DefaultEditStyle"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/xxx2"
+                    style="@style/OrderetialLayouStyle"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/y2"
+                    android:paddingLeft="@dimen/x55">
+
+                    <TextView
+                        style="@style/LeftTextStyle"
+                        android:text="订单金额" />
+
+                    <TextView
+                        android:id="@+id/in_your_tkm"
+                        style="@style/LeftBlackTextStyle"
+                        android:text=""
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/xxx3"
+                    style="@style/OrderetialLayouStyle"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/y2"
+                    android:paddingLeft="@dimen/x55">
+
+                    <TextView
+                        style="@style/LeftTextStyle"
+                        android:text="赔偿金额" />
+
+                    <TextView
+                        android:id="@+id/in_your_tkm1"
+                        style="@style/LeftBlackTextStyle"
+                        android:text=""
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/cd_zj1"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/y20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:paddingLeft="@dimen/x55"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="证据截图"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/zjjt1"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/y320"
+                        android:layout_marginLeft="@dimen/x10"
+                        android:layout_weight="1"
+                        android:layout_marginTop="@dimen/y30"
+                        android:background="@drawable/shape_normal"
+                        android:orientation="vertical">
+                        <TextView
+                            style="@style/BigTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/y75"
+                            android:background="@drawable/shape_fill_in_top"
+                            android:gravity="center"
+                            android:text="证据截图1"
+                            android:textSize="14sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/x40">
+                            <ImageView
+                                android:id="@+id/ds_zj101"
+                                android:layout_width="@dimen/x240"
+                                android:layout_height="@dimen/y250"
+                                android:src="@drawable/order_duanwei"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/y320"
+                        android:layout_marginLeft="@dimen/x10"
+                        android:layout_weight="1"
+                        android:layout_marginTop="@dimen/y30"
+                        android:background="@drawable/shape_normal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/BigTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/y75"
+                            android:background="@drawable/shape_fill_in_top"
+                            android:gravity="center"
+                            android:text="证据截图2"
+                            android:textSize="14sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/x40">
+                            <ImageView
+                                android:id="@+id/ds_zj201"
+                                android:layout_width="@dimen/x240"
+                                android:layout_height="@dimen/y250"
+                                android:src="@drawable/order_duanwei"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/y320"
+                        android:layout_marginLeft="@dimen/x10"
+                        android:layout_weight="1"
+                        android:layout_marginTop="@dimen/y30"
+                        android:background="@drawable/shape_normal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/BigTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/y75"
+                            android:background="@drawable/shape_fill_in_top"
+                            android:gravity="center"
+                            android:text="证据截图3"
+                            android:textSize="14sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/x40">
+                            <ImageView
+                                android:id="@+id/ds_zj301"
+                                android:layout_width="@dimen/x240"
+                                android:layout_height="@dimen/y250"
+                                android:src="@drawable/order_duanwei"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/dashoupingjia1"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/y20"
+                    style="@style/OrderetialLayouStyle"
+                    android:paddingLeft="@dimen/x55">
+
+                    <TextView
+                        style="@style/LeftTextStyle"
+                        android:text="用户评价"/>
+                    <TextView
+                        android:id="@+id/tv_result1"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center_horizontal" />
+
+                    <com.leveling.ZzRatingBar
+                        android:id="@+id/zzratingbar1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:zrb_click_enable="false"
+                        app:zrb_horizontal_spacing="5dp"
+
+                        app:zrb_rating="0"
+                        app:zrb_star_count="5"
+                        app:zrb_star_dimension="20dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/y20"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:paddingLeft="@dimen/x55"
+                        android:paddingRight="@dimen/x55"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center_vertical"
+                        android:layout_height="match_parent">
+                        <Button
+                            android:id="@+id/in_your_order_details_revoke"
+                            android:visibility="gone"
+                            style="@style/BaseBtnStyle"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="@dimen/x40"
+                            android:text="申请撤单"/>
+                        <Button
+                            android:id="@+id/in_your_order_details_stop"
+                            style="@style/BaseBtnStyle"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            android:layout_marginLeft="@dimen/x40"
+                            android:text="取消撤单"/>
+
+                        <Button
+                            android:id="@+id/in_your_order_details_finish"
+                            style="@style/BaseBtnStyle"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            android:layout_marginLeft="@dimen/x40"
+                            android:text="确认已完成"/>
+                        <Button
+                            android:id="@+id/in_your_order_details_agree"
+                            style="@style/BaseBtnStyle"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            android:layout_marginLeft="@dimen/x40"
+                            android:text="同意退款"/>
+                        <Button
+                            android:id="@+id/in_your_order_details_disagree"
+                            style="@style/BaseBtnStyle"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            android:layout_marginLeft="@dimen/x40"
+                            android:text="不同意退款"/>
+                        <Button
+                            android:id="@+id/in_your_order_details_agree_money"
+                            style="@style/BaseBtnStyle"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            android:layout_marginLeft="@dimen/x40"
+                            android:text="申请退款"/>
+                        <Button
+                            android:id="@+id/in_your_order_details_pingjia"
+                            style="@style/BaseBtnStyle"
+                            android:visibility="gone"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="@dimen/x40"
+                            android:text="提交评价"/>
+                        <Button
+                            android:id="@+id/in_your_order_details_cxcd"
+                            style="@style/BaseBtnStyle"
+                            android:visibility="gone"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="@dimen/x40"
+                            android:text="取消撤单"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

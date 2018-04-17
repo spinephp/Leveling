@@ -1,0 +1,104 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        dailian {
+            keyAlias 'dailian'
+            keyPassword 'myipp123'
+            storeFile file('D:/TEMP/1.cr')
+            storePassword 'myipp123,,'
+        }
+    }
+    compileSdkVersion 25
+    buildToolsVersion "26.0.1"
+    aaptOptions {
+        cruncherEnabled = false
+        useNewCruncher = false
+    }
+    defaultConfig {
+        applicationId "com.leveling"
+        minSdkVersion 16
+        targetSdkVersion 22
+        versionCode 8
+        versionName "1.0.19"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        //multiDexEnabled true
+        ndk {
+            //根据需要 自行选择添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a','x86', 'x86_64', 'mips', 'mips64'
+            // 还可以添加
+        }
+        manifestPlaceholders = [
+            XG_ACCESS_ID:"2100281001",
+            XG_ACCESS_KEY:"AB73Y884XJAE",
+        ]
+    }
+    buildTypes {
+        release {
+            release {
+                minifyEnabled false
+                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            }
+        }
+    }
+    useLibrary 'org.apache.http.legacy'
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile files('libs/alipaySdk-20170922.jar')
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'devlight.io:navigationtabbar:1.2.5'
+    compile 'com.kyleduo.switchbutton:library:2.0.0'
+    testCompile 'junit:junit:4.12'
+    configurations.all {
+        resolutionStrategy.force 'com.android.support:support-annotations:22.1.0'
+    }
+    compile 'org.apache.httpcomponents:httpcore:4.4.2'
+    compile 'com.google.android.gms:play-services-appindexing:8.4.0'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'org.greenrobot:greendao:3.2.0'
+    compile files('libs/gesture-imageview.jar')
+    compile 'cn.jzvd:jiaozivideoplayer:6.0.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile('com.weigan:loopView:0.1.2') {
+        exclude group: 'com.android.support'
+    }
+    compile 'net.zetetic:android-database-sqlcipher:3.5.2'
+    compile 'com.dyhdyh.loadingbar:loadingbar:1.4.4'
+
+    //compile 'com.squareup.okhttp3:logging-interceptor:3.2.0'
+    //compile 'com.google.code.gson:gson:2.6.2'
+    //compile 'com.squareup.retrofit2:retrofit:2.0.1'
+    //compile 'com.squareup.retrofit2:adapter-rxjava:2.0.1'
+    //compile 'com.squareup.retrofit2:converter-gson:2.0.1'
+    //compile 'io.reactivex:rxjava:1.1.2'
+    //compile 'io.reactivex:rxandroid:1.1.0'
+    compile 'com.yanzhenjie.nohttp:nohttp:1.1.9'
+    compile 'in.srain.cube:ptr-load-more:1.0.2'
+    compile 'com.zhy:flowlayout-lib:1.0.3'
+    compile 'com.android.support:recyclerview-v7:23.4.0'
+
+    //compile 'com.android.support:multidex:1.0.1'
+    //信鸽jar
+    compile 'com.tencent.xinge:xinge:3.2.2-release'
+    //wup包
+    compile 'com.tencent.wup:wup:1.0.0.E-release'
+    //mid包
+    compile 'com.tencent.mid:mid:4.0.6-release'
+
+
+    compile 'com.facebook.fresco:fresco:0.9.0'
+    compile files('libs/Baidu_Mtj_3.9.0.1.jar')
+}

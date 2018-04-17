@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y120"
+        android:background="@color/colorPrimary"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        >
+        <ImageView
+            android:id="@+id/img_title_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:id="@+id/tx_title_name"
+            style="@style/BigTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="@string/index_name"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            />
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            >
+        </android.support.design.widget.TabLayout>
+        <ImageView
+            android:id="@+id/img_title_right"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y260"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/x25"
+        android:paddingRight="@dimen/x25">
+
+        <ImageView
+            android:id="@+id/iv_no_orders_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/right"
+
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/x55"
+            android:layout_marginRight="@dimen/x55"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/y25">
+
+            <LinearLayout
+                android:id="@+id/ll_no_orders_king"
+                style="@style/tab_menu_item"
+                android:background="@drawable/no_orders_bg_selector"
+                android:paddingBottom="@dimen/y25"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10">
+
+                <ImageView
+
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y195"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/king" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_no_orders_hero"
+                style="@style/tab_menu_item"
+                android:background="@drawable/no_orders_bg_selector"
+                android:paddingBottom="@dimen/y25"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10"
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y195"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/hero" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_no_orders_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/left"
+            />
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/yxlm"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y120"
+        android:layout_marginTop="@dimen/y2"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/all_order_qq"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:text="全部" />
+
+            <View
+                android:id="@+id/all_order_qq1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y10"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/x55"
+                android:layout_marginRight="@dimen/x55"
+                android:background="@color/colorPrimary" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/peilain_oder_qq"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:text="带我飞" />
+
+            <View
+                android:id="@+id/peilain_oder_qq1"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y10"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/x55"
+                android:layout_marginRight="@dimen/x55"
+                android:background="@color/colorPrimary" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/dailian_order_qq"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:text="帮我打" />
+            <View
+                android:visibility="gone"
+                android:id="@+id/dailian_order_qq1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y10"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/x55"
+                android:layout_marginRight="@dimen/x55"
+                android:background="@color/colorPrimary" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ListView
+        android:layout_marginTop="@dimen/y10"
+        android:id="@+id/beater_all_order"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/y150"></ListView>
+
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/y15"
+        android:background="@color/white"
+        android:visibility="gone"
+        >
+
+    </android.support.v4.view.ViewPager>
+</LinearLayout>

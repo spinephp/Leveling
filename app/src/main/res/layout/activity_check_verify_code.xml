@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y120"
+        android:background="@color/colorPrimary"
+        android:paddingRight="10dp"
+        >
+        <LinearLayout
+            android:id="@+id/btn_back"
+            android:layout_width="@dimen/x120"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="?android:attr/selectableItemBackground">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_centerVertical="true"
+                />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tx_title_name"
+            style="@style/BigTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="短信验证"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            />
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            >
+        </android.support.design.widget.TabLayout>
+        <ImageView
+            android:id="@+id/img_title_right"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/y12"
+        android:paddingBottom="@dimen/y12"
+        >
+        <TextView
+            style="@style/LeftTextTipStyle"
+            android:layout_width="wrap_content"
+
+            android:text="需要向" />
+        <TextView
+            android:id="@+id/your_phone_number"
+            style="@style/LeftTextTipStyle"
+            android:layout_width="wrap_content"
+            android:paddingLeft="0dp"
+            android:text="186******13" />
+        <TextView
+            style="@style/LeftTextTipStyle"
+            android:layout_width="wrap_content"
+            android:paddingLeft="0dp"
+            android:text="发送验证码" />
+    </LinearLayout>
+    <LinearLayout
+        style="@style/LeveingLieanLayouStyle"
+        android:layout_marginTop="@dimen/y2"
+        android:paddingLeft="@dimen/x65">
+
+        <TextView
+            style="@style/BlackTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/reg_code"
+            android:drawablePadding="@dimen/x35"
+            android:gravity="center"
+            android:text="验证码" />
+
+        <EditText
+            android:id="@+id/tv_code"
+            android:singleLine="true"
+            style="@style/DefaultEditStyle"
+            android:layout_width="@dimen/x480"
+            android:layout_height="match_parent"
+            android:hint="请输入验证码"
+            android:maxLength="6"
+            android:inputType="number"
+            android:paddingLeft="@dimen/x65"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btn_send"
+            style="@style/RedBtnStyle"
+            android:drawableLeft="@drawable/reg_send_code"
+            android:gravity="center"
+            android:textSize="10sp"
+            android:paddingLeft="@dimen/x20"
+            android:text="发送验证码" />
+
+    </LinearLayout>
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/y160">
+
+        <Button
+            android:id="@+id/btn_confirm"
+            style="@style/BaseBtnStyle"
+            android:text="确定修改" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+    <!--兑换优惠卷页面  -->
+    <include layout="@layout/title_layout" />
+
+    <LinearLayout
+        style="@style/LeveingLieanLayouStyle"
+        android:layout_marginTop="@dimen/y2"
+        android:paddingLeft="@dimen/x65">
+
+        <TextView
+            style="@style/BlackTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/reg_code"
+            android:drawablePadding="@dimen/x35"
+            android:gravity="center"
+            android:text="优惠券" />
+
+        <EditText
+            style="@style/DefaultEditStyle"
+            android:layout_width="@dimen/x480"
+            android:layout_height="match_parent"
+            android:hint="请输入优惠券码"
+            android:paddingLeft="@dimen/x65"
+            android:textSize="12sp"
+
+            />
+
+        <Button
+            style="@style/RedBtnStyle"
+            android:drawableLeft="@drawable/reg_send_code"
+            android:gravity="center"
+            android:paddingLeft="@dimen/x20"
+            android:text="兑换" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+        </ListView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="暂无可以优惠券"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/hero_details"
+    android:layout_width="@dimen/x220"
+    android:layout_height="@dimen/y310"
+    android:paddingRight="@dimen/x25"
+    android:paddingLeft="@dimen/x25"
+    android:paddingTop="@dimen/y30"
+    android:background="@drawable/select_strong_hero"
+    android:paddingBottom="@dimen/y50"
+    android:gravity="center"
+    >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/hero_picture"
+        android:layout_width="@dimen/x150"
+        android:layout_height="@dimen/x150"
+        android:src="@drawable/monery_bg" />
+
+    <TextView
+        android:id="@+id/hero_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/y25"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:text="卡密尔"
+        />
+    <TextView
+        android:id="@+id/pic_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/y25"
+        android:textSize="12sp"
+        android:visibility="gone"
+        android:textColor="@color/black"
+        android:text="卡密尔"
+        />
+
+</LinearLayout>

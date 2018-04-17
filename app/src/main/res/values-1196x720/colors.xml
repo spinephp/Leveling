@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffb310</color>
+    <color name="colorPrimaryDark">#ffb310</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">@android:color/white</color>
+    <color name="bg_gray">#e4e4e4</color>
+    <color name="black">#0b0b0b</color>
+    <color name="dark_gary">#787878</color>
+    <color name="menu_text">#ff7800</color>
+    <color name="leveing_green">#23b001</color>
+    <color name="order_btn_green">#44c81c</color>
+    <color name="leveing_yuan">#ff6c00</color>
+    <color name="transparent">#00000000</color>
+    <color name="gray_text">#919191</color>
+    <color name="gray_btn">#EBEBEB</color>
+    <color name="gray_bg">#f0eff5</color>
+    <color name="gray_line">#ebebeb</color>
+    <color name="black_text">#212121</color>
+    <color name="province_line_border">#D0D0D0</color>
+    <color name="statebar">#00000000</color>
+</resources>

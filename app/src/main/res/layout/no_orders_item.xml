@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/x365"
+    android:orientation="vertical">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/x365"
+    android:background="@color/white"
+    android:orientation="horizontal">
+    <LinearLayout
+        android:layout_width="@dimen/x285"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/publisher_picture"
+            android:layout_width="@dimen/x140"
+            android:layout_height="@dimen/y140"
+            android:layout_marginTop="@dimen/y15"
+            app:civ_border_color="#c9b2b9"
+            app:civ_border_width="1dp" />
+
+        <TextView
+            android:id="@+id/publisher_name"
+            style="@style/BlackTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y30"
+            android:text="清风荣耀"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="10dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/ovel_bg_bitmap"
+        android:tileMode="repeat"
+        android:layout_marginBottom="@dimen/y10"
+        android:layout_marginTop="@dimen/y10"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/x50">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical">
+
+                <TextView
+                    style="@style/DefaultTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="代练时间:"
+                    android:textSize="12dip"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/beater_required_time"
+                    style="@style/DefaultTextStyle"
+                    android:layout_width="@dimen/x260"
+                    android:layout_height="wrap_content"
+                    android:text="1.5"
+                    android:textSize="12dip"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                android:layout_marginRight="@dimen/x15"
+                >
+                <TextView
+                    android:id="@+id/beater_receive_order_time"
+                    style="@style/DefaultTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2017-11-08 21:56"
+                    android:textSize="12dip"
+                    android:textColor="@color/dark_gary" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/beater_receive_begin_level"
+                style="@style/BlackTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="青铜三0星"
+                android:textSize="16dip"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x35"
+                android:layout_marginRight="@dimen/x35"
+                android:src="@drawable/a" />
+
+            <TextView
+                android:id="@+id/beater_receive_end_level"
+                style="@style/BlackTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="铂金三0星"
+                android:textSize="16dip"
+                android:textColor="#f49b01" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical">
+                <TextView
+                    android:id="@+id/beater_receive_money"
+                    android:textSize="18sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="￥50.00"
+                    android:textColor="#fe0000" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                android:layout_marginRight="@dimen/x15"
+                >
+
+               <Button
+                   android:id="@+id/receive_order_btn"
+                   style="@style/RedBtnStyle"
+                   android:layout_width="@dimen/x250"
+                   android:layout_height="@dimen/y80"
+                   android:text="接单"
+                   />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"/>
+</LinearLayout>

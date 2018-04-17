@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/bg_gray"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<include layout="@layout/title_layout"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y600"
+        android:background="@drawable/my_video_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/y40">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/activity_open_vip_headicon"
+            android:layout_width="@dimen/x300"
+            android:layout_height="@dimen/y300"
+            android:src="@drawable/help_banner"
+            app:civ_border_color="#c9b2b9"
+            app:civ_border_width="3dp" />
+
+        <TextView
+            android:layout_width="@dimen/x260"
+            android:layout_height="@dimen/y50"
+            android:background="@drawable/beater_text_bg"
+            android:gravity="center"
+            android:text="@string/help_common_problem"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y165"
+                android:background="#70000000">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/BeaterCenterTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="8" />
+
+                    <TextView
+                        style="@style/BigTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="点击量" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/BeaterCenterTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="8" />
+
+                    <TextView
+                        style="@style/BigTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="点赞" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/BeaterCenterTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="8" />
+
+                    <TextView
+                        style="@style/BigTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="上传视频" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/x30"
+        android:visibility="gone"
+        >
+
+
+    </android.support.v7.widget.RecyclerView>
+    <include layout="@layout/god_show_rcy_layout"/>
+</LinearLayout>

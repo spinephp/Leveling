@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y120"
+        android:background="@color/colorPrimary"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        >
+        <ImageView
+            android:id="@+id/img_title_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:id="@+id/tx_title_name"
+            style="@style/BigTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="订单发布失败"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            />
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            >
+        </android.support.design.widget.TabLayout>
+        <ImageView
+            android:id="@+id/img_title_right"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            />
+
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y1430"
+        android:layout_marginLeft="@dimen/x90"
+        android:layout_marginRight="@dimen/x90"
+        android:layout_marginTop="@dimen/y130"
+        android:layout_marginBottom="@dimen/y150"
+        android:background="@drawable/shape_normal"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/y75"
+        >
+<ImageView
+    android:layout_width="@dimen/x270"
+    android:layout_height="@dimen/x270"
+    android:src="@drawable/order_fail"
+    />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y90"
+            android:text="抱歉，订单发布失败!"
+            android:textSize="15sp"
+            android:textColor="#fe0000"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y2"
+            android:layout_marginTop="@dimen/y600"
+            android:background="@color/dark_gary"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:paddingLeft="@dimen/x55"
+    android:paddingRight="@dimen/x55"
+  android:gravity="center_vertical"
+    android:layout_height="match_parent">
+    <Button
+        android:id="@+id/back_from_failed"
+        style="@style/BaseBtnStyle"
+        android:layout_weight="1"
+        android:text="返回首页"/>
+
+</LinearLayout>
+    </LinearLayout>
+</LinearLayout>

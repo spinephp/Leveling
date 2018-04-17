@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_layout" />
+
+    <LinearLayout
+        style="@style/LeveingLieanLayouStyle"
+        android:paddingLeft="@dimen/x65">
+
+        <TextView
+            style="@style/BlackTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/reg_phone"
+            android:drawablePadding="@dimen/x35"
+            android:gravity="center"
+            android:text="手机号码" />
+
+        <EditText
+            style="@style/DefaultEditStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="请输入手机号码"
+            android:paddingLeft="@dimen/x30"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/LeveingLieanLayouStyle"
+        android:layout_marginTop="@dimen/y2"
+        android:paddingLeft="@dimen/x65">
+
+        <TextView
+            style="@style/BlackTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/reg_code"
+            android:drawablePadding="@dimen/x35"
+            android:gravity="center"
+            android:text="验证码" />
+
+        <EditText
+            style="@style/DefaultEditStyle"
+            android:layout_width="@dimen/x480"
+            android:layout_height="match_parent"
+            android:hint="请输入验证码"
+            android:paddingLeft="@dimen/x65"
+            android:textSize="12sp"
+
+            />
+
+        <Button
+            style="@style/RedBtnStyle"
+            android:drawableLeft="@drawable/reg_send_code"
+            android:gravity="center"
+            android:textSize="10sp"
+            android:paddingLeft="@dimen/x20"
+            android:text="发送验证码" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x30"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="注册即同意"
+            android:textColor="@color/dark_gary"
+            android:textSize="10sp" />
+
+        <TextView
+            style="@style/BigTextStyle"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="《恒派系统服务协议》"
+            android:textColor="#4aabf8"
+            android:textSize="10sp" />
+
+        <TextView
+            style="@style/BlackTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="与"
+            android:textColor="@color/dark_gary"
+            android:textSize="10sp" />
+
+        <TextView
+            style="@style/BigTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="《恒派系统服务协议》"
+            android:textColor="#4aabf8"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/y240">
+
+        <Button
+            style="@style/BaseBtnStyle"
+
+            android:text="下一步" />
+    </LinearLayout>
+</LinearLayout>

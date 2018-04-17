@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y120"
+        android:background="@color/colorPrimary"
+        android:paddingRight="10dp">
+        <LinearLayout
+            android:id="@+id/img_title_back"
+            android:layout_width="@dimen/x120"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="?android:attr/selectableItemBackground">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/back"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tx_title_name"
+            style="@style/BigTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="超神秀"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            />
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            >
+        </android.support.design.widget.TabLayout>
+        <ImageView
+            android:id="@+id/img_title_right"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>
+    <cn.jzvd.JZVideoPlayerStandard
+        android:id="@+id/videoplayer"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"/>
+
+
+    <LinearLayout
+        style="@style/LeveingLieanLayouStyle"
+        android:layout_marginTop="@dimen/y20"
+        android:paddingLeft="@dimen/x35">
+
+        <TextView
+            style="@style/BlackTextStyle"
+            android:layout_width="@dimen/x250"
+            android:layout_height="match_parent"
+            android:gravity="center|left"
+            android:text="发布者" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/release_person"
+                style="@style/GrayTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text=""
+                android:paddingLeft="@dimen/x30"
+                android:gravity="center_vertical"
+                android:textSize="12sp"
+                android:singleLine="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        style="@style/LeveingLieanLayouStyle"
+        android:layout_marginTop="@dimen/y2"
+        android:paddingLeft="@dimen/x35">
+
+        <TextView
+            style="@style/BlackTextStyle"
+            android:layout_width="@dimen/x250"
+            android:layout_height="match_parent"
+            android:gravity="center|left"
+            android:text="发布时间" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/video_release_time"
+                style="@style/GrayTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text=""
+                android:paddingLeft="@dimen/x30"
+                android:gravity="center_vertical"
+                android:textSize="12sp"
+                android:singleLine="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        style="@style/LeveingLieanLayouStyle"
+        android:layout_marginTop="@dimen/y2"
+        android:paddingLeft="@dimen/x35">
+
+        <TextView
+            style="@style/BlackTextStyle"
+            android:layout_width="@dimen/x250"
+            android:layout_height="match_parent"
+            android:gravity="center|left"
+            android:text="视频标签" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/video_lable"
+                style="@style/GrayTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text=""
+                android:paddingLeft="@dimen/x30"
+                android:gravity="center_vertical"
+                android:textSize="12sp"
+                android:singleLine="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_upload_video_img"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.leveling.UploadVideoImgActivity"
+    android:baselineAligned="false"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y120"
+        android:background="@color/colorPrimary"
+        android:paddingRight="10dp"
+        >
+        <LinearLayout
+            android:id="@+id/img_video_back"
+            android:layout_width="@dimen/x120"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="?android:attr/selectableItemBackground">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_centerVertical="true"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tx_title_name"
+            style="@style/BigTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="上传视频"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            />
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            >
+        </android.support.design.widget.TabLayout>
+        <ImageView
+            android:id="@+id/img_title_right"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            />
+
+
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/la_video_name"
+        style="@style/LeveingLieanLayouStyle"
+        android:layout_marginTop="@dimen/y35"
+        android:paddingLeft="@dimen/x50"
+        android:paddingRight="@dimen/x50">
+
+        <TextView
+            style="@style/BlackTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/x25"
+            android:text="视频标签" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right">
+
+            <TextView
+                android:id="@+id/biaoqian"
+                style="@style/BlackTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/x25"
+                android:text="" />
+            <ImageView
+                android:id="@+id/shengji_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x60"
+                android:src="@drawable/left" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/la_videoimg"
+        style="@style/LeveingLieanLayouStyle"
+        android:layout_marginTop="@dimen/y25"
+        android:paddingLeft="@dimen/x50"
+        android:paddingRight="@dimen/x50">
+
+        <TextView
+            style="@style/BlackTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/x25"
+            android:text="视频标题" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x50"
+            android:gravity="right">
+            <TextView
+                android:id="@+id/video_t"
+                style="@style/BlackTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/x25"
+                android:text="" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/y185"
+        android:gravity="center"
+        android:paddingLeft="@dimen/x50"
+        android:paddingRight="@dimen/x50">
+        <ImageView
+            android:id="@+id/videos"
+            android:layout_width="@dimen/x440"
+            android:layout_height="@dimen/y250"
+            android:src="@drawable/order_duanwei"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/y30"
+            android:layout_height="wrap_content">
+            <TextView
+                style="@style/BlackTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:paddingTop="12dp"
+                android:text="视频封面" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="发布视频后玩家可以指定给你订单的机会"
+                android:gravity="center"
+                android:paddingTop="12dp"
+                android:textColor="@color/gray_text"
+                android:textSize="16sp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/y200"
+        android:gravity="center"
+        android:paddingLeft="@dimen/x50"
+        android:paddingRight="@dimen/x50">
+        <Button
+            android:id="@+id/video_content"
+            style="@style/BaseBtnStyle"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/y60"
+            android:text="选择视频"
+            />
+
+        <Button
+            android:id="@+id/btn_upload"
+            style="@style/BaseBtnStyle"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:layout_marginTop="@dimen/y60"
+            android:text="开始上传"
+            />
+
+
+        <LinearLayout
+            android:id="@+id/lay_percent"
+            android:layout_marginTop="@dimen/x55"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ProgressBar
+                android:id="@+id/progressBar1"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></ProgressBar>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/x20"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/text_percent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0%" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    </LinearLayout>

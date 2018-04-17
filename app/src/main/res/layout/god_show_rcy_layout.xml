@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/y10"
+    android:orientation="vertical">
+    <!--超神秀item  -->
+    <RelativeLayout
+        android:gravity="center"
+        android:layout_width="@dimen/x1035"
+        android:layout_height="@dimen/y600"
+        android:background="@color/white"
+
+        >
+
+        <ImageView
+            android:id="@+id/video_bg"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y85"
+            android:layout_alignParentBottom="true"
+            android:background="#70000000"
+
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/x20">
+
+
+                <TextView
+                    style="@style/BigTextStyle"
+                    android:textSize="@dimen/x40"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="发布者:" />
+
+                <TextView
+                    android:id="@+id/tx_god_show_item_name"
+                    style="@style/BigTextStyle"
+                    android:textSize="@dimen/x40"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:text="情深荣耀" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="@dimen/x35">
+                <TextView
+                    style="@style/BigTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/x40"
+                    android:text="时间:" />
+
+                <TextView
+                    android:id="@+id/tx_god_show_item_time"
+                    style="@style/BigTextStyle"
+                    android:textSize="@dimen/x40"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:text="2017-10-13"
+                    android:paddingRight="@dimen/x55"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

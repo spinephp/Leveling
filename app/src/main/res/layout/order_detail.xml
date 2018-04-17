@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/y150"
+    android:layout_marginTop="@dimen/y2"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp">
+
+        <LinearLayout
+            android:id="@+id/lay_right"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/notice_time_txt"
+                style="@style/BigTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/x25"
+                android:textColor="@color/dark_gary"
+                android:text="222222"/>
+
+            <TextView
+                android:id="@+id/is_read_txt"
+                style="@style/BigTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/x25"
+                android:textColor="@color/dark_gary"
+                android:text="444444"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/content_txt"
+            style="@style/BlackTextStyle"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/lay_right"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3333333"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

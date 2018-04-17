@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:clickable="true"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y120"
+        android:background="@color/colorPrimary"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        >
+        <ImageView
+            android:id="@+id/img_title_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:id="@+id/tx_title_name"
+            style="@style/BigTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="消息"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            />
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            >
+        </android.support.design.widget.TabLayout>
+        <ImageView
+            android:id="@+id/img_title_right"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            />
+
+
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/system_info_extra"
+        style="@style/LeveingLieanLayouStyle"
+        android:paddingLeft="@dimen/x45"
+        >
+        <TextView
+           style="@style/BlackTextStyle"
+            android:gravity="center_vertical"
+            android:drawablePadding="@dimen/x40"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/sys_notification"
+            android:text="系统消息"
+            />
+        <TextView
+            android:id="@+id/system_info_num"
+            style="@style/BigTextStyle"
+            android:layout_width="@dimen/x60"
+            android:layout_height="@dimen/y60"
+            android:background="@drawable/ovel_red_shape"
+            android:layout_marginLeft="@dimen/x35"
+            android:text="0"
+            android:gravity="center"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/notification_order"
+        style="@style/LeveingLieanLayouStyle"
+        android:paddingLeft="@dimen/x45"
+        android:layout_marginTop="@dimen/y20"
+        android:layout_marginBottom="@dimen/y20"
+        >
+        <TextView
+            style="@style/BlackTextStyle"
+            android:gravity="center_vertical"
+            android:drawablePadding="@dimen/x55"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/sys_order_notification"
+            android:text="订单通知"
+            />
+        <TextView
+            android:id="@+id/order_info_num"
+            style="@style/BigTextStyle"
+            android:layout_width="@dimen/x60"
+            android:layout_height="@dimen/y60"
+            android:background="@drawable/ovel_red_shape"
+            android:layout_marginLeft="@dimen/x35"
+            android:text="0"
+            android:gravity="center"
+            />
+
+    </LinearLayout>
+
+    <in.srain.cube.views.ptr.PtrFrameLayout
+        android:id="@+id/chat_ptr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/chat_recy"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+    </in.srain.cube.views.ptr.PtrFrameLayout>
+
+    <!--<include layout="@layout/message_item_layout" />-->
+
+    <!--<include layout="@layout/message_item_layout" />-->
+    <!--<include layout="@layout/message_item_layout" />-->
+    <!--<ListView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_marginTop="@dimen/y20"-->
+        <!--android:background="@color/white"-->
+        <!--android:layout_height="match_parent"></ListView>-->
+
+</LinearLayout>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <include layout="@layout/title_layout" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y135"
+            android:background="#ff6263"
+            android:gravity="center"
+            android:text="客服将在24小时后自动回复"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <RelativeLayout
+            style="@style/OrderetialLayouStyle"
+            android:layout_height="@dimen/y240"
+            android:layout_marginTop="@dimen/y45"
+            android:paddingLeft="@dimen/x50"
+
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civ_order_detial_header"
+                android:layout_width="@dimen/x180"
+                android:layout_height="@dimen/y180"
+                android:layout_centerVertical="true"
+                android:src="@drawable/help_banner"
+                app:civ_border_color="#20000000"
+                app:civ_border_width="3dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="@dimen/x30"
+
+                android:layout_toEndOf="@+id/civ_order_detial_header"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/BlackTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/y10"
+                    android:drawableLeft="@drawable/progress_complaint"
+                    android:drawablePadding="@dimen/x10"
+                    android:text="打手发起的投诉" />
+
+                <TextView
+                    style="@style/BlackTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/y20"
+                    android:text="清风荣耀战队" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/y20"
+                android:layout_marginTop="@dimen/y10"
+                android:text="2017-11-08 21:21"
+                android:textColor="@color/dark_gary"
+                android:textSize="12sp" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            style="@style/OrderetialLayouStyle"
+            android:layout_marginTop="@dimen/y20"
+            android:paddingLeft="@dimen/x55">
+
+            <TextView
+                style="@style/LeftTextStyle"
+                android:text="投诉原因"
+
+                />
+
+            <TextView
+                style="@style/LeftBlackTextStyle"
+
+                android:text="其他" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/OrderetialLayouStyle"
+            android:layout_marginTop="@dimen/y2"
+            android:paddingLeft="@dimen/x55">
+
+            <TextView
+                style="@style/LeftTextStyle"
+                android:text="原因描述"
+
+                />
+
+            <TextView
+                style="@style/LeftBlackTextStyle"
+
+                android:text="我们自愿撤单" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/OrderetialLayouStyle"
+            android:layout_height="@dimen/y415"
+            android:layout_marginTop="@dimen/y20"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/y35"
+            android:paddingLeft="@dimen/x55"
+            android:paddingTop="@dimen/y35">
+
+            <TextView
+                android:id="@+id/textView12"
+                style="@style/LeftTextStyle"
+
+                android:text="投诉举证" />
+
+            <ImageView
+                android:layout_width="@dimen/x300"
+                android:layout_height="@dimen/y345"
+                android:layout_marginLeft="@dimen/x45"
+                android:maxHeight="@dimen/y390"
+                android:maxWidth="@dimen/x10"
+                android:src="@drawable/order_duanwei_exp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y160"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="@dimen/x45">
+
+            <Button
+                android:layout_width="@dimen/x240"
+                android:layout_height="@dimen/y90"
+                android:background="@drawable/shape_order_green_btn"
+                android:text="补充申请"
+                android:textColor="@color/white" />
+
+            <Button
+                style="@style/BaseBtnStyle"
+                android:layout_width="@dimen/x240"
+                android:layout_height="@dimen/y90"
+                android:layout_marginLeft="@dimen/x50"
+                android:text="撤销投诉" />
+
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="@dimen/x300"
+            android:layout_height="@dimen/y90"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x50"
+            android:layout_marginRight="@dimen/x55"
+            android:background="@drawable/shape_tousu_violte"
+            android:text="申请客服介入"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+</RelativeLayout>

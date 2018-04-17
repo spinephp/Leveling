@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--订单详情界面，根据不同状态进行修改或隐藏显示相应布局 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y120"
+        android:background="@color/colorPrimary"
+        android:paddingRight="10dp"
+        >
+        <LinearLayout
+            android:id="@+id/img_jiedanxq_back"
+            android:layout_width="@dimen/x120"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="?android:attr/selectableItemBackground">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_centerVertical="true"
+                />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tx_title_name"
+            style="@style/BigTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="订单详情"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            />
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            >
+        </android.support.design.widget.TabLayout>
+        <ImageView
+            android:id="@+id/img_title_right"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_gray"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--<LinearLayout-->
+                <!--style="@style/LeveingLieanLayouStyle"-->
+                <!--android:gravity="center">-->
+
+                <!--<TextView-->
+                    <!--style="@style/BigTextStyle"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:drawableLeft="@drawable/order_detial_leveing"-->
+                    <!--android:drawablePadding="@dimen/x20"-->
+                    <!--android:text="代练中..."-->
+                    <!--android:textColor="#ff3535"-->
+                    <!--android:textSize="18sp" />-->
+            <!--</LinearLayout>-->
+
+            <RelativeLayout
+                style="@style/OrderetialLayouStyle"
+                android:layout_height="@dimen/y240"
+                android:layout_marginTop="@dimen/y45"
+                android:paddingLeft="@dimen/x50"
+
+                >
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/civ_order_detial_header"
+                    android:layout_width="@dimen/x180"
+                    android:layout_height="@dimen/y180"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/help_banner"
+                    app:civ_border_color="#20000000"
+                    app:civ_border_width="3dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/x30"
+
+                    android:layout_toEndOf="@+id/civ_order_detial_header"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/BlackTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="昵称:" />
+
+                    <TextView
+                        android:id="@+id/publisher_game_name"
+                        style="@style/BlackTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/y20"
+                        android:text="清风荣耀战队" />
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                style="@style/OrderetialLayouStyle"
+                android:layout_marginTop="@dimen/y20"
+                android:paddingLeft="@dimen/x55">
+
+                <TextView
+                    style="@style/LeftTextStyle"
+                    android:text="代练内容"
+
+                    />
+
+                <TextView
+                    style="@style/LeftBlackTextStyle"
+                    android:id="@+id/dailian_content"
+                    android:text=""
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/OrderetialLayouStyle"
+                android:layout_marginTop="@dimen/y2"
+                android:paddingLeft="@dimen/x55">
+
+                <TextView
+                    style="@style/LeftTextStyle"
+
+                    android:text="代练区服"
+
+                    />
+
+                <TextView
+                    android:id="@+id/game_areas"
+                    style="@style/LeftBlackTextStyle"
+                    android:text="钻石五3星--钻石四3星"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/OrderetialLayouStyle"
+                android:layout_marginTop="@dimen/y2"
+                android:paddingLeft="@dimen/x55">
+
+                <TextView
+                    style="@style/LeftTextStyle"
+
+                    android:text="代练时间" />
+
+                <TextView
+                    style="@style/LeftBlackTextStyle"
+                    android:id="@+id/dailian_time"
+                    android:text="钻石五3星--钻石四3星"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/OrderetialLayouStyle"
+                android:layout_marginTop="@dimen/y20"
+                android:paddingLeft="@dimen/x55">
+
+                <TextView
+                    style="@style/LeftTextStyle"
+                    android:text="代练价格"
+
+                    />
+
+                <TextView
+                    android:id="@+id/dailian_price"
+                    style="@style/LeftBlackTextStyle"
+                    android:text="钻石五3星--钻石四3星"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/OrderetialLayouStyle"
+                android:layout_marginTop="@dimen/y2"
+                android:paddingLeft="@dimen/x55">
+
+                <TextView
+                    style="@style/LeftTextStyle"
+                    android:text="奖励"
+
+                    />
+
+                <TextView
+                    style="@style/LeftBlackTextStyle"
+                    android:id="@+id/jiangli"
+                    android:text=""
+                    />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                style="@style/OrderetialLayouStyle"
+                android:layout_marginTop="@dimen/y2"
+                android:paddingLeft="@dimen/x55">
+
+                <TextView
+                    style="@style/GrayTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="最终收益"
+                    android:textColor="#ff3535"
+
+                    />
+
+                <TextView
+                    android:id="@+id/zuizhongshouyi"
+                    style="@style/GrayTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/x25"
+                    android:paddingLeft="@dimen/x45"
+                    android:text="￥50.00"
+                    android:textColor="#ff3535" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/OrderetialLayouStyle"
+                android:layout_marginTop="@dimen/y20"
+                android:paddingLeft="@dimen/x55">
+
+                <TextView
+                    style="@style/LeftTextStyle"
+
+                    android:text="创建时间"
+
+                    />
+
+                <TextView
+                    android:id="@+id/create_time"
+                    style="@style/LeftBlackTextStyle"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/x20"
+                    android:textColor="@color/dark_gary"
+                    android:text="2017-11-08 21:25" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                style="@style/OrderetialLayouStyle"
+
+                android:layout_marginTop="@dimen/y2"
+                android:paddingLeft="@dimen/x55">
+
+                <TextView
+                    style="@style/LeftTextStyle"
+
+                    android:text="订单编号"
+
+                    />
+
+                <TextView
+                    android:id="@+id/dingdan_id"
+                    style="@style/LeftBlackTextStyle"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/x20"
+                    android:textColor="@color/dark_gary"
+                    android:text="8654123647856321456" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y20"
+
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/y30"
+                    android:layout_marginTop="@dimen/y75"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/rec_order_btn"
+                        style="@style/BaseBtnStyle"
+                        android:layout_width="@dimen/x860"
+                        android:layout_height="@dimen/y120"
+                        android:text="确定接单" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

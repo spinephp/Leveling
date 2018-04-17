@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y120"
+        android:background="@color/colorPrimary"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        >
+        <LinearLayout
+            android:id="@+id/img_sh_back"
+            android:layout_width="@dimen/x120"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="?android:attr/selectableItemBackground">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back"
+                android:layout_centerVertical="true"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tx_title_name"
+            style="@style/BigTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="强势英雄"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            />
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            >
+        </android.support.design.widget.TabLayout>
+        <ImageView
+            android:id="@+id/img_title_right"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y135"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/x75"
+        android:id="@+id/relativeLayout2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_max_can_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/selected_hero_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x10"
+                android:text=""
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x2"
+                android:text=""
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/select_hero_sure111"
+            android:layout_width="@dimen/x195"
+            android:layout_height="@dimen/y85"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x20"
+            android:background="@drawable/shape_layout"
+            android:text="确定"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_above="@+id/relativeLayout2"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true">
+
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y180"
+                    android:background="@color/white"
+                    android:paddingLeft="@dimen/x60"
+                    android:paddingRight="@dimen/x60"
+                    android:paddingTop="@dimen/y20">
+
+                    <LinearLayout
+                        android:id="@+id/li_tank"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/tanke"
+                            android:layout_width="@dimen/x100"
+                            android:layout_height="@dimen/y100"
+                            android:src="@drawable/atank"
+                            app:civ_border_color="@color/dark_gary"
+                            app:civ_border_width="1dp" />
+
+                        <TextView
+                            android:id="@+id/color1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/y10"
+                            android:text="坦克"
+                            android:textColor="@color/black"
+                            android:textSize="11sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/li_cike"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/cike"
+                            android:layout_width="@dimen/x100"
+                            android:layout_height="@dimen/y100"
+                            android:src="@drawable/acike"
+                            app:civ_border_color="@color/dark_gary"
+                            app:civ_border_width="1dp" />
+
+                        <TextView
+                            android:id="@+id/color2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/y10"
+                            android:text="刺客"
+                            android:textColor="@color/black"
+                            android:textSize="11sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/li_fashi"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/fashi"
+                            android:layout_width="@dimen/x100"
+                            android:layout_height="@dimen/y100"
+                            android:src="@drawable/afashi"
+                            app:civ_border_color="@color/dark_gary"
+                            app:civ_border_width="1dp" />
+
+                        <TextView
+                            android:id="@+id/color3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/y10"
+                            android:text="法师"
+                            android:textColor="@color/black"
+                            android:textSize="11sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/li_sheshou"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/sheshou"
+                            android:layout_width="@dimen/x100"
+                            android:layout_height="@dimen/y100"
+                            android:src="@drawable/asheshou"
+                            app:civ_border_color="@color/dark_gary"
+                            app:civ_border_width="1dp" />
+
+                        <TextView
+                            android:id="@+id/color4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/y10"
+                            android:text="射手"
+                            android:textColor="@color/black"
+                            android:textSize="11sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/li_zhanshi"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/zhanshi"
+                            android:layout_width="@dimen/x100"
+                            android:layout_height="@dimen/y100"
+                            android:src="@drawable/azhanshi"
+                            app:civ_border_color="@color/dark_gary"
+
+                            app:civ_border_width="1dp" />
+
+                        <TextView
+                            android:id="@+id/color5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/y10"
+                            android:text="战士"
+                            android:textColor="@color/black"
+                            android:textSize="11sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/li_fuzhu"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/fuzhu"
+                            android:layout_width="@dimen/x100"
+                            android:layout_height="@dimen/y100"
+                            android:src="@drawable/afuzhu"
+                            app:civ_border_color="@color/dark_gary"
+                            app:civ_border_width="1dp" />
+
+                        <TextView
+                            android:id="@+id/color6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/y10"
+                            android:text="辅助"
+                            android:textColor="@color/black"
+                            android:textSize="11sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y1150"
+                    android:layout_marginLeft="@dimen/x35"
+                    android:layout_marginRight="@dimen/x35"
+                    android:layout_marginTop="@dimen/y280"
+                    android:background="#d3d3d3"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/x55"
+                    android:paddingRight="@dimen/x55"
+                    android:paddingTop="@dimen/y95">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/lv_hero"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/y45">
+                    </android.support.v7.widget.RecyclerView>
+
+                </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/y230"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="@dimen/x780"
+                        android:layout_height="@dimen/y90"
+                        android:background="@drawable/shouru_biaoqian_big"
+                        android:gravity="center"
+                        android:text="请选择您需要的本赛季强势英雄"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/y45"
+                        android:visibility="gone">
+
+                    </android.support.v7.widget.RecyclerView>
+
+
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/y80"
+                android:text="强势英雄越多，代练效率/胜率更高"
+                android:textColor="@color/dark_gary"
+                android:textSize="12sp" />
+        </LinearLayout>
+</RelativeLayout>

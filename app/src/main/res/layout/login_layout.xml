@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <!--登陆  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="@dimen/y130">
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="@dimen/x440"
+                android:layout_height="@dimen/y565"
+                android:scaleType="fitCenter"
+                android:src="@drawable/newlogo" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y130"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/x125"
+            android:paddingRight="@dimen/x125">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y120">
+
+                <EditText
+                    android:id="@+id/username"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@null"
+                    android:drawablePadding="@dimen/x25"
+                    android:hint="账号/手机号"
+                    android:inputType="number"
+                    android:paddingLeft="@dimen/x20"
+                    android:singleLine="true"
+                    android:textColor="@color/gray_text" />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y5"
+                android:gravity="center">
+
+                <View
+                    android:layout_width="@dimen/x800"
+                    android:layout_height="@dimen/y5"
+                    android:background="@color/bg_gray"
+                    android:paddingLeft="@dimen/x70" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y120"
+                android:layout_marginTop="@dimen/y60">
+
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@null"
+                    android:digits="@string/pass_word"
+                    android:drawablePadding="@dimen/x45"
+                    android:hint="请输入密码"
+                    android:inputType="textPassword"
+                    android:paddingLeft="@dimen/x20"
+                    android:singleLine="true"
+                    android:textColor="@color/gray_text" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y5"
+                android:gravity="center">
+
+                <View
+                    android:layout_width="@dimen/x800"
+                    android:layout_height="@dimen/y5"
+                    android:background="@color/bg_gray"
+                    android:paddingLeft="@dimen/x70" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="@dimen/x70"
+                android:gravity="right">
+
+                <TextView
+                    android:id="@+id/find_password"
+                    style="@style/BigTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:drawableLeft="@drawable/reg_forget_ped"
+                    android:gravity="right"
+                    android:text="忘记密码?"
+                    android:textColor="@color/gray_text"
+                    android:textColorHint="@color/bg_gray" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y60"
+                android:gravity="center">
+
+
+                <Button
+                    android:id="@+id/btn_login"
+                    style="@style/BaseBtnStyle"
+                    android:layout_width="@dimen/x720"
+                    android:text="登录" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x100"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btn_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/x18"
+            android:layout_weight="1"
+            android:gravity="center_vertical|left"
+            android:paddingLeft="@dimen/x38"
+            android:text="创建用户"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/btn_back_to_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/x18"
+            android:layout_weight="1"
+            android:gravity="center_vertical|right"
+            android:paddingRight="@dimen/x38"
+            android:text="进入首页"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp" />
+    </LinearLayout>
+</RelativeLayout>

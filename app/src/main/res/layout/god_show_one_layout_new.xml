@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y120"
+        android:background="@color/colorPrimary"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+        <ImageView
+            android:id="@+id/img_title_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:id="@+id/tx_title_name"
+            style="@style/BigTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="超神秀"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            />
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            >
+        </android.support.design.widget.TabLayout>
+        <ImageView
+            android:id="@+id/img_title_right"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y175"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/x18">
+            <ImageView
+                android:id="@+id/video_time"
+                android:layout_marginTop="@dimen/x28"
+                android:layout_width="@dimen/x97"
+                android:layout_height="@dimen/x97"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/time" />
+            <View
+                android:id="@+id/view00"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y10"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/x25"
+                android:layout_marginRight="@dimen/x25" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/x18">
+            <ImageView
+                android:id="@+id/video_tank"
+                android:layout_marginTop="@dimen/x28"
+                android:layout_width="@dimen/x97"
+                android:layout_height="@dimen/x97"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/tan_ke" />
+            <View
+                android:id="@+id/view01"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y10"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/x25"
+                android:layout_marginRight="@dimen/x25" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/x18">
+            <ImageView
+                android:id="@+id/video_cike"
+                android:layout_marginTop="@dimen/x28"
+                android:layout_width="@dimen/x97"
+                android:layout_height="@dimen/x97"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ci_ke" />
+            <View
+                android:id="@+id/view02"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y10"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/x25"
+                android:layout_marginRight="@dimen/x25" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/x18">
+            <ImageView
+                android:id="@+id/video_fashi"
+                android:layout_marginTop="@dimen/x28"
+                android:layout_width="@dimen/x97"
+                android:layout_height="@dimen/x97"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/fa_shi" />
+
+            <View
+                android:id="@+id/view03"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y10"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/x25"
+                android:layout_marginRight="@dimen/x25" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/x18">
+            <ImageView
+                android:id="@+id/video_sheshou"
+                android:layout_marginTop="@dimen/x28"
+                android:layout_width="@dimen/x97"
+                android:layout_height="@dimen/x97"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/she_shou" />
+            <View
+                android:id="@+id/view04"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y10"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/x25"
+                android:layout_marginRight="@dimen/x25" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/x18">
+            <ImageView
+                android:id="@+id/video_zhanshi"
+                android:layout_marginTop="@dimen/x28"
+                android:layout_width="@dimen/x97"
+                android:layout_height="@dimen/x97"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/zhan_shi" />
+            <View
+                android:id="@+id/view05"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y10"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/x25"
+                android:layout_marginRight="@dimen/x25" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/x18">
+            <ImageView
+                android:id="@+id/video_fuzhu"
+                android:layout_marginTop="@dimen/x28"
+                android:layout_width="@dimen/x97"
+                android:layout_height="@dimen/x97"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/fu_zhu" />
+            <View
+                android:id="@+id/view06"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y10"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/x25"
+                android:layout_marginRight="@dimen/x25" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/x18">
+            <ImageView
+                android:id="@+id/video_god"
+                android:layout_marginTop="@dimen/x28"
+                android:layout_width="@dimen/x97"
+                android:layout_height="@dimen/x97"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/god" />
+            <View
+                android:id="@+id/view07"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y10"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/x25"
+                android:layout_marginRight="@dimen/x25" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/x18">
+            <ImageView
+                android:id="@+id/video_five"
+                android:layout_marginTop="@dimen/x28"
+                android:layout_width="@dimen/x97"
+                android:layout_height="@dimen/x97"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/five" />
+            <View
+                android:id="@+id/view08"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y10"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/x25"
+                android:layout_marginRight="@dimen/x25" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/x18">
+            <ImageView
+                android:id="@+id/video_four"
+                android:layout_marginTop="@dimen/x28"
+                android:layout_width="@dimen/x97"
+                android:layout_height="@dimen/x97"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/four" />
+            <View
+                android:id="@+id/view09"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y10"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/x25"
+                android:layout_marginRight="@dimen/x25"
+                 />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/x25">
+        <!--超神秀  -->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_god_show"
+            android:paddingLeft="@dimen/x10"
+            android:paddingRight="@dimen/x10"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+</LinearLayout>

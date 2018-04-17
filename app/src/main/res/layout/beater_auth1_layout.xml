@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+    <!-- 打手认证 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y120"
+        android:background="@color/colorPrimary"
+        android:paddingRight="10dp"
+        >
+        <LinearLayout
+            android:id="@+id/img_bttwo_back"
+            android:layout_width="@dimen/x120"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="?android:attr/selectableItemBackground">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_centerVertical="true"
+                />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tx_title_name"
+            style="@style/BigTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="打手认证"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            />
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            >
+        </android.support.design.widget.TabLayout>
+        <ImageView
+            android:id="@+id/img_title_right"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        style="@style/LeveingLieanLayouStyle"
+        android:paddingLeft="@dimen/x65"
+        android:layout_marginTop="@dimen/y1">
+
+        <TextView
+            style="@style/BlackTextStyle"
+            android:layout_width="@dimen/x300"
+            android:layout_height="match_parent"
+            android:gravity="center|left"
+            android:text="入驻分类" />
+
+        <TextView
+            android:id="@+id/leveling"
+            style="@style/BlackTextStyle"
+            android:layout_width="94dp"
+            android:layout_height="match_parent"
+            android:gravity="center|left"
+            android:paddingLeft="@dimen/x30"
+            android:inputType="number"
+            android:text="大神"
+            android:textSize="15dip"/>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/LeveingLieanLayouStyle"
+        android:paddingLeft="@dimen/x65"
+        android:layout_marginTop="@dimen/y1"
+        android:weightSum="1">
+
+        <TextView
+            style="@style/BlackTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawablePadding="@dimen/x35"
+            android:gravity="center"
+            android:text="游戏类型" />
+
+        <RadioGroup
+            android:id="@+id/GameType"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/x90"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x95"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/WKG"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:button="@null"
+                android:drawableLeft="@drawable/order_seting_chooles_selector"
+                android:drawablePadding="@dimen/x10"
+                android:text="王者荣耀" />
+
+            <RadioButton
+                android:id="@+id/LOL"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/x80"
+                android:button="@null"
+                android:drawableLeft="@drawable/order_seting_chooles_selector"
+                android:drawablePadding="@dimen/x10"
+                android:text="英雄联盟"
+
+                />
+
+        </RadioGroup>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/item_qiangshi_hero"
+        style="@style/LeveingLieanLayouStyle"
+        android:layout_marginTop="@dimen/y2"
+        android:paddingLeft="@dimen/x65">
+
+        <TextView
+            style="@style/BlackTextStyle"
+            android:layout_width="@dimen/x300"
+            android:layout_height="match_parent"
+            android:gravity="center|left"
+            android:text="强势英雄选择" />
+        <RelativeLayout
+            android:id="@+id/choose_hero"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/x30"
+                android:gravity="center_vertical"
+                android:layout_height="match_parent">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/heropic1"
+                    android:layout_width="@dimen/x75"
+                    android:layout_height="@dimen/x75"
+                    android:layout_marginRight="@dimen/x25"
+                    />
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/heropic2"
+                    android:layout_width="@dimen/x75"
+                    android:layout_height="@dimen/x75"
+                    android:layout_marginRight="@dimen/x25"
+                    />
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/heropic3"
+                    android:layout_width="@dimen/x75"
+                    android:layout_height="@dimen/x75"
+                    android:layout_marginRight="@dimen/x25"
+                    />
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/heropic4"
+                    android:layout_width="@dimen/x75"
+                    android:layout_height="@dimen/x75"
+                    android:layout_marginRight="@dimen/x25"
+                    />
+
+            </LinearLayout>
+            <ImageView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/x25"
+                android:src="@drawable/left"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        style="@style/LeveingLieanLayouStyle"
+        android:layout_marginTop="@dimen/y2"
+        android:paddingLeft="@dimen/x65">
+
+        <TextView
+            style="@style/BlackTextStyle"
+            android:layout_width="@dimen/x300"
+            android:layout_height="match_parent"
+            android:gravity="center|left"
+            android:text="最高可接段位" />
+        <RelativeLayout
+            android:id="@+id/choosed_level"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/duanwei_choose"
+                style="@style/BlackTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="请选择可接段位"
+                android:paddingLeft="@dimen/x30"
+                android:gravity="center_vertical"
+                android:textSize="15sp" />
+            <ImageView
+                android:id="@+id/choose_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/x25"
+                android:src="@drawable/left"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+    <RelativeLayout
+        style="@style/LeveingLieanLayouStyle"
+        android:layout_marginTop="@dimen/y2"
+        android:paddingLeft="@dimen/x65">
+
+        <TextView
+            style="@style/BlackTextStyle"
+            android:layout_width="@dimen/x300"
+            android:layout_height="match_parent"
+            android:gravity="center|left"
+            android:text="可同时接单数" />
+
+        <com.leveling.AmountView1
+            android:id="@+id/OrderMaxNumber"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x30"
+            android:layout_height="wrap_content">
+
+        </com.leveling.AmountView1>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="@dimen/y45"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/y25"
+
+        >
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_height="@dimen/y370">
+
+            <ImageView
+                android:id="@+id/Authentication1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/zhanji" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_height="@dimen/y370">
+
+            <ImageView
+                android:id="@+id/Authentication2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/beater_auth_duanwei" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/author_next"
+        style="@style/BaseBtnStyle"
+        android:layout_marginTop="@dimen/y100"
+        android:text="@string/next" />
+
+</LinearLayout>

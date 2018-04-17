@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/y185"
+    android:background="@color/white"
+    android:layout_marginTop="@dimen/y1"
+    android:layout_marginBottom="@dimen/y1"
+    android:id="@+id/system_info">
+    <!--财务明细item  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/x55"
+        android:paddingTop="@dimen/y25">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y55"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/ann_title"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/x20"
+                android:text="标题" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/ann_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y25"
+            android:text="时间"
+            android:textColor="#fe504f"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+    <!-- 已完成的状态-->
+    <!--<TextView-->
+    <!--style="@style/DefaultTextStyle"-->
+    <!--android:layout_width="@dimen/x190"-->
+    <!--android:layout_height="@dimen/y55"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginRight="@dimen/x15"-->
+    <!--android:background="@drawable/shape_tixian_finish"-->
+    <!--android:gravity="center"-->
+    <!--android:text="收入">-->
+    <!--</TextView>-->
+    <TextView
+        android:id="@+id/ann_url"
+        style="@style/DefaultTextStyle"
+        android:layout_width="@dimen/x190"
+        android:layout_height="@dimen/y55"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/x15"
+        android:background="@drawable/shape_tixian_process"
+        android:gravity="center"
+        android:text="查看详情"/>
+
+</RelativeLayout>

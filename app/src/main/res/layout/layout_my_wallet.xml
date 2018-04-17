@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/bg_gray"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/tixian_my_money"
+        style="@style/BaseBtnStyle"
+        android:text="提现"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/y230"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y120"
+            android:background="@color/colorPrimary"
+            android:paddingRight="10dp"
+            >
+            <LinearLayout
+                android:id="@+id/img_title_back"
+                android:layout_width="@dimen/x120"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="?android:attr/selectableItemBackground">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/back"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x20"
+                    />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tx_title_name"
+                style="@style/BigTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:text="我的钱包"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                />
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tab_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:visibility="gone"
+                >
+            </android.support.design.widget.TabLayout>
+            <ImageView
+                android:id="@+id/img_title_right"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                />
+
+
+        </RelativeLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y475"
+            android:background="@drawable/monery_bg"
+            />
+        <LinearLayout
+            style="@style/LeveingLieanLayouStyle">
+            <TextView
+                style="@style/BlackTextStyle"
+                android:gravity="right"
+                android:layout_width="@dimen/x245"
+                android:layout_height="wrap_content"
+                android:text="账户余额"
+                />
+            <TextView
+                android:id="@+id/select_left_money_new"
+                style="@style/BlackTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x60"
+                android:textColor="#479800"
+                android:text=""
+                />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/lay_dailian_yajin"
+            android:visibility="gone"
+            style="@style/LeveingLieanLayouStyle"
+            android:layout_marginTop="@dimen/y1">
+
+            <TextView
+                android:id="@+id/tx_yj"
+                style="@style/BlackTextStyle"
+                android:layout_width="@dimen/x245"
+
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:gravity="right|center_vertical"
+                android:text="代练押金" />
+
+            <TextView
+                android:id="@+id/leveling_money_new"
+                style="@style/BlackTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/x305"
+                android:gravity="right|center_vertical"
+                android:text=""
+                android:textColor="#d81817" />
+
+            <Button
+                android:id="@+id/add_leveling_money"
+                style="@style/RedBtnStyle"
+                android:layout_width="@dimen/x300"
+                android:layout_height="@dimen/y95"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/x25"
+                android:drawableLeft="@drawable/shouru_yajin"
+                android:layout_centerVertical="true"
+                android:paddingLeft="@dimen/x30"
+                android:text="押金充值" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/lay_peilian_yajin"
+            style="@style/LeveingLieanLayouStyle"
+            android:layout_marginTop="@dimen/y1">
+
+            <TextView
+                style="@style/BlackTextStyle"
+                android:layout_width="@dimen/x245"
+
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:gravity="right|center_vertical"
+                android:text="押金" />
+
+            <TextView
+                android:id="@+id/peilian_money_new"
+                style="@style/BlackTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/x305"
+                android:gravity="right|center_vertical"
+                android:text=""
+                android:textColor="#d81817" />
+
+            <Button
+                android:id="@+id/add_peilian_money"
+                style="@style/RedBtnStyle"
+                android:layout_width="@dimen/x300"
+                android:layout_height="@dimen/y95"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/x25"
+                android:drawableLeft="@drawable/shouru_yajin"
+                android:layout_centerVertical="true"
+                android:paddingLeft="@dimen/x30"
+                android:text="押金充值" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

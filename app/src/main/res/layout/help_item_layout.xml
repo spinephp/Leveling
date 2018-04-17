@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--填写订单页面  -->
+
+
+        <RelativeLayout
+            android:id="@+id/qnm"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y135"
+            android:paddingLeft="@dimen/x35"
+            android:paddingRight="@dimen/x35"
+            android:layout_marginTop="@dimen/y2"
+            >
+
+            <!--帮助中心item  -->
+            <TextView
+                android:id="@+id/help_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="什么是超时赔?"
+                android:maxLength="16"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:layout_centerVertical="true"
+
+                />
+            <ImageButton
+                android:id="@+id/help_url"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/left"
+                android:background="@null"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                />
+
+        </RelativeLayout>
+</LinearLayout>

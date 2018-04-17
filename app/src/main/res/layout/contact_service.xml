@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/la_contact"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y120"
+        android:background="@color/colorPrimary"
+        android:paddingRight="10dp">
+
+        <LinearLayout
+            android:id="@+id/img_tel_back"
+            android:layout_width="@dimen/x120"
+            android:layout_height="match_parent"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x20"
+                android:src="@drawable/back" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tx_title_name"
+            style="@style/BigTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="联系客服"
+            android:textSize="15sp" />
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"></android.support.design.widget.TabLayout>
+
+        <ImageView
+            android:id="@+id/img_title_right"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y35"
+                android:gravity="center">
+
+                <RelativeLayout
+                    android:layout_width="@dimen/x460"
+                    android:layout_height="@dimen/y590"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/y460"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentStart="true"
+                        android:background="@drawable/shape_contact_bg"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/image11"
+                            android:layout_width="@dimen/x240"
+                            android:layout_height="@dimen/x240"
+                            android:layout_marginTop="@dimen/y100"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/wexin1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/y30"
+                            android:text="识别二维码联系客服"
+                            android:textColor="#a3806c"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="@dimen/x195"
+                        android:layout_height="@dimen/x195"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/kefu" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="@dimen/x55"
+                    android:layout_height="match_parent" />
+
+                <RelativeLayout
+                    android:layout_width="@dimen/x460"
+                    android:layout_height="@dimen/y590"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/y460"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentStart="true"
+                        android:background="@drawable/shape_contact_bg"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/image22"
+                            android:layout_width="@dimen/x240"
+                            android:layout_height="@dimen/x240"
+                            android:layout_marginTop="@dimen/y100"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/wexin2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/y30"
+                            android:text="识别二维码联系客服"
+                            android:textColor="#a3806c"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="@dimen/x195"
+                        android:layout_height="@dimen/x195"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/kefu" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y35"
+                android:gravity="center">
+
+                <RelativeLayout
+                    android:layout_width="@dimen/x460"
+                    android:layout_height="@dimen/y590"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/y460"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentStart="true"
+                        android:background="@drawable/shape_contact_bg"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/image33"
+                            android:layout_width="@dimen/x240"
+                            android:layout_height="@dimen/x240"
+                            android:layout_marginTop="@dimen/y100"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/wexin3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/y30"
+                            android:text="识别二维码联系客服"
+                            android:textColor="#a3806c"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="@dimen/x195"
+                        android:layout_height="@dimen/x195"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/kefu" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="@dimen/x55"
+                    android:layout_height="match_parent" />
+
+                <RelativeLayout
+                    android:layout_width="@dimen/x460"
+                    android:layout_height="@dimen/y590"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/y460"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentStart="true"
+                        android:background="@drawable/shape_contact_bg"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/image44"
+                            android:layout_width="@dimen/x240"
+                            android:layout_height="@dimen/x240"
+                            android:layout_marginTop="@dimen/y100"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/wexin4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/y30"
+                            android:text="识别二维码联系客服"
+                            android:textColor="#a3806c"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="@dimen/x195"
+                        android:layout_height="@dimen/x195"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/kefu" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y360"
+                android:layout_marginBottom="@dimen/y70"
+                android:layout_marginLeft="@dimen/x45"
+                android:layout_marginRight="@dimen/x45"
+                android:layout_marginTop="@dimen/y50"
+                android:background="@drawable/shape_normal"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/y40"
+                    android:paddingLeft="@dimen/x75">
+
+                    <TextView
+                        style="@style/BlackTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="公司电话:"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/Call_tel"
+                        style="@style/BlackTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x30"
+                        android:text=""
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y2"
+                    android:layout_marginLeft="@dimen/x15"
+                    android:layout_marginRight="@dimen/x15"
+                    android:layout_marginTop="@dimen/y20"
+                    android:background="@color/bg_gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/y40"
+                    android:paddingLeft="@dimen/x75">
+
+                    <TextView
+                        style="@style/BlackTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="前台总机:"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tel11"
+                        style="@style/BlackTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x30"
+                        android:text=""
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y2"
+                    android:layout_marginLeft="@dimen/x15"
+                    android:layout_marginRight="@dimen/x15"
+                    android:layout_marginTop="@dimen/y20"
+                    android:background="@color/bg_gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/y40"
+                    android:paddingLeft="@dimen/x75">
+
+                    <TextView
+                        style="@style/BlackTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="公司地址:"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/dizhi"
+                        style="@style/BlackTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x30"
+                        android:text=""
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

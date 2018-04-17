@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rg_main"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:padding="@dimen/y15"
+    android:layout_height="@dimen/y170">
+    <!--底部导航栏  -->
+    <RadioButton
+        android:id="@+id/rb_main_receive_orders"
+        style="@style/tab_menu_item"
+        android:drawableTop="@drawable/send_orders_menu_selector"
+        android:text="我要接单" />
+    <RadioButton
+        android:id="@+id/rb_main_send_orders"
+        style="@style/tab_menu_item"
+        android:drawableTop="@drawable/send_orders_menu_selector"
+        android:text="我要发单" />
+
+    <RadioButton
+        android:id="@+id/rb_main_no_orders"
+        style="@style/tab_menu_item"
+        android:drawableTop="@drawable/god_show_menu_select"
+        android:text="@string/main_bootm_god" />
+
+    <RadioButton
+        android:id="@+id/rb_main_ranking"
+        android:visibility="gone"
+        style="@style/tab_menu_item"
+        android:drawableTop="@drawable/ranking_menu_selector"
+        android:text="@string/ranking_menu" />
+    <RadioButton
+        android:id="@+id/rb_main_message"
+        style="@style/tab_menu_item"
+        android:drawableTop="@drawable/message_menu_selector"
+        android:text="@string/main_bootm_message" />
+
+    <RadioButton
+        android:id="@+id/rb_main_beart"
+        style="@style/tab_menu_item"
+        android:drawableTop="@drawable/person_orders_menu_selector"
+        android:text="个人中心" />
+
+
+</RadioGroup>

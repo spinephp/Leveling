@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/la_t"
+    android:background="@color/bg_gray"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y120"
+        android:background="@color/colorPrimary"
+        android:paddingRight="10dp"
+        >
+        <LinearLayout
+            android:id="@+id/img_nima_back"
+            android:layout_width="@dimen/x120"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="?android:attr/selectableItemBackground">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_centerVertical="true"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tx_title_name"
+            style="@style/BigTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="提现账户管理"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            />
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            >
+        </android.support.design.widget.TabLayout>
+        <ImageView
+            android:id="@+id/img_title_right"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/weixin_update33"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/x25"
+        android:background="@drawable/tixian_wx">
+
+        <TextView
+            android:id="@+id/updw"
+            android:layout_width="@dimen/x160"
+            android:layout_height="@dimen/y75"
+            android:background="@drawable/shape_tx_delete_layout"
+            android:layout_alignParentRight="true"
+            android:textSize="15sp"
+            android:layout_marginRight="@dimen/x15"
+            android:layout_marginTop="@dimen/y15"
+            android:gravity="center"
+            android:text="修改"
+            android:textColor="@color/white">
+
+        </TextView>
+        <TextView
+            android:id="@+id/wc_account2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y95"
+            android:layout_alignParentRight="true"
+            android:textSize="20sp"
+            android:layout_marginTop="@dimen/y185"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/white">
+        </TextView>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/zhifubao_update33"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/x25"
+        android:background="@drawable/tixian_zfb">
+
+        <TextView
+            android:id="@+id/updzf"
+            android:layout_width="@dimen/x160"
+            android:layout_height="@dimen/y75"
+            android:background="@drawable/shape_tx_delete_layout"
+            android:layout_alignParentRight="true"
+            android:textSize="15sp"
+            android:layout_marginRight="@dimen/x15"
+            android:layout_marginTop="@dimen/y15"
+            android:gravity="center"
+            android:text="修改"
+            android:textColor="@color/white">
+
+        </TextView>
+        <TextView
+            android:id="@+id/zfb_account2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y95"
+            android:layout_alignParentRight="true"
+            android:textSize="20sp"
+            android:layout_marginTop="@dimen/y185"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/white">
+        </TextView>
+    </RelativeLayout>
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/card_update33"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/x25"
+        android:background="@drawable/backcard">
+
+        <TextView
+            android:id="@+id/updca"
+            android:layout_width="@dimen/x160"
+            android:layout_height="@dimen/y75"
+            android:background="@drawable/shape_tx_delete_layout"
+            android:layout_alignParentRight="true"
+            android:textSize="15sp"
+            android:layout_marginRight="@dimen/x15"
+            android:layout_marginTop="@dimen/y15"
+            android:gravity="center"
+            android:text="修改"
+            android:textColor="@color/white">
+
+        </TextView>
+        <TextView
+            android:id="@+id/card_account2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y95"
+            android:layout_alignParentRight="true"
+            android:textSize="20sp"
+            android:layout_marginTop="@dimen/y185"
+            android:gravity="center"
+            android:text="11"
+            android:textColor="@color/white">
+        </TextView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_tixian_add33"
+        style="@style/LeveingLieanLayouStyle"
+        android:layout_marginTop="@dimen/y25"
+        android:paddingLeft="@dimen/x50"
+        android:paddingRight="@dimen/x50">
+
+        <TextView
+            style="@style/BlackTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/tixian_add"
+            android:drawablePadding="@dimen/x35"
+            android:text="添加提现账户" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right">
+
+
+
+            <ImageView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x60"
+                android:src="@drawable/left" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
