@@ -1,4 +1,4 @@
-package com.leveling.ui;
+package com.youyudj.leveling.ui;
 
 import android.app.Activity;
 import android.os.Handler;
@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import com.dyhdyh.widget.loading.bar.LoadingBar;
 import com.dyhdyh.widget.loading.factory.LoadingFactory;
-import com.leveling.R;
+import com.youyudj.leveling.R;
 
 import org.w3c.dom.Text;
 

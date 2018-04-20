@@ -1,4 +1,4 @@
-package com.leveling.personcenter;
+package com.youyudj.leveling.personcenter;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -11,9 +11,9 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.leveling.R;
-import com.leveling.entity.UserInfo;
-import com.leveling.utils.HttpPostUtils;
+import com.youyudj.leveling.R;
+import com.youyudj.leveling.entity.UserInfo;
+import com.youyudj.leveling.utils.HttpPostUtils;
 
 import org.json.JSONException;
 import org.json.JSONObject;

@@ -1,4 +1,4 @@
-package com.leveling;
+package com.youyudj.leveling;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -16,9 +16,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.leveling.entity.BeaterOrder;
-import com.leveling.utils.HttpGetUtils;
-import com.leveling.utils.HttpFileHelper;
+import com.youyudj.leveling.entity.BeaterOrder;
+import com.youyudj.leveling.utils.HttpGetUtils;
+import com.youyudj.leveling.utils.HttpFileHelper;
 
 import org.json.JSONException;
 import org.json.JSONObject;

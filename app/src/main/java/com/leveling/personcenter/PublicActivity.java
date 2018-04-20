@@ -1,4 +1,4 @@
-package com.leveling.personcenter;
+package com.youyudj.leveling.personcenter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -16,9 +16,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.leveling.PublicWebViewActivity;
-import com.leveling.R;
-import com.leveling.utils.HttpGetUtils;
+import com.youyudj.leveling.PublicWebViewActivity;
+import com.youyudj.leveling.R;
+import com.youyudj.leveling.utils.HttpGetUtils;
 
 import org.json.JSONArray;
 import org.json.JSONException;

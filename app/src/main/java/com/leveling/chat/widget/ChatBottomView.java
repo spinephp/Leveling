@@ -1,4 +1,4 @@
-package com.leveling.chat.widget;
+package com.youyudj.leveling.chat.widget;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 
-import com.leveling.R;
+import com.youyudj.leveling.R;
 
 
 public class ChatBottomView extends LinearLayout {

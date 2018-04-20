@@ -1,4 +1,4 @@
-package com.leveling.entity;
+package com.youyudj.leveling.entity;
 
 /**
  * Created by myipp on 2018/2/12.

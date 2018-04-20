@@ -1,4 +1,4 @@
-package com.leveling.entity;
+package com.youyudj.leveling.entity;
 
 import org.json.JSONException;
 import org.json.JSONObject;

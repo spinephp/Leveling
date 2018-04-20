@@ -7,7 +7,7 @@
     android:fitsSystemWindows="true"
     android:windowTranslucentNavigation="false"
     android:background="@drawable/welcome2"
-    tools:context="com.leveling.WelcomActivity">
+    tools:context="com.youyudj.leveling.WelcomActivity">
 
     <EditText
         android:id="@+id/pre_login_name"

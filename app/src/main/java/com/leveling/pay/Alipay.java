@@ -1,4 +1,4 @@
-package com.leveling.pay;
+package com.youyudj.leveling.pay;
 
 /**
  * Created by myipp on 2018/3/18.

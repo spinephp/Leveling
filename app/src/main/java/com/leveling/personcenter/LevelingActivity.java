@@ -1,4 +1,4 @@
-package com.leveling.personcenter;
+package com.youyudj.leveling.personcenter;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -21,19 +21,19 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.leveling.PayOrderActivity;
-import com.leveling.R;
-import com.leveling.ShowImage1Activity;
-import com.leveling.ShowImageActivity;
-import com.leveling.TuikaunActivity;
-import com.leveling.ZzRatingBar;
-import com.leveling.entity.OrderInfo;
-import com.leveling.entity.OrderType;
-import com.leveling.new_chat.ChatActivity;
-import com.leveling.utils.BitmapLoader;
-import com.leveling.utils.HttpGetUtils;
-import com.leveling.utils.HttpPostUtils;
-import com.leveling.utils.HttpFileHelper;
+import com.youyudj.leveling.PayOrderActivity;
+import com.youyudj.leveling.R;
+import com.youyudj.leveling.ShowImage1Activity;
+import com.youyudj.leveling.ShowImageActivity;
+import com.youyudj.leveling.TuikaunActivity;
+import com.youyudj.leveling.ZzRatingBar;
+import com.youyudj.leveling.entity.OrderInfo;
+import com.youyudj.leveling.entity.OrderType;
+import com.youyudj.leveling.new_chat.ChatActivity;
+import com.youyudj.leveling.utils.BitmapLoader;
+import com.youyudj.leveling.utils.HttpGetUtils;
+import com.youyudj.leveling.utils.HttpPostUtils;
+import com.youyudj.leveling.utils.HttpFileHelper;
 
 import org.json.JSONException;
 import org.json.JSONObject;

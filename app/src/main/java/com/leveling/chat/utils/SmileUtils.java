@@ -11,14 +11,14 @@
  * Stb the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.leveling.chat.utils;
+package com.youyudj.leveling.chat.utils;
 
 import android.content.Context;
 import android.text.Spannable;
 import android.text.Spannable.Factory;
 import android.text.style.ImageSpan;
 
-import com.leveling.R;
+import com.youyudj.leveling.R;
 
 import java.util.HashMap;
 import java.util.Map;

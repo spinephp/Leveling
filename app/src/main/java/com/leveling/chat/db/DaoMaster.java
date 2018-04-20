@@ -1,4 +1,4 @@
-package com.leveling.chat.db;
+package com.youyudj.leveling.chat.db;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

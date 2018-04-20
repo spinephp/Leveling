@@ -1,4 +1,4 @@
-package com.leveling.entity;
+package com.youyudj.leveling.entity;
 
 public class ApplyAuthentication {
 

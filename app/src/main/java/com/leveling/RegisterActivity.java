@@ -1,4 +1,4 @@
-package com.leveling;
+package com.youyudj.leveling;
 
 
 import android.app.AlertDialog;
@@ -16,10 +16,10 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.leveling.entity.UserInfo;
-import com.leveling.new_chat.IMSession;
-import com.leveling.utils.HttpGetUtils;
-import com.leveling.utils.HttpPostUtils;
+import com.youyudj.leveling.entity.UserInfo;
+import com.youyudj.leveling.new_chat.IMSession;
+import com.youyudj.leveling.utils.HttpGetUtils;
+import com.youyudj.leveling.utils.HttpPostUtils;
 
 import org.json.JSONException;
 import org.json.JSONObject;

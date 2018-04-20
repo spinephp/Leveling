@@ -1,4 +1,4 @@
-package com.leveling;
+package com.youyudj.leveling;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.leveling", appContext.getPackageName());
+        assertEquals("com.youyudj.leveling", appContext.getPackageName());
     }
 }

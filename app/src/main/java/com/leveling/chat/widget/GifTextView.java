@@ -1,4 +1,4 @@
-package com.leveling.chat.widget;
+package com.youyudj.leveling.chat.widget;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -11,9 +11,9 @@ import android.text.style.ImageSpan;
 import android.util.AttributeSet;
 import android.widget.EditText;
 
-import com.leveling.chat.utils.FaceData;
-import com.leveling.chat.utils.GifOpenHelper;
-import com.leveling.chat.utils.ScreenUtil;
+import com.youyudj.leveling.chat.utils.FaceData;
+import com.youyudj.leveling.chat.utils.GifOpenHelper;
+import com.youyudj.leveling.chat.utils.ScreenUtil;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;

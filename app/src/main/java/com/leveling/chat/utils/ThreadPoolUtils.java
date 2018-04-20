@@ -1,4 +1,4 @@
-package com.leveling.chat.utils;
+package com.youyudj.leveling.chat.utils;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;

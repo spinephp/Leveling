@@ -1,4 +1,4 @@
-package com.leveling;
+package com.youyudj.leveling;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -15,11 +15,11 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.leveling.common.CheckVerifyCodeActivity;
-import com.leveling.ui.EasyLoading;
-import com.leveling.ui.StatusControl;
-import com.leveling.utils.HttpGetUtils;
-import com.leveling.utils.HttpPostUtils;
+import com.youyudj.leveling.common.CheckVerifyCodeActivity;
+import com.youyudj.leveling.ui.EasyLoading;
+import com.youyudj.leveling.ui.StatusControl;
+import com.youyudj.leveling.utils.HttpGetUtils;
+import com.youyudj.leveling.utils.HttpPostUtils;
 
 import org.json.JSONException;
 import org.json.JSONObject;

@@ -134,7 +134,7 @@
             android:gravity="center"
             android:text="最大可接单数" />
 
-        <com.leveling.AmountView1
+        <com.youyudj.leveling.AmountView1
             android:id="@+id/dsOrderMaxNumber"
             android:layout_alignParentRight="true"
             android:layout_width="wrap_content"

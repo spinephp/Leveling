@@ -1,4 +1,4 @@
-package com.leveling;
+package com.youyudj.leveling;
 
 import android.content.ClipboardManager;
 import android.content.Context;
@@ -17,8 +17,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.leveling.utils.HttpFileHelper;
-import com.leveling.utils.HttpGetUtils;
+import com.youyudj.leveling.utils.HttpFileHelper;
+import com.youyudj.leveling.utils.HttpGetUtils;
 
 import org.json.JSONArray;
 import org.json.JSONException;

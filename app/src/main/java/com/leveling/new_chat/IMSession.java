@@ -1,11 +1,11 @@
-package com.leveling.new_chat;
+package com.youyudj.leveling.new_chat;
 
 import android.os.Handler;
 import android.os.Message;
 
-import com.leveling.chat.app.ChatApplication;
-import com.leveling.entity.Url;
-import com.leveling.utils.HttpPostUtils;
+import com.youyudj.leveling.chat.app.ChatApplication;
+import com.youyudj.leveling.entity.Url;
+import com.youyudj.leveling.utils.HttpPostUtils;
 
 import org.json.JSONArray;
 import org.json.JSONException;

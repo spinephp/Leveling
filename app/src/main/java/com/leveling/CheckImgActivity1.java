@@ -1,4 +1,4 @@
-package com.leveling;
+package com.youyudj.leveling;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import com.leveling.utils.HttpFileHelper;
+import com.youyudj.leveling.utils.HttpFileHelper;
 
 public class CheckImgActivity1 extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.leveling;
+package com.youyudj.leveling;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,8 +8,8 @@ import android.view.View;
 import android.webkit.WebView;
 import android.widget.TextView;
 
-import com.leveling.chat.utils.FileSaveUtil;
-import com.leveling.utils.Utils;
+import com.youyudj.leveling.chat.utils.FileSaveUtil;
+import com.youyudj.leveling.utils.Utils;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;

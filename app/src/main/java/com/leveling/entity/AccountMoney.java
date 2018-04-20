@@ -1,4 +1,4 @@
-package com.leveling.entity;
+package com.youyudj.leveling.entity;
 
 /**
  * Created by Administrator on 2017/12/13.

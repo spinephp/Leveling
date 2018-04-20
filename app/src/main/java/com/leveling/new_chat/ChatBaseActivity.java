@@ -1,12 +1,12 @@
-package com.leveling.new_chat;
+package com.youyudj.leveling.new_chat;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
-import com.leveling.chat.utils.FileSaveUtil;
-import com.leveling.utils.HttpPostUtils;
-import com.leveling.utils.Utils;
+import com.youyudj.leveling.chat.utils.FileSaveUtil;
+import com.youyudj.leveling.utils.HttpPostUtils;
+import com.youyudj.leveling.utils.Utils;
 import com.yanzhenjie.nohttp.ByteArrayBinary;
 import com.yanzhenjie.nohttp.NoHttp;
 import com.yanzhenjie.nohttp.RequestMethod;

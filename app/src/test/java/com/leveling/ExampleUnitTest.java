@@ -1,4 +1,4 @@
-package com.leveling;
+package com.youyudj.leveling;
 
 import org.junit.Test;
 

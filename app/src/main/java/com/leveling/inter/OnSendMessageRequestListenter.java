@@ -1,4 +1,4 @@
-package com.leveling.inter;
+package com.youyudj.leveling.inter;
 
 public interface OnSendMessageRequestListenter {
 	public void sendMessage(String id, String name, String message, String operator);

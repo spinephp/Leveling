@@ -1,6 +1,6 @@
-package com.leveling.alipay.util;
+package com.youyudj.leveling.alipay.util;
 
-import com.leveling.alipay.SignUtils;
+import com.youyudj.leveling.alipay.SignUtils;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;

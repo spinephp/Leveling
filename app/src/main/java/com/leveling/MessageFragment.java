@@ -1,4 +1,4 @@
-package com.leveling;
+package com.youyudj.leveling;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,12 +14,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.leveling.entity.MessageItemBean;
-import com.leveling.new_chat.BasePtr;
-import com.leveling.new_chat.ChatActivity;
-import com.leveling.new_chat.Const;
-import com.leveling.personcenter.SystemInfoActivity;
-import com.leveling.utils.HttpGetUtils;
+import com.youyudj.leveling.entity.MessageItemBean;
+import com.youyudj.leveling.new_chat.BasePtr;
+import com.youyudj.leveling.new_chat.ChatActivity;
+import com.youyudj.leveling.new_chat.Const;
+import com.youyudj.leveling.personcenter.SystemInfoActivity;
+import com.youyudj.leveling.utils.HttpGetUtils;
 
 import org.json.JSONArray;
 import org.json.JSONException;

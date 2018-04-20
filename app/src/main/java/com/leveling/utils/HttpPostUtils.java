@@ -1,4 +1,4 @@
-package com.leveling.utils;
+package com.youyudj.leveling.utils;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -24,11 +24,11 @@ import android.os.Looper;
 import android.os.Message;
 import android.util.Log;
 
-import com.leveling.RegisterActivity;
-import com.leveling.chat.app.ChatApplication;
-import com.leveling.entity.Url;
-import com.leveling.entity.UserInfo;
-import com.leveling.new_chat.IMSession;
+import com.youyudj.leveling.RegisterActivity;
+import com.youyudj.leveling.chat.app.ChatApplication;
+import com.youyudj.leveling.entity.Url;
+import com.youyudj.leveling.entity.UserInfo;
+import com.youyudj.leveling.new_chat.IMSession;
 import com.tencent.android.tpush.XGIOperateCallback;
 import com.tencent.android.tpush.XGPushConfig;
 import com.tencent.android.tpush.XGPushManager;

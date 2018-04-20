@@ -1,4 +1,4 @@
-package com.leveling.utils;
+package com.youyudj.leveling.utils;
 
 import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;

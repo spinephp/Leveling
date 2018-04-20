@@ -1,7 +1,7 @@
-package com.leveling.chat.utils;
+package com.youyudj.leveling.chat.utils;
 
 
-import com.leveling.R;
+import com.youyudj.leveling.R;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package com.leveling;
+package com.youyudj.leveling;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -7,7 +7,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.leveling.personcenter.UpdateNickNameActivity;
+import com.youyudj.leveling.personcenter.UpdateNickNameActivity;
 
 public class UpdateSuccessActivity extends AppCompatActivity {
     private Button update_pwd_success;

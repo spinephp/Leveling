@@ -1,10 +1,10 @@
-package com.leveling;
+package com.youyudj.leveling;
 
 import android.view.View;
 import android.widget.TextView;
 
-import com.leveling.entity.OrderBean;
-import com.leveling.new_chat.BaseRecyclerHolder;
+import com.youyudj.leveling.entity.OrderBean;
+import com.youyudj.leveling.new_chat.BaseRecyclerHolder;
 
 /**
  * Created by lin on 2018/4/8.

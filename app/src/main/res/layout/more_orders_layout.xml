@@ -29,13 +29,13 @@
 
                 android:text="可同时接单数" />
 
-            <com.leveling.AmountView
+            <com.youyudj.leveling.AmountView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true">
 
-            </com.leveling.AmountView>
+            </com.youyudj.leveling.AmountView>
         </RelativeLayout>
 
         <LinearLayout

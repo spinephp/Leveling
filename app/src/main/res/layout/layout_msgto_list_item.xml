@@ -28,7 +28,7 @@
         android:layout_toLeftOf="@+id/tb_my_user_icon"
         android:orientation="horizontal">
 
-        <com.leveling.chat.widget.GifTextView
+        <com.youyudj.leveling.chat.widget.GifTextView
             android:id="@+id/mycontent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

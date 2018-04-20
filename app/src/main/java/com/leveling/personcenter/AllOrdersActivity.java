@@ -1,4 +1,4 @@
-package com.leveling.personcenter;
+package com.youyudj.leveling.personcenter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -22,14 +22,14 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.leveling.R;
-import com.leveling.entity.OrderType;
-import com.leveling.entity.UserInfo;
-import com.leveling.entity.gametype;
-import com.leveling.utils.BitmapLoader;
-import com.leveling.utils.HttpGetUtils;
-import com.leveling.utils.HttpPostUtils;
-import com.leveling.utils.HttpFileHelper;
+import com.youyudj.leveling.R;
+import com.youyudj.leveling.entity.OrderType;
+import com.youyudj.leveling.entity.UserInfo;
+import com.youyudj.leveling.entity.gametype;
+import com.youyudj.leveling.utils.BitmapLoader;
+import com.youyudj.leveling.utils.HttpGetUtils;
+import com.youyudj.leveling.utils.HttpPostUtils;
+import com.youyudj.leveling.utils.HttpFileHelper;
 
 import org.json.JSONArray;
 import org.json.JSONException;

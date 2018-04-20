@@ -1,4 +1,4 @@
-package com.leveling.chat.app;
+package com.youyudj.leveling.chat.app;
 
 import android.app.Application;
 import android.content.Context;
@@ -10,12 +10,12 @@ import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.imagepipeline.core.ImagePipelineConfig;
 import com.facebook.imagepipeline.listener.RequestListener;
 import com.facebook.imagepipeline.listener.RequestLoggingListener;
-import com.leveling.chat.db.base.BaseManager;
-import com.leveling.common.SystemLogHelper;
-import com.leveling.entity.Url;
-import com.leveling.new_chat.ChatBaseActivity;
-import com.leveling.new_chat.Const;
-import com.leveling.utils.HttpPostUtils;
+import com.youyudj.leveling.chat.db.base.BaseManager;
+import com.youyudj.leveling.common.SystemLogHelper;
+import com.youyudj.leveling.entity.Url;
+import com.youyudj.leveling.new_chat.ChatBaseActivity;
+import com.youyudj.leveling.new_chat.Const;
+import com.youyudj.leveling.utils.HttpPostUtils;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.yanzhenjie.nohttp.InitializationConfig;

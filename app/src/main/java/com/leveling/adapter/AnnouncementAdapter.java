@@ -1,4 +1,4 @@
-package com.leveling.adapter;
+package com.youyudj.leveling.adapter;
 
 /**
  * Created by Administrator on 2017/12/8.
@@ -15,7 +15,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.leveling.R;
+import com.youyudj.leveling.R;
 
 public class AnnouncementAdapter extends BaseAdapter {
 

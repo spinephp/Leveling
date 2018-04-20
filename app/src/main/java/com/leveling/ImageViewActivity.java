@@ -1,4 +1,4 @@
-package com.leveling;
+package com.youyudj.leveling;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,7 +10,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.widget.TextView;
 
-import com.leveling.chat.fragment.ImageViewFragment;
+import com.youyudj.leveling.chat.fragment.ImageViewFragment;
 
 import java.util.ArrayList;
 import java.util.List;

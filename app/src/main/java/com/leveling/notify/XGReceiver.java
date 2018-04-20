@@ -1,16 +1,16 @@
-package com.leveling.notify;
+package com.youyudj.leveling.notify;
 
 import android.content.Context;
 import android.content.Intent;
 
-import com.leveling.BeaterReceiveOrderActivity;
-import com.leveling.Beater_Order_Activity;
-import com.leveling.ReleaseOrderSuccessActivity;
-import com.leveling.chat.app.ChatApplication;
-import com.leveling.entity.BeaterOrder;
-import com.leveling.entity.OrderType;
-import com.leveling.new_chat.ChatActivity;
-import com.leveling.personcenter.AllOrdersActivity;
+import com.youyudj.leveling.BeaterReceiveOrderActivity;
+import com.youyudj.leveling.Beater_Order_Activity;
+import com.youyudj.leveling.ReleaseOrderSuccessActivity;
+import com.youyudj.leveling.chat.app.ChatApplication;
+import com.youyudj.leveling.entity.BeaterOrder;
+import com.youyudj.leveling.entity.OrderType;
+import com.youyudj.leveling.new_chat.ChatActivity;
+import com.youyudj.leveling.personcenter.AllOrdersActivity;
 import com.tencent.android.tpush.XGPushBaseReceiver;
 import com.tencent.android.tpush.XGPushClickedResult;
 import com.tencent.android.tpush.XGPushManager;

@@ -1,4 +1,4 @@
-package com.leveling.adapter;
+package com.youyudj.leveling.adapter;
 
 /**
  * Created by Administrator on 2017/12/8.

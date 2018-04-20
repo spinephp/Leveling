@@ -1,4 +1,4 @@
-package com.leveling.chat.widget;
+package com.youyudj.leveling.chat.widget;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

@@ -1,4 +1,4 @@
-package com.leveling.personcenter;
+package com.youyudj.leveling.personcenter;
 
 import android.content.ClipboardManager;
 import android.content.Context;
@@ -10,7 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.leveling.R;
+import com.youyudj.leveling.R;
 
 /**
  * *******************************************************

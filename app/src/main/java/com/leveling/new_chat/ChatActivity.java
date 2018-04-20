@@ -1,4 +1,4 @@
-package com.leveling.new_chat;
+package com.youyudj.leveling.new_chat;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -25,7 +25,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.leveling.utils.BitmapLoader;
+import com.youyudj.leveling.utils.BitmapLoader;
 import com.yanzhenjie.nohttp.rest.Response;
 
 import org.json.JSONArray;
@@ -39,7 +39,7 @@ import java.util.List;
 import in.srain.cube.views.ptr.PtrDefaultHandler2;
 import in.srain.cube.views.ptr.PtrFrameLayout;
 
-import com.leveling.R;
+import com.youyudj.leveling.R;
 
 /**
  * Created by lin on 2018/3/26.

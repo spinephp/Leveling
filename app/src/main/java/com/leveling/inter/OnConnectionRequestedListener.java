@@ -1,4 +1,4 @@
-package com.leveling.inter;
+package com.youyudj.leveling.inter;
 
 import android.net.Uri;
 

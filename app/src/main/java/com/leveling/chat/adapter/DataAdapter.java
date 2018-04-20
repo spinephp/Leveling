@@ -1,4 +1,4 @@
-package com.leveling.chat.adapter;
+package com.youyudj.leveling.chat.adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.leveling.R;
+import com.youyudj.leveling.R;
 
 public class DataAdapter extends BaseAdapter {
 

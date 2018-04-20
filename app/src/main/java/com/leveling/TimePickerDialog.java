@@ -1,4 +1,4 @@
-package com.leveling;
+package com.youyudj.leveling;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -9,7 +9,7 @@ import android.view.Window;
 import android.view.WindowManager;
 
 
-import com.leveling.R;
+import com.youyudj.leveling.R;
 
 import java.util.Arrays;
 import java.util.List;

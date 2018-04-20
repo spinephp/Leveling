@@ -1,4 +1,4 @@
-package com.leveling.adapter;
+package com.youyudj.leveling.adapter;
 
 import android.content.Context;
 import android.view.View;
@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.leveling.R;
+import com.youyudj.leveling.R;
 
 import java.util.List;
 

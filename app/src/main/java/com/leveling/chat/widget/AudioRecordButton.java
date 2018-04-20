@@ -1,4 +1,4 @@
-package com.leveling.chat.widget;
+package com.youyudj.leveling.chat.widget;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -10,9 +10,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.leveling.R;
-import com.leveling.chat.utils.AudioManager;
-import com.leveling.chat.utils.FileSaveUtil;
+import com.youyudj.leveling.R;
+import com.youyudj.leveling.chat.utils.AudioManager;
+import com.youyudj.leveling.chat.utils.FileSaveUtil;
 
 import java.io.File;
 import java.io.IOException;

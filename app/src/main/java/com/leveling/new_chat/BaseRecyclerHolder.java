@@ -1,4 +1,4 @@
-package com.leveling.new_chat;
+package com.youyudj.leveling.new_chat;
 
 import android.renderscript.Element;
 import android.support.v7.widget.RecyclerView;

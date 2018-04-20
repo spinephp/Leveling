@@ -1,4 +1,4 @@
-package com.leveling;
+package com.youyudj.leveling;
 
 import android.app.Dialog;
 import android.content.Intent;
@@ -17,8 +17,8 @@ import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.leveling.utils.HttpGetUtils;
-import com.leveling.utils.HttpPostUtils;
+import com.youyudj.leveling.utils.HttpGetUtils;
+import com.youyudj.leveling.utils.HttpPostUtils;
 
 import org.json.JSONException;
 import org.json.JSONObject;

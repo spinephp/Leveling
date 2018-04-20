@@ -1,4 +1,4 @@
-package com.leveling.chat.utils;
+package com.youyudj.leveling.chat.utils;
 
 import android.annotation.TargetApi;
 import android.app.Activity;

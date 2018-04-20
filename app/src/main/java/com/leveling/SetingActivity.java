@@ -1,4 +1,4 @@
-package com.leveling;
+package com.youyudj.leveling;
 
 import android.app.AlertDialog;
 import android.content.ClipboardManager;
@@ -26,17 +26,17 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.leveling.entity.Url;
-import com.leveling.entity.UserInfo;
-import com.leveling.personcenter.ChangeLoginPasswordActivity;
-import com.leveling.personcenter.ChangePayPasswordActivity;
-import com.leveling.personcenter.UpdatePhoneActivity;
-import com.leveling.ui.EasyLoading;
-import com.leveling.ui.StatusControl;
-import com.leveling.utils.HttpFileHelper;
-import com.leveling.utils.HttpGetUtils;
-import com.leveling.utils.HttpPostUtils;
-import com.leveling.utils.Utils;
+import com.youyudj.leveling.entity.Url;
+import com.youyudj.leveling.entity.UserInfo;
+import com.youyudj.leveling.personcenter.ChangeLoginPasswordActivity;
+import com.youyudj.leveling.personcenter.ChangePayPasswordActivity;
+import com.youyudj.leveling.personcenter.UpdatePhoneActivity;
+import com.youyudj.leveling.ui.EasyLoading;
+import com.youyudj.leveling.ui.StatusControl;
+import com.youyudj.leveling.utils.HttpFileHelper;
+import com.youyudj.leveling.utils.HttpGetUtils;
+import com.youyudj.leveling.utils.HttpPostUtils;
+import com.youyudj.leveling.utils.Utils;
 
 import org.json.JSONException;
 import org.json.JSONObject;

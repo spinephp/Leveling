@@ -1,4 +1,4 @@
-package com.leveling;
+package com.youyudj.leveling;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,8 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.leveling.entity.BeaterOrder;
-import com.leveling.entity.OrderType;
+import com.youyudj.leveling.entity.BeaterOrder;
+import com.youyudj.leveling.entity.OrderType;
 
 public class TsActivity extends AppCompatActivity {
 

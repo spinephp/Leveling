@@ -1,4 +1,4 @@
-package com.leveling.alipay;
+package com.youyudj.leveling.alipay;
 
 import com.alipay.sdk.app.PayTask;
 import com.alipay.sdk.util.H5PayResultModel;

@@ -1,4 +1,4 @@
-package com.leveling;
+package com.youyudj.leveling;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,9 +14,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.leveling.entity.UserInfo;
-import com.leveling.new_chat.IMSession;
-import com.leveling.utils.HttpPostUtils;
+import com.youyudj.leveling.entity.UserInfo;
+import com.youyudj.leveling.new_chat.IMSession;
+import com.youyudj.leveling.utils.HttpPostUtils;
 
 import org.json.JSONException;
 import org.json.JSONObject;

@@ -1,4 +1,4 @@
-package com.leveling;
+package com.youyudj.leveling;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -15,10 +15,10 @@ import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 import android.widget.TextView;
 
-import com.leveling.adapter.MyPagerAdapter;
-import com.leveling.entity.BannerInfo;
-import com.leveling.entity.Url;
-import com.leveling.personcenter.PublicActivity;
+import com.youyudj.leveling.adapter.MyPagerAdapter;
+import com.youyudj.leveling.entity.BannerInfo;
+import com.youyudj.leveling.entity.Url;
+import com.youyudj.leveling.personcenter.PublicActivity;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;

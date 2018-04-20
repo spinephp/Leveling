@@ -1,4 +1,4 @@
-package com.leveling;
+package com.youyudj.leveling;
 
 import android.content.Context;
 import android.content.Intent;
@@ -23,9 +23,9 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.leveling.utils.HttpFileHelper;
-import com.leveling.utils.HttpGetUtils;
-import com.leveling.utils.HttpPostUtils;
+import com.youyudj.leveling.utils.HttpFileHelper;
+import com.youyudj.leveling.utils.HttpGetUtils;
+import com.youyudj.leveling.utils.HttpPostUtils;
 
 import org.json.JSONArray;
 import org.json.JSONException;

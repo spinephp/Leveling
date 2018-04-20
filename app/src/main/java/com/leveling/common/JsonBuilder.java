@@ -1,4 +1,4 @@
-package com.leveling.common;
+package com.youyudj.leveling.common;
 
 import org.json.JSONException;
 import org.json.JSONObject;

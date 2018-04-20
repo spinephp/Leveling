@@ -1,4 +1,4 @@
-package com.leveling.new_chat;
+package com.youyudj.leveling.new_chat;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -16,8 +16,8 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import com.leveling.R;
-import com.leveling.utils.BitmapLoader;
+import com.youyudj.leveling.R;
+import com.youyudj.leveling.utils.BitmapLoader;
 
 /**
  * Created by lin on 2018/3/27.

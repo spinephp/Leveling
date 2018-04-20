@@ -1,9 +1,9 @@
-package com.leveling.common;
+package com.youyudj.leveling.common;
 
 import android.os.Handler;
 import android.os.Message;
 
-import com.leveling.utils.HttpPostUtils;
+import com.youyudj.leveling.utils.HttpPostUtils;
 import com.net.cookie.Objects;
 
 /**

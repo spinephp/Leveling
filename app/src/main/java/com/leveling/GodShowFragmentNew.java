@@ -1,4 +1,4 @@
-package com.leveling;
+package com.youyudj.leveling;
 
 
 import android.os.Bundle;
@@ -14,8 +14,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.leveling.adapter.RecyclerViewAdapter;
-import com.leveling.utils.HttpGetUtils;
+import com.youyudj.leveling.adapter.RecyclerViewAdapter;
+import com.youyudj.leveling.utils.HttpGetUtils;
 
 import org.json.JSONArray;
 import org.json.JSONException;

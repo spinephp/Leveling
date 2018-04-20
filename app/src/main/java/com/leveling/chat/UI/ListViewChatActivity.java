@@ -1,4 +1,4 @@
-package com.leveling.chat.UI;
+package com.youyudj.leveling.chat.UI;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,15 +9,15 @@ import android.util.Log;
 import android.widget.AbsListView;
 import android.widget.Toast;
 
-import com.leveling.personcenter.LevelingActivity;
-import com.leveling.chat.adapter.ChatListViewAdapter;
-import com.leveling.chat.common.ChatConst;
-import com.leveling.chat.db.ChatMessageBean;
-import com.leveling.chat.utils.KeyBoardUtils;
-import com.leveling.chat.widget.AudioRecordButton;
-import com.leveling.chat.widget.pulltorefresh.PullToRefreshListView;
-import com.leveling.chat.widget.pulltorefresh.base.PullToRefreshView;
-import com.leveling.utils.HttpPostUtils;
+import com.youyudj.leveling.personcenter.LevelingActivity;
+import com.youyudj.leveling.chat.adapter.ChatListViewAdapter;
+import com.youyudj.leveling.chat.common.ChatConst;
+import com.youyudj.leveling.chat.db.ChatMessageBean;
+import com.youyudj.leveling.chat.utils.KeyBoardUtils;
+import com.youyudj.leveling.chat.widget.AudioRecordButton;
+import com.youyudj.leveling.chat.widget.pulltorefresh.PullToRefreshListView;
+import com.youyudj.leveling.chat.widget.pulltorefresh.base.PullToRefreshView;
+import com.youyudj.leveling.utils.HttpPostUtils;
 import com.zsoft.SignalA.Hubs.HubInvokeCallback;
 import com.zsoft.SignalA.Hubs.HubOnDataCallback;
 

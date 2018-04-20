@@ -1,4 +1,4 @@
-package com.leveling.new_chat;
+package com.youyudj.leveling.new_chat;
 
 import android.graphics.Bitmap;
 import android.os.Handler;
@@ -7,8 +7,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.leveling.R;
-import com.leveling.utils.BitmapLoader;
+import com.youyudj.leveling.R;
+import com.youyudj.leveling.utils.BitmapLoader;
 
 /**
  * Created by lin on 2018/3/29.

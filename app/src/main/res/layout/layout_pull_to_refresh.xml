@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:text="pull to refresh!"
         />
-    <com.leveling.chat.widget.pulltorefresh.PullToRefreshRecyclerView
+    <com.youyudj.leveling.chat.widget.pulltorefresh.PullToRefreshRecyclerView
         android:id="@+id/pull_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

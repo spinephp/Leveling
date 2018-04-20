@@ -1,4 +1,4 @@
-package com.leveling;
+package com.youyudj.leveling;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,12 +15,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.alipay.sdk.app.PayTask;
-import com.leveling.alipay.PayResult;
-import com.leveling.entity.AccountMoney;
-import com.leveling.entity.OrderInfo;
-import com.leveling.pay.AddMoneyActivity;
-import com.leveling.utils.HttpGetUtils;
-import com.leveling.utils.HttpPostUtils;
+import com.youyudj.leveling.alipay.PayResult;
+import com.youyudj.leveling.entity.AccountMoney;
+import com.youyudj.leveling.entity.OrderInfo;
+import com.youyudj.leveling.pay.AddMoneyActivity;
+import com.youyudj.leveling.utils.HttpGetUtils;
+import com.youyudj.leveling.utils.HttpPostUtils;
 
 import org.apache.http.client.ClientProtocolException;
 import org.json.JSONException;

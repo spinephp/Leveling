@@ -1,4 +1,4 @@
-package com.leveling;
+package com.youyudj.leveling;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,11 +13,11 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.leveling.entity.AccountMoney;
-import com.leveling.pay.AddMoney1Activity;
-import com.leveling.pay.AddMoneyActivity;
-import com.leveling.utils.HttpGetUtils;
-import com.leveling.utils.HttpPostUtils;
+import com.youyudj.leveling.entity.AccountMoney;
+import com.youyudj.leveling.pay.AddMoney1Activity;
+import com.youyudj.leveling.pay.AddMoneyActivity;
+import com.youyudj.leveling.utils.HttpGetUtils;
+import com.youyudj.leveling.utils.HttpPostUtils;
 
 import org.json.JSONException;
 import org.json.JSONObject;

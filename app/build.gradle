@@ -21,11 +21,11 @@ android {
         useNewCruncher = false
     }
     defaultConfig {
-        applicationId "com.leveling"
+        applicationId "com.youyudj.leveling"
         minSdkVersion 16
         targetSdkVersion 22
         versionCode 8
-        versionName "1.0.21"
+        versionName "1.0.22"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         //multiDexEnabled true
         ndk {

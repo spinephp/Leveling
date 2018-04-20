@@ -1,4 +1,4 @@
-package com.leveling.utils;
+package com.youyudj.leveling.utils;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
@@ -10,7 +10,7 @@ import org.apache.http.util.EntityUtils;
 import android.os.Handler;
 import android.os.Message;
 
-import com.leveling.entity.Url;
+import com.youyudj.leveling.entity.Url;
 
 public class HttpGetUtils {
     interface IRunner {

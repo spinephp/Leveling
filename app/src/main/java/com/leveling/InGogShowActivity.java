@@ -1,4 +1,4 @@
-package com.leveling;
+package com.youyudj.leveling;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,7 +8,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.VideoView;
-import com.leveling.entity.Url;
+import com.youyudj.leveling.entity.Url;
 import com.squareup.picasso.Picasso;
 
 import cn.jzvd.JZVideoPlayer;

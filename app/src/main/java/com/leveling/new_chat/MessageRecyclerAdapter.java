@@ -1,4 +1,4 @@
-package com.leveling.new_chat;
+package com.youyudj.leveling.new_chat;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import java.util.List;
-import com.leveling.R;
+import com.youyudj.leveling.R;
 
 /**
  * Created by lin on 2018/3/29.

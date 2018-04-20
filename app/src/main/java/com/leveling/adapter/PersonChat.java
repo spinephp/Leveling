@@ -1,4 +1,4 @@
-package com.leveling.adapter;
+package com.youyudj.leveling.adapter;
 
 public class PersonChat {
 	/**

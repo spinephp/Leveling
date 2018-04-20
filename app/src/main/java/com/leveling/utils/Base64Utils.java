@@ -1,4 +1,4 @@
-package com.leveling.utils;
+package com.youyudj.leveling.utils;
 
 /**
  * Created by myipp on 2018/2/7.

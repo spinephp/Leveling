@@ -1,4 +1,4 @@
-package com.leveling.chat.animator;
+package com.youyudj.leveling.chat.animator;
 
 import android.support.v4.animation.AnimatorCompatHelper;
 import android.support.v4.view.ViewCompat;

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@android:color/white">
 
-    <com.leveling.chat.widget.pulltorefresh.PullToRefreshLayout
+    <com.youyudj.leveling.chat.widget.pulltorefresh.PullToRefreshLayout
         android:id="@+id/content_lv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -95,7 +95,7 @@
                 android:background="@drawable/voice_btn_normal"
                 android:padding="4dp" />
 
-            <com.leveling.chat.widget.AudioRecordButton
+            <com.youyudj.leveling.chat.widget.AudioRecordButton
                 android:id="@+id/voice_btn"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -108,7 +108,7 @@
                 android:padding="5dp"
                 android:text="@string/normal"
                 android:textColor="#727272"
-                android:visibility="gone"></com.leveling.chat.widget.AudioRecordButton>
+                android:visibility="gone"></com.youyudj.leveling.chat.widget.AudioRecordButton>
 
             <ImageView
                 android:id="@+id/emoji"
@@ -180,7 +180,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <com.leveling.chat.widget.ChatBottomView
+            <com.youyudj.leveling.chat.widget.ChatBottomView
                 android:id="@+id/other_lv"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"

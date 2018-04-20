@@ -1,4 +1,4 @@
-package com.leveling.chat.db.interfaces;
+package com.youyudj.leveling.chat.db.interfaces;
 
 import android.support.annotation.NonNull;
 

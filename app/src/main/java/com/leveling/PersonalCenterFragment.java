@@ -1,4 +1,4 @@
-package com.leveling;
+package com.youyudj.leveling;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -15,12 +15,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.leveling.entity.OrderType;
-import com.leveling.personcenter.AllOrdersActivity;
-import com.leveling.personcenter.PublicActivity;
-import com.leveling.utils.HttpGetUtils;
-import com.leveling.utils.HttpPostUtils;
-import com.leveling.utils.HttpFileHelper;
+import com.youyudj.leveling.entity.OrderType;
+import com.youyudj.leveling.personcenter.AllOrdersActivity;
+import com.youyudj.leveling.personcenter.PublicActivity;
+import com.youyudj.leveling.utils.HttpGetUtils;
+import com.youyudj.leveling.utils.HttpPostUtils;
+import com.youyudj.leveling.utils.HttpFileHelper;
 
 import org.json.JSONException;
 import org.json.JSONObject;

@@ -1,4 +1,4 @@
-package com.leveling;
+package com.youyudj.leveling;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -16,8 +16,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.leveling.entity.OrderType;
-import com.leveling.utils.HttpPostUtils;
+import com.youyudj.leveling.entity.OrderType;
+import com.youyudj.leveling.utils.HttpPostUtils;
 
 import org.apache.http.client.ClientProtocolException;
 import org.json.JSONException;

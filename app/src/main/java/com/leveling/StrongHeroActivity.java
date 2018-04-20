@@ -1,4 +1,4 @@
-package com.leveling;
+package com.youyudj.leveling;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,10 +15,10 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.leveling.adapter.HeroRecyclerViewAdapter;
-import com.leveling.entity.Hero;
-import com.leveling.entity.HeroChoose;
-import com.leveling.utils.HttpGetUtils;
+import com.youyudj.leveling.adapter.HeroRecyclerViewAdapter;
+import com.youyudj.leveling.entity.Hero;
+import com.youyudj.leveling.entity.HeroChoose;
+import com.youyudj.leveling.utils.HttpGetUtils;
 
 import org.json.JSONArray;
 import org.json.JSONException;

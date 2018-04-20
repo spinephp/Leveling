@@ -1,4 +1,4 @@
-package com.leveling.chat.db;
+package com.youyudj.leveling.chat.db;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteStatement;

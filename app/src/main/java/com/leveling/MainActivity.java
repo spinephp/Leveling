@@ -1,4 +1,4 @@
-package com.leveling;
+package com.youyudj.leveling;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -27,12 +27,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.alipay.sdk.app.EnvUtils;
-import com.leveling.chat.app.ChatApplication;
-import com.leveling.common.SystemLogHelper;
-import com.leveling.entity.UserInfo;
-import com.leveling.utils.HttpFileHelper;
-import com.leveling.utils.HttpGetUtils;
-import com.leveling.utils.HttpPostUtils;
+import com.youyudj.leveling.chat.app.ChatApplication;
+import com.youyudj.leveling.common.SystemLogHelper;
+import com.youyudj.leveling.entity.UserInfo;
+import com.youyudj.leveling.utils.HttpFileHelper;
+import com.youyudj.leveling.utils.HttpGetUtils;
+import com.youyudj.leveling.utils.HttpPostUtils;
 import com.tencent.android.tpush.XGIOperateCallback;
 import com.tencent.android.tpush.XGPushConfig;
 import com.tencent.android.tpush.XGPushManager;

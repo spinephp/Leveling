@@ -1,4 +1,4 @@
-package com.leveling;
+package com.youyudj.leveling;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -24,12 +24,12 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.leveling.entity.ApplyAuthentication;
-import com.leveling.entity.Url;
-import com.leveling.ui.EasyLoading;
-import com.leveling.ui.StatusControl;
-import com.leveling.utils.HttpPostUtils;
-import com.leveling.utils.Utils;
+import com.youyudj.leveling.entity.ApplyAuthentication;
+import com.youyudj.leveling.entity.Url;
+import com.youyudj.leveling.ui.EasyLoading;
+import com.youyudj.leveling.ui.StatusControl;
+import com.youyudj.leveling.utils.HttpPostUtils;
+import com.youyudj.leveling.utils.Utils;
 
 import org.json.JSONObject;
 

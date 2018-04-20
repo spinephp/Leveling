@@ -1,11 +1,11 @@
-package com.leveling.alipay;
+package com.youyudj.leveling.alipay;
 
 import java.util.Map;
 
 import com.alipay.sdk.app.AuthTask;
 import com.alipay.sdk.app.PayTask;
-import com.leveling.R;
-import com.leveling.alipay.util.OrderInfoUtil2_0;
+import com.youyudj.leveling.R;
+import com.youyudj.leveling.alipay.util.OrderInfoUtil2_0;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;

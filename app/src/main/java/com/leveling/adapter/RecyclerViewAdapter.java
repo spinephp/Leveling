@@ -1,4 +1,4 @@
-package com.leveling.adapter;
+package com.youyudj.leveling.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -14,9 +14,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.leveling.InGogShowActivity;
-import com.leveling.R;
-import com.leveling.utils.HttpFileHelper;
+import com.youyudj.leveling.InGogShowActivity;
+import com.youyudj.leveling.R;
+import com.youyudj.leveling.utils.HttpFileHelper;
 
 import org.json.JSONException;
 import org.json.JSONObject;

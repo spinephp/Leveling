@@ -1,4 +1,4 @@
-package com.leveling.pay;
+package com.youyudj.leveling.pay;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -10,8 +10,8 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.leveling.R;
-import com.leveling.entity.Type;
+import com.youyudj.leveling.R;
+import com.youyudj.leveling.entity.Type;
 
 public class AddMoney1Activity extends AppCompatActivity implements View.OnClickListener {
 

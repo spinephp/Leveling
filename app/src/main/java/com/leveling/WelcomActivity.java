@@ -1,4 +1,4 @@
-package com.leveling;
+package com.youyudj.leveling;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -22,14 +22,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.baidu.mobstat.StatService;
-import com.leveling.chat.db.ChatMessageBean;
-import com.leveling.entity.BannerInfo;
-import com.leveling.entity.Url;
-import com.leveling.entity.UserInfo;
-import com.leveling.new_chat.IMSession;
-import com.leveling.utils.HttpGetUtils;
-import com.leveling.utils.HttpPostUtils;
-import com.leveling.utils.NetWorkUtils;
+import com.youyudj.leveling.chat.db.ChatMessageBean;
+import com.youyudj.leveling.entity.BannerInfo;
+import com.youyudj.leveling.entity.Url;
+import com.youyudj.leveling.entity.UserInfo;
+import com.youyudj.leveling.new_chat.IMSession;
+import com.youyudj.leveling.utils.HttpGetUtils;
+import com.youyudj.leveling.utils.HttpPostUtils;
+import com.youyudj.leveling.utils.NetWorkUtils;
 import com.zsoft.SignalA.Hubs.HubConnection;
 import com.zsoft.SignalA.Hubs.HubInvokeCallback;
 import com.zsoft.SignalA.Hubs.HubOnDataCallback;

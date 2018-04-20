@@ -1,4 +1,4 @@
-package com.leveling.chat.widget;
+package com.youyudj.leveling.chat.widget;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
@@ -10,8 +10,8 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.leveling.R;
-import com.leveling.chat.utils.ScreenUtil;
+import com.youyudj.leveling.R;
+import com.youyudj.leveling.chat.utils.ScreenUtil;
 
 @SuppressLint("InflateParams")
 public class DialogManager {

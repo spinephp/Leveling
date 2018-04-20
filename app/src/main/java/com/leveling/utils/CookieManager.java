@@ -1,4 +1,4 @@
-package com.leveling.utils;
+package com.youyudj.leveling.utils;
 
 import java.util.HashMap;
 import java.util.Map;

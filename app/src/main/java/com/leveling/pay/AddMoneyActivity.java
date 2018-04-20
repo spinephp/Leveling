@@ -1,4 +1,4 @@
-package com.leveling.pay;
+package com.youyudj.leveling.pay;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
@@ -19,13 +19,13 @@ import android.widget.Toast;
 import com.alipay.sdk.app.EnvUtils;
 import com.alipay.sdk.app.PayTask;
 import com.alipay.sdk.util.H5PayResultModel;
-import com.leveling.R;
-import com.leveling.alipay.AuthResult;
-import com.leveling.alipay.PayResult;
-import com.leveling.alipay.util.OrderInfoUtil2_0;
-import com.leveling.chat.utils.FileSaveUtil;
-import com.leveling.utils.HttpGetUtils;
-import com.leveling.utils.HttpPostUtils;
+import com.youyudj.leveling.R;
+import com.youyudj.leveling.alipay.AuthResult;
+import com.youyudj.leveling.alipay.PayResult;
+import com.youyudj.leveling.alipay.util.OrderInfoUtil2_0;
+import com.youyudj.leveling.chat.utils.FileSaveUtil;
+import com.youyudj.leveling.utils.HttpGetUtils;
+import com.youyudj.leveling.utils.HttpPostUtils;
 
 import org.json.JSONException;
 import org.json.JSONObject;

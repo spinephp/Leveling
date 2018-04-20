@@ -4,7 +4,7 @@
     android:id="@+id/activity_upload_video_img"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.leveling.UploadVideoImgActivity"
+    tools:context="com.youyudj.leveling.UploadVideoImgActivity"
     android:baselineAligned="false"
     android:orientation="vertical">
     <RelativeLayout

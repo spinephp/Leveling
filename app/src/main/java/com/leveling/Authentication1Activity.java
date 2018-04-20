@@ -1,4 +1,4 @@
-package com.leveling;
+package com.youyudj.leveling;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -25,15 +25,15 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.leveling.entity.ApplyAuthentication;
-import com.leveling.entity.Hero;
-import com.leveling.entity.Url;
-import com.leveling.entity.UserInfo;
-import com.leveling.ui.EasyLoading;
-import com.leveling.ui.StatusControl;
-import com.leveling.utils.HttpFileHelper;
-import com.leveling.utils.HttpPostUtils;
-import com.leveling.utils.Utils;
+import com.youyudj.leveling.entity.ApplyAuthentication;
+import com.youyudj.leveling.entity.Hero;
+import com.youyudj.leveling.entity.Url;
+import com.youyudj.leveling.entity.UserInfo;
+import com.youyudj.leveling.ui.EasyLoading;
+import com.youyudj.leveling.ui.StatusControl;
+import com.youyudj.leveling.utils.HttpFileHelper;
+import com.youyudj.leveling.utils.HttpPostUtils;
+import com.youyudj.leveling.utils.Utils;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -82,7 +82,7 @@ public class Authentication1Activity extends AppCompatActivity implements OnClic
     @InjectView(R.id.Authentication2)
     ImageView authentication2;
     @InjectView(R.id.OrderMaxNumber)
-    com.leveling.AmountView1 OrderMaxNumber1;
+    com.youyudj.leveling.AmountView1 OrderMaxNumber1;
     @InjectView(R.id.author_next)
     Button player_conform;
     private JSONObject json = new JSONObject();

@@ -1,4 +1,4 @@
-package com.leveling.chat.common;
+package com.youyudj.leveling.chat.common;
 
 import android.support.annotation.IntDef;
 

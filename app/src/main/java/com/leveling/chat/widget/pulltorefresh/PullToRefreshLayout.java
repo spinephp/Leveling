@@ -1,4 +1,4 @@
-package com.leveling.chat.widget.pulltorefresh;
+package com.youyudj.leveling.chat.widget.pulltorefresh;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -13,7 +13,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.leveling.chat.utils.ScreenUtil;
+import com.youyudj.leveling.chat.utils.ScreenUtil;
 
 
 /**

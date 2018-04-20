@@ -1,4 +1,4 @@
-package com.leveling;
+package com.youyudj.leveling;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,14 +17,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
 
-import com.leveling.common.CheckVerifyCodeActivity;
-import com.leveling.entity.OrderInfo;
-import com.leveling.entity.ReleaseOrder;
-import com.leveling.entity.UserInfo;
-import com.leveling.entity.gametype;
-import com.leveling.utils.AnimationUtil;
-import com.leveling.utils.HttpGetUtils;
-import com.leveling.utils.HttpPostUtils;
+import com.youyudj.leveling.common.CheckVerifyCodeActivity;
+import com.youyudj.leveling.entity.OrderInfo;
+import com.youyudj.leveling.entity.ReleaseOrder;
+import com.youyudj.leveling.entity.UserInfo;
+import com.youyudj.leveling.entity.gametype;
+import com.youyudj.leveling.utils.AnimationUtil;
+import com.youyudj.leveling.utils.HttpGetUtils;
+import com.youyudj.leveling.utils.HttpPostUtils;
 
 import org.json.JSONException;
 import org.json.JSONObject;

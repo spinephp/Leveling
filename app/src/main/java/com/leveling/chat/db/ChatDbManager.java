@@ -1,7 +1,7 @@
-package com.leveling.chat.db;
+package com.youyudj.leveling.chat.db;
 
 
-import com.leveling.chat.db.base.BaseManager;
+import com.youyudj.leveling.chat.db.base.BaseManager;
 
 import org.greenrobot.greendao.AbstractDao;
 

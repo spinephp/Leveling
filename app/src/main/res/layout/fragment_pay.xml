@@ -50,7 +50,7 @@
             android:layout_gravity="center_horizontal"
             android:gravity="center" />
 
-        <com.leveling.PayPwdView
+        <com.youyudj.leveling.PayPwdView
             android:id="@+id/payPwdView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -60,7 +60,7 @@
     </LinearLayout>
 
 
-    <com.leveling.PwdInputMethodView
+    <com.youyudj.leveling.PwdInputMethodView
         android:id="@+id/inputMethodView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

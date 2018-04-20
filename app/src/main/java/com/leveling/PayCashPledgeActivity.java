@@ -1,4 +1,4 @@
-package com.leveling;
+package com.youyudj.leveling;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,15 +13,15 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.leveling.entity.ApplyAuthentication;
-import com.leveling.utils.HttpGetUtils;
-import com.leveling.utils.HttpPostUtils;
+import com.youyudj.leveling.entity.ApplyAuthentication;
+import com.youyudj.leveling.utils.HttpGetUtils;
+import com.youyudj.leveling.utils.HttpPostUtils;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import static com.leveling.R.id.account_left_money;
-import static com.leveling.R.id.unuseful_money;
+import static com.youyudj.leveling.R.id.account_left_money;
+import static com.youyudj.leveling.R.id.unuseful_money;
 
 public class PayCashPledgeActivity extends AppCompatActivity implements OnClickListener {
 

@@ -1,4 +1,4 @@
-package com.leveling.chat.adapter;
+package com.youyudj.leveling.chat.adapter;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -24,15 +24,15 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.leveling.R;
-import com.leveling.chat.common.ChatConst;
-import com.leveling.chat.db.ChatMessageBean;
-import com.leveling.ImageViewActivity;
-import com.leveling.chat.utils.FileSaveUtil;
-import com.leveling.chat.widget.BubbleImageView;
-import com.leveling.chat.widget.CustomShapeTransformation;
-import com.leveling.chat.widget.GifTextView;
-import com.leveling.chat.widget.MediaManager;
+import com.youyudj.leveling.R;
+import com.youyudj.leveling.chat.common.ChatConst;
+import com.youyudj.leveling.chat.db.ChatMessageBean;
+import com.youyudj.leveling.ImageViewActivity;
+import com.youyudj.leveling.chat.utils.FileSaveUtil;
+import com.youyudj.leveling.chat.widget.BubbleImageView;
+import com.youyudj.leveling.chat.widget.CustomShapeTransformation;
+import com.youyudj.leveling.chat.widget.GifTextView;
+import com.youyudj.leveling.chat.widget.MediaManager;
 
 import java.io.BufferedInputStream;
 import java.io.ByteArrayOutputStream;

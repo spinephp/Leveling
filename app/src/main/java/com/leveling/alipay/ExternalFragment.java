@@ -1,4 +1,4 @@
-package com.leveling.alipay;
+package com.youyudj.leveling.alipay;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.leveling.R;
+import com.youyudj.leveling.R;
 
 public class ExternalFragment extends Fragment {
 

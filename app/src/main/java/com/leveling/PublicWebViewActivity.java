@@ -1,4 +1,4 @@
-package com.leveling;
+package com.youyudj.leveling;
 
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
@@ -18,7 +18,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.leveling.entity.Url;
+import com.youyudj.leveling.entity.Url;
 
 import java.net.URL;
 

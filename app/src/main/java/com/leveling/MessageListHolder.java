@@ -1,4 +1,4 @@
-package com.leveling;
+package com.youyudj.leveling;
 
 import android.os.Handler;
 import android.os.Message;
@@ -7,10 +7,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.facebook.drawee.view.SimpleDraweeView;
-import com.leveling.entity.MessageItemBean;
-import com.leveling.new_chat.BaseRecyclerHolder;
-import com.leveling.new_chat.Const;
-import com.leveling.utils.BitmapLoader;
+import com.youyudj.leveling.entity.MessageItemBean;
+import com.youyudj.leveling.new_chat.BaseRecyclerHolder;
+import com.youyudj.leveling.new_chat.Const;
+import com.youyudj.leveling.utils.BitmapLoader;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 

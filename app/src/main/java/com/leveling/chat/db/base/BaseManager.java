@@ -1,4 +1,4 @@
-package com.leveling.chat.db.base;
+package com.youyudj.leveling.chat.db.base;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -7,9 +7,9 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
 
-import com.leveling.chat.db.DaoMaster;
-import com.leveling.chat.db.DaoSession;
-import com.leveling.chat.db.interfaces.IDatabase;
+import com.youyudj.leveling.chat.db.DaoMaster;
+import com.youyudj.leveling.chat.db.DaoSession;
+import com.youyudj.leveling.chat.db.interfaces.IDatabase;
 
 import org.greenrobot.greendao.AbstractDao;
 import org.greenrobot.greendao.query.Query;

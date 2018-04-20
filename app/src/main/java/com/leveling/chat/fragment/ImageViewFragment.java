@@ -1,4 +1,4 @@
-package com.leveling.chat.fragment;
+package com.youyudj.leveling.chat.fragment;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -11,7 +11,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.animation.GlideAnimation;
 import com.bumptech.glide.request.target.SimpleTarget;
 import com.polites.android.GestureImageView;
-import com.leveling.R;
+import com.youyudj.leveling.R;
 
 public class ImageViewFragment extends Fragment {
     private String imageUrl;

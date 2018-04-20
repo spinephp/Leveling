@@ -1,11 +1,11 @@
-package com.leveling.chat.db;
+package com.youyudj.leveling.chat.db;
 
 /**
  * Created by Mao Jiqing on 2016/10/15.
  */
 
 
-import com.leveling.chat.common.ChatConst;
+import com.youyudj.leveling.chat.common.ChatConst;
 
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Generated;

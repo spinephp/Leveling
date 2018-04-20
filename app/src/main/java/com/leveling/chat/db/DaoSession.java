@@ -1,4 +1,4 @@
-package com.leveling.chat.db;
+package com.youyudj.leveling.chat.db;
 
 import org.greenrobot.greendao.AbstractDao;
 import org.greenrobot.greendao.AbstractDaoSession;
