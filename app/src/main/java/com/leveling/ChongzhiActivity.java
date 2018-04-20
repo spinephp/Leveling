@@ -142,6 +142,8 @@ public class ChongzhiActivity extends AppCompatActivity {
                 viewHold.zhifubao_pay.setText("陪练押金充值");
             }else if(hashMap.get("Type").equals(3)){
                 viewHold.zhifubao_pay.setText("后台充值");
+            }else if(hashMap.get("Type").equals(4)){
+                viewHold.zhifubao_pay.setText("订单支付");
             }
             if (hashMap.get("State").equals(1)){
                 String time = hashMap.get("Time1").toString();

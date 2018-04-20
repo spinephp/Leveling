@@ -112,23 +112,24 @@
             android:text="发送验证码" />
 
     </LinearLayout>
-    <TextView
-        style="@style/LeftTextTipStyle"
-        android:layout_width="wrap_content"
-        android:text="旧密码" />
-    <LinearLayout style="@style/LeveingLieanLayouStyle">
 
-        <EditText
-            android:id="@+id/old_paypw"
-            style="@style/DefaultEditStyle"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="请输入旧密码"
-            android:inputType="numberPassword"
-            android:paddingLeft="@dimen/x60"
-            android:textSize="12sp" />
+    <!--<TextView-->
+        <!--style="@style/LeftTextTipStyle"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:text="旧密码" />-->
+    <!--<LinearLayout style="@style/LeveingLieanLayouStyle">-->
 
-    </LinearLayout>
+        <!--<EditText-->
+            <!--android:id="@+id/old_paypw"-->
+            <!--style="@style/DefaultEditStyle"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:hint="请输入旧密码"-->
+            <!--android:inputType="numberPassword"-->
+            <!--android:paddingLeft="@dimen/x60"-->
+            <!--android:textSize="12sp" />-->
+
+    <!--</LinearLayout>-->
 
     <TextView
         style="@style/LeftTextTipStyle"

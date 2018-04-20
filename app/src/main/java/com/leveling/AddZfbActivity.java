@@ -77,7 +77,7 @@ public class AddZfbActivity extends AppCompatActivity {
                 if (add_zhifb.getText().toString().equals("")) {
                     Toast.makeText(AddZfbActivity.this, "请输入支付宝账户", Toast.LENGTH_LONG).show();
                 } else if (add_zfn_name.getText().toString().equals("")) {
-                    Toast.makeText(AddZfbActivity.this, "请输入用户名", Toast.LENGTH_LONG).show();
+                    Toast.makeText(AddZfbActivity.this, "请输入账户名", Toast.LENGTH_LONG).show();
                 } else {
                     new AlertDialog.Builder(AddZfbActivity.this).setTitle("提示")//设置对话框标题
                             .setMessage("确认进行该操作？")//设置显示的内容

@@ -51,7 +51,7 @@
         <!-- 您从百度网站获取的APP KEY -->
         <meta-data
             android:name="BaiduMobAd_STAT_ID"
-            android:value="6bdf1b2d81" /> <!-- abcd1234 -->
+            android:value="89bf6767d1" /> <!-- abcd1234 -->
         <!-- 渠道商编号 -->
         <meta-data
             android:name="BaiduMobAd_CHANNEL"

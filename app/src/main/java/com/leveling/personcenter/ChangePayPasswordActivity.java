@@ -51,7 +51,7 @@ public class ChangePayPasswordActivity extends AppCompatActivity implements OnCl
         setContentView(R.layout.change_pay_pwd_layout);
 
         conform_code = (EditText) findViewById(R.id.conform_code);
-        old_paypw = (EditText) findViewById(R.id.old_paypw);
+        //old_paypw = (EditText) findViewById(R.id.old_paypw);
         new_paypw = (EditText) findViewById(R.id.new_paypw);
         your_phone = (TextView) findViewById(R.id.your_phone_number);
         conforn_new_paypw = (EditText) findViewById(R.id.conform_new_paypw);
@@ -109,9 +109,11 @@ public class ChangePayPasswordActivity extends AppCompatActivity implements OnCl
             case R.id.update_paypw:
                 if(conform_code.getText().toString().equals("")){
                     Toast.makeText(ChangePayPasswordActivity.this,"请输入验证码",Toast.LENGTH_LONG).show();
-                }else if(old_paypw.getText().toString().trim().equals("")){
-                    Toast.makeText(ChangePayPasswordActivity.this,"请输入旧密码",Toast.LENGTH_LONG).show();
-                } else if(conforn_new_paypw.getText().toString().trim().equals("")||new_paypw.getText().toString().trim().equals("")){
+                }
+//                else if(old_paypw.getText().toString().trim().equals("")){
+//                    Toast.makeText(ChangePayPasswordActivity.this,"请输入旧密码",Toast.LENGTH_LONG).show();
+//                }
+                else if(conforn_new_paypw.getText().toString().trim().equals("")||new_paypw.getText().toString().trim().equals("")){
                     Toast.makeText(ChangePayPasswordActivity.this,"请输入新密码",Toast.LENGTH_LONG).show();
                 }else if(new_paypw.getText().toString().equals(conforn_new_paypw.getText().toString())==false){
                     Toast.makeText(ChangePayPasswordActivity.this,"请确保两次密码输入一样",Toast.LENGTH_LONG).show();
@@ -244,7 +246,7 @@ public class ChangePayPasswordActivity extends AppCompatActivity implements OnCl
         // TODO Auto-generated method stub
 
         try {
-            json.put("OldPayPW", old_paypw.getText().toString().trim());
+            //json.put("OldPayPW", old_paypw.getText().toString().trim());
             json.put("NewPayPW", conforn_new_paypw.getText().toString().trim());
             json.put("Code",conform_code.getText().toString().trim());
         } catch (JSONException e) {

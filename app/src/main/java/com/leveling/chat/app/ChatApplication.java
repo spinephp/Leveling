@@ -11,6 +11,7 @@ import com.facebook.imagepipeline.core.ImagePipelineConfig;
 import com.facebook.imagepipeline.listener.RequestListener;
 import com.facebook.imagepipeline.listener.RequestLoggingListener;
 import com.leveling.chat.db.base.BaseManager;
+import com.leveling.common.SystemLogHelper;
 import com.leveling.entity.Url;
 import com.leveling.new_chat.ChatBaseActivity;
 import com.leveling.new_chat.Const;
@@ -72,6 +73,21 @@ public class ChatApplication extends Application {
                 .setBitmapsConfig(Bitmap.Config.RGB_565)
                 .build();
         Fresco.initialize(this, configs);
+        Thread.setDefaultUncaughtExceptionHandler(
+                new UncaughtExceptionHandler(this)
+        );
+    }
+
+    public class UncaughtExceptionHandler implements java.lang.Thread.UncaughtExceptionHandler {
+        private final Context myContext;
+
+        public UncaughtExceptionHandler(Context context) {
+            myContext = context;
+        }
+
+        public void uncaughtException(Thread thread, Throwable exception) {
+            SystemLogHelper.Error(exception);
+        }
     }
 
     @Override

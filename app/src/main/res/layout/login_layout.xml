@@ -21,10 +21,9 @@
                 android:layout_width="@dimen/x440"
                 android:layout_height="@dimen/y565"
                 android:scaleType="fitCenter"
-                android:src="@drawable/newlogo" />
+                android:src="@drawable/logo_cldj" />
 
         </LinearLayout>
-
 
         <LinearLayout
             android:layout_width="match_parent"
