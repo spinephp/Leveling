@@ -381,7 +381,7 @@ public class HeroOrder1Activity extends AppCompatActivity implements View.OnClic
                 .setOnDataSelectedListener(new DataPickerDialog.OnDataSelectedListener() {
                     @Override
                     public void onDataSelected(String itemValue) {
-                        if(data1.indexOf(ms)>=data2.indexOf(itemValue)){
+                        if(data1 == null || data1.indexOf(ms)>=data2.indexOf(itemValue)){
                             Toast.makeText(HeroOrder1Activity.this,"请选择正确的段位！",Toast.LENGTH_LONG).show();
                         }else{
                             end_level.setText(itemValue);
