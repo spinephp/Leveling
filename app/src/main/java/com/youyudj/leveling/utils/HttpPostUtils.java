@@ -199,16 +199,19 @@ public class HttpPostUtils {
     }
 
     static class HttpPostRunner implements HttpPostUtils.IRunner {
-
+        HttpClient client = null;
+        HttpParams params = null;
+        HttpPostRunner(){
+            params = new BasicHttpParams();
+            // �������ӳ�ʱʱ��
+            HttpConnectionParams.setConnectionTimeout(params, 30000);
+            client = new DefaultHttpClient(params);
+        }
         @Override
         public Object run(int actionID, String url, String postData, Handler handler)
                 throws Exception {
             String res = null;
             try {
-                HttpParams params = new BasicHttpParams();
-                // �������ӳ�ʱʱ��
-                HttpConnectionParams.setConnectionTimeout(params, 30000);
-                HttpClient client = new DefaultHttpClient(params);
                 String fullURL = url;
                 if (!url.startsWith("http://") && !url.startsWith("https://"))
                     fullURL = Url.urlShort + url;
