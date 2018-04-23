@@ -102,7 +102,8 @@ dependencies {
     compile 'com.tencent.wup:wup:1.0.0.E-release'
     //mid包
     compile 'com.tencent.mid:mid:4.0.6-release'
-
+    //微信支付包
+    compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
 
     compile 'com.facebook.fresco:fresco:0.9.0'
     compile files('libs/Baidu_Mtj_3.9.0.1.jar')

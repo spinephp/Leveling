@@ -1,5 +1,6 @@
 package com.youyudj.leveling;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -15,10 +16,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.alipay.sdk.app.PayTask;
+import com.google.gson.Gson;
+import com.tencent.mm.opensdk.modelpay.PayReq;
+import com.tencent.mm.opensdk.openapi.IWXAPI;
+import com.tencent.mm.opensdk.openapi.WXAPIFactory;
 import com.youyudj.leveling.alipay.PayResult;
 import com.youyudj.leveling.entity.AccountMoney;
 import com.youyudj.leveling.entity.OrderInfo;
 import com.youyudj.leveling.pay.AddMoneyActivity;
+import com.youyudj.leveling.pay.WechatPay;
 import com.youyudj.leveling.utils.HttpGetUtils;
 import com.youyudj.leveling.utils.HttpPostUtils;
 
@@ -43,6 +49,7 @@ public class PayOrderActivity extends AppCompatActivity implements PayPwdView.In
     final String PM_YuE = "YuE";
     final String PM_Wechat = "Wechat";
     final String PM_AliPay = "AliPay";
+    final int WECHAT_COMMON_ORDER_API = 20;
 
     class BorderClick implements View.OnClickListener {
         @Override
@@ -116,8 +123,13 @@ public class PayOrderActivity extends AppCompatActivity implements PayPwdView.In
                     };
                     new Thread(payRunnable).start();
                 }else if(payMethod.equals(PM_Wechat)){
-                    Toast.makeText(PayOrderActivity.this, "微信支付尚未开通，请选择其他支付方式", Toast.LENGTH_LONG).show();
-                    return;
+                    // 请求微信统一下单API
+                    String url = "";
+                    // TODO: 把微信统一下单API需要的信息放入json中发送给后端
+                    JSONObject json = new JSONObject();
+
+
+                    HttpPostUtils.httpPostFile(WECHAT_COMMON_ORDER_API, url, json, handler);
                 }
             }
         });
@@ -136,6 +148,7 @@ public class PayOrderActivity extends AppCompatActivity implements PayPwdView.In
         HttpGetUtils.httpGetFile(14, url, handler);
     }
 
+    @SuppressLint("HandlerLeak")
     private Handler handler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
@@ -241,6 +254,15 @@ public class PayOrderActivity extends AppCompatActivity implements PayPwdView.In
                         e.printStackTrace();
                     }
                     break;
+                case WECHAT_COMMON_ORDER_API: {
+                    WechatPay wechatPay = new Gson().fromJson((String)msg.obj, WechatPay.class);
+                    if (wechatPay.getResult_code().equals(WechatPay.SUCCESS)
+                            && wechatPay.getReturn_code().equals(WechatPay.SUCCESS)){
+                        wechatPay.pay(getApplicationContext());
+                    } else {
+                        Toast.makeText(PayOrderActivity.this, "支付失败", Toast.LENGTH_SHORT).show();
+                    }
+                }
             }
         }
 
