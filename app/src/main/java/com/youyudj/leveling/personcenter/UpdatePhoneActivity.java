@@ -126,7 +126,7 @@ public class UpdatePhoneActivity extends AppCompatActivity implements OnClickLis
         int id = v.getId();
         switch (id){
             case R.id.btn_send:
-                String url9 = "/api/SMS/GetUserSendInfor?codetype="+1;
+                String url9 = "/api/SMS/GetUserSendInfor?userid="+HttpPostUtils.getUserId()+"&codetype="+1;
                 HttpGetUtils.httpGetFile(9,url9, handler);
                 new MyCount1().execute();
                 break;

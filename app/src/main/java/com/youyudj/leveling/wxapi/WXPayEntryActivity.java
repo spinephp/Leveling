@@ -50,7 +50,7 @@ public class WXPayEntryActivity extends Activity implements IWXAPIEventHandler {
     public void onResp(BaseResp resp) {
         if (resp.errCode == 0) {
             // 支付成功, 发送请求到服务器端验证
-            String url = "";
+            String url = "api/Pay/WXPaySuccess";
             JSONObject json = new JSONObject();
             HttpPostUtils.httpPostFile(VALIDATE_PAYMENT, url, json, handler);
             return;

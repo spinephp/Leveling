@@ -123,13 +123,22 @@ public class PayOrderActivity extends AppCompatActivity implements PayPwdView.In
                     };
                     new Thread(payRunnable).start();
                 }else if(payMethod.equals(PM_Wechat)){
+                    /*
                     // 请求微信统一下单API
-                    String url = "";
+                    String url = "/api/Pay/WXUnifiedorder";
                     // TODO: 把微信统一下单API需要的信息放入json中发送给后端
-                    JSONObject json = new JSONObject();
+                    try {
+                        JSONObject json = new JSONObject();
+                        json.put("TotalFee", OrderInfo.pay_money);
+                        json.put("TradeNo", OrderInfo.order_id);
+                        json.put("Des", OrderInfo.order_id);
+                        json.put("FeeType", "CNY");
+                        HttpPostUtils.httpPostFile(WECHAT_COMMON_ORDER_API, url, json, handler);
+                    }catch (JSONException e){
 
-
-                    HttpPostUtils.httpPostFile(WECHAT_COMMON_ORDER_API, url, json, handler);
+                    }*/
+                    Toast.makeText(PayOrderActivity.this, "微信支付尚未开通，请选择其他支付方式", Toast.LENGTH_LONG).show();
+                    return;
                 }
             }
         });

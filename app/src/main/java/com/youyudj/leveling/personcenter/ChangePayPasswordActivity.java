@@ -102,7 +102,7 @@ public class ChangePayPasswordActivity extends AppCompatActivity implements OnCl
                 }).show();//在按键响应事件中显示此对话框
                 break;
             case R.id.get_conformCode_button:
-                String url = "/api/SMS/GetUserSendInfor?codetype="+2;
+                String url = "/api/SMS/GetUserSendInfor?userid="+HttpPostUtils.getUserId()+"&codetype="+2;
                 HttpGetUtils.httpGetFile(22,url, handler);
                 new MyCount().execute();
                 break;
