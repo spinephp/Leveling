@@ -15,16 +15,17 @@ import com.tencent.mm.opensdk.openapi.IWXAPIEventHandler;
 import com.tencent.mm.opensdk.openapi.WXAPIFactory;
 import com.youyudj.leveling.ReleaseOrderFailedActivity;
 import com.youyudj.leveling.ReleaseOrderSuccessActivity;
+import com.youyudj.leveling.entity.OrderInfo;
 import com.youyudj.leveling.pay.WechatPay;
 import com.youyudj.leveling.utils.HttpPostUtils;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 public class WXPayEntryActivity extends Activity implements IWXAPIEventHandler {
 
     private final int VALIDATE_PAYMENT = 6;
     private IWXAPI api;
-    private PayReq req;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -43,7 +44,6 @@ public class WXPayEntryActivity extends Activity implements IWXAPIEventHandler {
 
     @Override
     public void onReq(BaseReq req) {
-        this.req = (PayReq)req;
     }
 
     @Override
@@ -52,6 +52,11 @@ public class WXPayEntryActivity extends Activity implements IWXAPIEventHandler {
             // 支付成功, 发送请求到服务器端验证
             String url = "api/Pay/WXPaySuccess";
             JSONObject json = new JSONObject();
+            try {
+                json.put("TradeNo", OrderInfo.order_id);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
             HttpPostUtils.httpPostFile(VALIDATE_PAYMENT, url, json, handler);
             return;
         } else if (resp.errCode == -1) {
@@ -72,9 +77,27 @@ public class WXPayEntryActivity extends Activity implements IWXAPIEventHandler {
         public void handleMessage(Message msg) {
             switch (msg.what) {
                 case VALIDATE_PAYMENT: {
-                    // 验证成功
-                    Intent intent = new Intent(WXPayEntryActivity.this, ReleaseOrderSuccessActivity.class);
-                    startActivity(intent);
+                    String res = (String) msg.obj;
+                    if (res == null) {
+                        return;
+                    }
+                    String resultCode = "";
+                    try {
+                        JSONObject result = new JSONObject(res);
+                        resultCode = result.getString("resultCode");
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+
+                    if (resultCode.equals(WechatPay.SUCCESS)) {
+                        // 验证成功
+                        Intent intent = new Intent(WXPayEntryActivity.this, ReleaseOrderSuccessActivity.class);
+                        startActivity(intent);
+                    } else {
+                        // 验证失败
+                        Intent intent = new Intent(WXPayEntryActivity.this, ReleaseOrderFailedActivity.class);
+                        startActivity(intent);
+                    }
                     finish();
                     break;
                 }

@@ -6,48 +6,67 @@ import com.tencent.mm.opensdk.modelpay.PayReq;
 import com.tencent.mm.opensdk.openapi.IWXAPI;
 import com.tencent.mm.opensdk.openapi.WXAPIFactory;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class WechatPay {
     public static final String MECHANT_ID = "1500046952";
     public static final String APP_ID = "wx2b71a85ff6be04b2";
     public static final String SUCCESS = "SUCCESS";
     public static final String FAIL = "FAIL";
-    private String return_code;
-    private String return_message;
     private String appid;
-    private String mch_id;
-    private String device_info;
-    private String nonce_str;
+    private String partnerid;
+    private String noncestr;
     private String sign;
-    private String result_code;
-    private String err_code;
-    private String err_code_des;
     private String trade_type;
-    private String prepay_id;
-    private String time_stamp;
+    private String prepayid;
+    private String timestamp;
     private final String package_value = "Sign=WXPay";
 
     public void pay(Context context) {
-        if (return_code.equals(SUCCESS) && result_code.equals(SUCCESS)) {
-            IWXAPI msgApi = WXAPIFactory.createWXAPI(context, null);
-            msgApi.registerApp(appid);
+        IWXAPI msgApi = WXAPIFactory.createWXAPI(context, null);
+        msgApi.registerApp(appid);
 
-            PayReq req = new PayReq();
-            req.appId = appid;
-            req.partnerId = mch_id;
-            req.prepayId = prepay_id;
-            req.nonceStr = nonce_str;
-            req.timeStamp = time_stamp;
-            req.packageValue = package_value;
-            req.sign = sign;
-            msgApi.sendReq(req);
-        }
+        PayReq req = new PayReq();
+        req.appId = appid;
+        req.partnerId = partnerid;
+        req.prepayId = prepayid;
+        req.nonceStr = noncestr;
+        req.timeStamp = timestamp;
+        req.packageValue = package_value;
+        req.sign = sign;
+        msgApi.sendReq(req);
     }
 
-    public String getReturn_code() {
-        return return_code;
+    public String getAppid() {
+        return appid;
     }
 
-    public String getResult_code() {
-        return result_code;
+    public String getPartnerid() {
+        return partnerid;
+    }
+
+    public String getNoncestr() {
+        return noncestr;
+    }
+
+    public String getSign() {
+        return sign;
+    }
+
+    public String getTrade_type() {
+        return trade_type;
+    }
+
+    public String getPrepayid() {
+        return prepayid;
+    }
+
+    public String getTimestamp() {
+        return timestamp;
+    }
+
+    public String getPackage_value() {
+        return package_value;
     }
 }

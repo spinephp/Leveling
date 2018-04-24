@@ -123,21 +123,36 @@ public class PayOrderActivity extends AppCompatActivity implements PayPwdView.In
                     };
                     new Thread(payRunnable).start();
                 }else if(payMethod.equals(PM_Wechat)){
-                    /*
                     // 请求微信统一下单API
                     String url = "/api/Pay/WXUnifiedorder";
                     // TODO: 把微信统一下单API需要的信息放入json中发送给后端
+                    String[] values = OrderInfo.pay_money.split("\\.");
+
+                    // 把支付金额转化为分为单位
+                    int money = 0;
+                    for (char c: values[0].toCharArray()) {
+                        money *= 10;
+                        money += c - '0';
+                    }
+                    if (values.length == 2) {
+                        int size = Math.min(2, values[1].length());
+                        for (int i = 0; i < size; i++) {
+                            char c = values[1].charAt(i);
+                            money *= 10;
+                            money += c - '0';
+                        }
+                    }
+
                     try {
                         JSONObject json = new JSONObject();
-                        json.put("TotalFee", OrderInfo.pay_money);
+                        json.put("TotalFee", money);
                         json.put("TradeNo", OrderInfo.order_id);
-                        json.put("Des", OrderInfo.order_id);
+                        json.put("Des", "超溜电竞-代练费用");
                         json.put("FeeType", "CNY");
                         HttpPostUtils.httpPostFile(WECHAT_COMMON_ORDER_API, url, json, handler);
                     }catch (JSONException e){
 
-                    }*/
-                    Toast.makeText(PayOrderActivity.this, "微信支付尚未开通，请选择其他支付方式", Toast.LENGTH_LONG).show();
+                    }
                     return;
                 }
             }
@@ -265,8 +280,7 @@ public class PayOrderActivity extends AppCompatActivity implements PayPwdView.In
                     break;
                 case WECHAT_COMMON_ORDER_API: {
                     WechatPay wechatPay = new Gson().fromJson((String)msg.obj, WechatPay.class);
-                    if (wechatPay.getResult_code().equals(WechatPay.SUCCESS)
-                            && wechatPay.getReturn_code().equals(WechatPay.SUCCESS)){
+                    if (wechatPay.getPrepayid() != null) {
                         wechatPay.pay(getApplicationContext());
                     } else {
                         Toast.makeText(PayOrderActivity.this, "支付失败", Toast.LENGTH_SHORT).show();
