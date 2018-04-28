@@ -5,7 +5,7 @@ android {
         dailian {
             keyAlias 'dailian'
             keyPassword 'myipp123'
-            storeFile file('D:/TEMP/1.cr')
+            storeFile file('~/Developer/TEMP/1.cr')
             storePassword 'myipp123,,'
         }
     }

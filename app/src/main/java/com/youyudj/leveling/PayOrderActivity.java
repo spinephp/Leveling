@@ -124,6 +124,14 @@ public class PayOrderActivity extends AppCompatActivity implements PayPwdView.In
                     new Thread(payRunnable).start();
                 }else if(payMethod.equals(PM_Wechat)){
                     // 请求微信统一下单API
+                    String s = "{\"appid\":\"wx2b71a85ff6be04b2\",\"partnerid\":\"1502427041\",\"prepayid\":\"wx27163930705233e077eb22033011264211\",\"package\":\"Sign=WXPay\",\"noncestr\":\"fwnbCiIJmr9FDxGD\",\"timestamp\":\"1524818382\",\"sign\":\"DD929536AAAC25017A0CCF946138183A\"}";
+                    WechatPay wechatPay = new Gson().fromJson(s, WechatPay.class);
+                    if (wechatPay.getPrepayid() != null) {
+                        wechatPay.pay(getApplicationContext());
+                    } else {
+                        Toast.makeText(PayOrderActivity.this, "支付失败", Toast.LENGTH_SHORT).show();
+                    }
+/*
                     String url = "/api/Pay/WXUnifiedorder";
                     // TODO: 把微信统一下单API需要的信息放入json中发送给后端
                     String[] values = OrderInfo.pay_money.split("\\.");
@@ -152,7 +160,7 @@ public class PayOrderActivity extends AppCompatActivity implements PayPwdView.In
                         HttpPostUtils.httpPostFile(WECHAT_COMMON_ORDER_API, url, json, handler);
                     }catch (JSONException e){
 
-                    }
+                    }*/
                     return;
                 }
             }
