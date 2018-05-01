@@ -25,7 +25,7 @@ android {
         minSdkVersion 16
         targetSdkVersion 22
         versionCode 8
-        versionName "1.0.25"
+        versionName "1.0.26"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         //multiDexEnabled true
         ndk {

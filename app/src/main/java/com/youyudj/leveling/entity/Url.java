@@ -10,7 +10,7 @@ public class Url {
 //  public static String urlUploadFile = "http://api.youyudj.com/api/File/PostUploadFile?catalog=";
 // public static String urlShort = "http://api.youyudj.com";
 //  public static String urlIM = "http://im.youyudj.com";
-//   public static String html = "http://admin.youyudj.com/index.php/Public/notice?id=";
+//  public static String html = "http://admin.youyudj.com/index.php/Public/notice?id=";
 //   public static String video_url = "http://admin.youyudj.com/Uploads/video/";
 
    public static String urlUploadFile = "http://dailianapi.myipp.cn/api/File/PostUploadFile?catalog=";

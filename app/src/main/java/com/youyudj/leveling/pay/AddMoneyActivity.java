@@ -229,6 +229,7 @@ public class AddMoneyActivity extends AppCompatActivity implements View.OnClickL
                 break;
             case R.id.pay_by_wechat:
                 WechatPay.payByWechat(wxRes,1,getApplicationContext(),AddMoneyActivity.this);
+                AddMoneyActivity.this.finish();
 /*                try {
                     WechatPay wechatPay = new Gson().fromJson(wxOrderInfo, WechatPay.class);
                     if (wechatPay.getPrepayid() != null) {
