@@ -15,10 +15,13 @@ import android.widget.Toast;
 
 import com.alipay.sdk.app.PayTask;
 import com.youyudj.leveling.alipay.PayResult;
+import com.google.gson.Gson;
 import com.youyudj.leveling.entity.AccountMoney;
 import com.youyudj.leveling.entity.ApplyAuthentication;
 import com.youyudj.leveling.entity.OrderInfo;
 import com.youyudj.leveling.entity.UserInfo;
+import com.youyudj.leveling.pay.AddMoneyActivity;
+import com.youyudj.leveling.pay.WechatPay;
 import com.youyudj.leveling.utils.HttpGetUtils;
 import com.youyudj.leveling.utils.HttpPostUtils;
 
@@ -44,6 +47,7 @@ public class PayMonActivity extends AppCompatActivity implements View.OnClickLis
     final String PM_YuE = "YuE";
     final String PM_Wechat = "Wechat";
     final String PM_AliPay = "AliPay";
+    final int WECHAT_COMMON_ORDER_API = 20;
 
     class BorderClick implements View.OnClickListener {
         @Override
@@ -134,8 +138,10 @@ public class PayMonActivity extends AppCompatActivity implements View.OnClickLis
                     };
                     new Thread(payRunnable).start();
                 } else if (payMethod.equals(PM_Wechat)) {
-                    Toast.makeText(PayMonActivity.this, "微信支付尚未开通，请选择其他支付方式", Toast.LENGTH_LONG).show();
-                    return;
+                    String urlWX = "/api/Pay/WXPayForAuth?authID=" + ApplyAuthentication.id;
+                    HttpGetUtils.httpGetFile(WECHAT_COMMON_ORDER_API, urlWX, handler);
+                    //Toast.makeText(PayMonActivity.this, "微信支付尚未开通，请选择其他支付方式", Toast.LENGTH_LONG).show();
+                    //return;
                 }
         }
     }
@@ -239,6 +245,26 @@ public class PayMonActivity extends AppCompatActivity implements View.OnClickLis
                         e.printStackTrace();
                     }
                     break;
+                case WECHAT_COMMON_ORDER_API: {
+                    String res = (String) msg.obj;
+                    WechatPay.payByWechat(res,2,getApplicationContext(),PayMonActivity.this);
+/*                    if (res != null) {
+                        String wxOrderInfo = res;
+                        if (res.startsWith("\""))
+                            wxOrderInfo = wxOrderInfo.substring(1, wxOrderInfo.length() - 1);
+                        wxOrderInfo = wxOrderInfo.replace("\\", "");
+                        WechatPay wechatPay = new Gson().fromJson( wxOrderInfo, WechatPay.class);
+                        if (wechatPay.getPrepayid() != null) {
+                            OrderInfo.WXPayType = 2;
+                            wechatPay.pay(getApplicationContext());
+                         } else {
+                            Toast.makeText(PayMonActivity.this, "支付失败", Toast.LENGTH_SHORT).show();
+                        }
+                    } else {
+                        Toast.makeText(PayMonActivity.this, "获取支付授权失败", Toast.LENGTH_SHORT).show();
+                    }*/
+                    break;
+                }
             }
 
         }

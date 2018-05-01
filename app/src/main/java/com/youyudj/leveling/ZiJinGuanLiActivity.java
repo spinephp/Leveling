@@ -123,6 +123,7 @@ public class ZiJinGuanLiActivity extends AppCompatActivity {
         account_left_money = (TextView) findViewById(R.id.account_left_money);
         useful = (TextView) findViewById(R.id.useful);
         unuseful_money = (TextView) findViewById(R.id.unuseful_money);
+        // 查询余额接口
         String url = "/api/Pay/GetPayMoney";
         HttpGetUtils.httpGetFile(16, url, handler);
     }

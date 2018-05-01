@@ -9,15 +9,15 @@ import android.os.Message;
 
 import com.tencent.mm.opensdk.modelbase.BaseReq;
 import com.tencent.mm.opensdk.modelbase.BaseResp;
-import com.tencent.mm.opensdk.modelpay.PayReq;
 import com.tencent.mm.opensdk.openapi.IWXAPI;
 import com.tencent.mm.opensdk.openapi.IWXAPIEventHandler;
 import com.tencent.mm.opensdk.openapi.WXAPIFactory;
+import com.youyudj.leveling.BeaterAuthSuccessActivity;
 import com.youyudj.leveling.ReleaseOrderFailedActivity;
 import com.youyudj.leveling.ReleaseOrderSuccessActivity;
 import com.youyudj.leveling.entity.OrderInfo;
 import com.youyudj.leveling.pay.WechatPay;
-import com.youyudj.leveling.utils.HttpPostUtils;
+import com.youyudj.leveling.utils.HttpGetUtils;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -50,6 +50,35 @@ public class WXPayEntryActivity extends Activity implements IWXAPIEventHandler {
     public void onResp(BaseResp resp) {
         if (resp.errCode == 0) {
             // 支付成功, 发送请求到服务器端验证
+            switch(OrderInfo.WXPayType) {
+                case 1: {// AddMoney
+                    String url = "/api/Pay/GetPayMoney";
+                    HttpGetUtils.httpGetFile(3, url, handler);
+                    break;
+                }
+                case 2: {//PayMon
+                    Intent intent = new Intent(WXPayEntryActivity.this, BeaterAuthSuccessActivity.class);
+                    startActivity(intent);
+                    break;
+                }
+                case 3: {///PayOrder
+                    Intent intent = new Intent(WXPayEntryActivity.this, ReleaseOrderSuccessActivity.class);
+                    startActivity(intent);
+                    break;
+                }
+                case 4: {//ToPayCashPledge
+                    Intent intent = new Intent(WXPayEntryActivity.this, BeaterAuthSuccessActivity.class);
+                    startActivity(intent);
+                    break;
+                }
+                case 5: {//ToPayCashPledge
+                    Intent intent = new Intent(WXPayEntryActivity.this, BeaterAuthSuccessActivity.class);
+                    startActivity(intent);
+                    break;
+                }
+            }
+            /*
+            startActivity(intent);
             String url = "api/Pay/WXPaySuccess";
             JSONObject json = new JSONObject();
             try {
@@ -58,6 +87,7 @@ public class WXPayEntryActivity extends Activity implements IWXAPIEventHandler {
                 e.printStackTrace();
             }
             HttpPostUtils.httpPostFile(VALIDATE_PAYMENT, url, json, handler);
+            */
             return;
         } else if (resp.errCode == -1) {
             // 支付失败
@@ -97,6 +127,26 @@ public class WXPayEntryActivity extends Activity implements IWXAPIEventHandler {
                         // 验证失败
                         Intent intent = new Intent(WXPayEntryActivity.this, ReleaseOrderFailedActivity.class);
                         startActivity(intent);
+                    }
+                    finish();
+                    break;
+                }
+                case 3:{
+                    String res = (String) msg.obj;
+                    JSONObject obj = null;
+                    try {
+                        obj = new JSONObject(res);
+                        String success = obj.getString("Success");
+                        if (success == "true") {
+                            String money = obj.getString("Data");
+                            Intent intent = new Intent();
+                            intent.putExtra("balance", money);
+                            setResult(1, intent);
+                        }else{
+                            setResult(0);
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
                     }
                     finish();
                     break;

@@ -1,0 +1,503 @@
+package com.leveling;
+
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
+import android.os.Environment;
+import android.os.Looper;
+import android.os.Handler;
+import android.os.Message;
+import android.provider.MediaStore;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.leveling.entity.Url;
+import com.leveling.personcenter.LevelingActivity;
+import com.leveling.ui.EasyLoading;
+import com.leveling.ui.StatusControl;
+import com.leveling.utils.HttpPostUtils;
+import com.leveling.utils.Utils;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.Arrays;
+import java.util.List;
+
+public class TuikaunActivity extends AppCompatActivity implements View.OnClickListener {
+    private TextView tuikuan_id, tuikuan_type;
+    private EditText tuikuan_money1, tuikuan_reason;
+    private EditText tuikuan_money;
+    private ImageView zj1, zj2, zj3;
+    private LinearLayout img_tk_back;
+    private Button player_conform_tj;
+    private String msg;
+    private String s;
+    private LinearLayout peiqian;
+    protected static final int CHOOSE_PICTURE = 0;
+    protected static final int TAKE_PICTURE = 1;
+    protected static final int CROP_SMALL_PICTURE = 2;
+    protected static Uri tempUri;
+    private static final String BEENAUTH = "BEENAUTH";
+    String imagePath;
+    String test, dd;
+    private String newName = "image.jpg";
+    private String imageName1, imageName2, imageName3;
+    private JSONObject json = new JSONObject();
+    private int typee;
+    private String iv;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_tuikaun);
+        Intent intent = getIntent();
+        iv = intent.getStringExtra("orderid");
+        tuikuan_id = (TextView) findViewById(R.id.tuikuan_id);
+        tuikuan_id.setText(intent.getStringExtra("orderNo"));
+        img_tk_back = (LinearLayout) findViewById(R.id.img_tk_back);
+        img_tk_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+        tuikuan_type = (TextView) findViewById(R.id.tuikuan_type);
+        tuikuan_reason = (EditText) findViewById(R.id.tuikuan_reason);
+        tuikuan_money = (EditText) findViewById(R.id.tuikuan_money);
+        tuikuan_money.setText(LevelingActivity.money);
+        tuikuan_money1 = (EditText) findViewById(R.id.tuikuan_money1);
+        peiqian = (LinearLayout) findViewById(R.id.peiqian);
+        zj1 = (ImageView) findViewById(R.id.zj1);
+        zj2 = (ImageView) findViewById(R.id.zj2);
+        zj3 = (ImageView) findViewById(R.id.zj3);
+        player_conform_tj = (Button) findViewById(R.id.player_conform_tj1);
+        tuikuan_type.setOnClickListener(this);
+        zj1.setOnClickListener(this);
+        zj2.setOnClickListener(this);
+        zj3.setOnClickListener(this);
+        player_conform_tj.setOnClickListener(this);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
+
+    @Override
+    public void onClick(View v) {
+        int id = v.getId();
+        switch (id) {
+            case R.id.tuikuan_type:
+                showDialog();
+                break;
+            case R.id.zj1:
+                s = "1";
+                showChoosePicDialog();
+                break;
+            case R.id.zj2:
+                s = "2";
+                showChoosePicDialog();
+                break;
+            case R.id.zj3:
+                s = "3";
+                showChoosePicDialog();
+                break;
+            case R.id.player_conform_tj1:
+                if (typee == 0) {
+                    Toast.makeText(TuikaunActivity.this, "请选择退款类型", Toast.LENGTH_SHORT).show();
+                } else if (typee == 1) {
+                    if (tuikuan_reason.getText().toString().equals("")) {
+                        Toast.makeText(TuikaunActivity.this, "请输入退款原因", Toast.LENGTH_SHORT).show();
+                    } else if (tuikuan_reason.getText().toString().trim().length() > 100) {
+                        Toast.makeText(TuikaunActivity.this, "退款原因不超过100字", Toast.LENGTH_SHORT).show();
+                    } else if (imageName1 == null && imageName2 == null && imageName3 == null) {
+                        Toast.makeText(TuikaunActivity.this, "请上传证据截图", Toast.LENGTH_SHORT).show();
+                    } else {
+                        new AlertDialog.Builder(TuikaunActivity.this).setTitle("提示")//设置对话框标题
+                                .setMessage("确定提交？")//设置显示的内容
+                                .setPositiveButton("确定", new DialogInterface.OnClickListener() {//添加确定按钮
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {//确定按钮的响应事件
+                                        // TODO Auto-generated method stub
+                                        getData(json);
+                                        String url = "/api/Order/PostRefund";
+                                        HttpPostUtils.httpPostFile(12, url, json, handler);
+                                    }
+                                }).setNegativeButton("取消", new DialogInterface.OnClickListener() {//添加返回按钮
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {//响应事件
+                                // TODO Auto-generated method stub
+                            }
+                        }).show();//在按键响应事件中显示此对话框
+                    }
+                } else if (typee == 2) {
+                    if (tuikuan_reason.getText().toString().equals("")) {
+                        Toast.makeText(TuikaunActivity.this, "请输入退款原因", Toast.LENGTH_SHORT).show();
+                    } else if (tuikuan_reason.getText().toString().trim().length() > 100) {
+                        Toast.makeText(TuikaunActivity.this, "退款原因不超过100字", Toast.LENGTH_SHORT).show();
+                    } else if (tuikuan_money1.getText().toString().equals("")) {
+                        Toast.makeText(TuikaunActivity.this, "请输入赔偿金额", Toast.LENGTH_SHORT).show();
+                    } else if (imageName1 == null && imageName2 == null && imageName3 == null) {
+                        Toast.makeText(TuikaunActivity.this, "请上传证据截图", Toast.LENGTH_SHORT).show();
+                    } else {
+                        new AlertDialog.Builder(TuikaunActivity.this).setTitle("提示")//设置对话框标题
+                                .setMessage("确定提交？")//设置显示的内容
+                                .setPositiveButton("确定", new DialogInterface.OnClickListener() {//添加确定按钮
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {//确定按钮的响应事件
+                                        // TODO Auto-generated method stub
+                                        getData(json);
+                                        String url = "/api/Order/PostRefund";
+                                        HttpPostUtils.httpPostFile(12, url, json, handler);
+                                    }
+                                }).setNegativeButton("取消", new DialogInterface.OnClickListener() {//添加返回按钮
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {//响应事件
+                                // TODO Auto-generated method stub
+                            }
+                        }).show();//在按键响应事件中显示此对话框
+                    }
+                }
+                break;
+        }
+    }
+
+    private void getData(JSONObject json) {
+        try {
+            json.put("OrderID", iv);
+            json.put("Type", typee + "");
+            json.put("Cause", tuikuan_reason.getText().toString());
+            json.put("OrderMoney", tuikuan_money.getText().toString());
+            json.put("Compensation", tuikuan_money1.getText().toString());
+            json.put("Evidence1", imageName1);
+            json.put("Evidence2", imageName2);
+            json.put("Evidence3", imageName3);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private Handler handler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            switch (msg.what) {
+                case 12:
+                    String res = (String) msg.obj;
+                    if (res == null) {
+                        return;
+                    }
+                    JSONObject result = null;
+                    try {
+                        result = new JSONObject(res);
+                        String success = result.getString("Success");
+                        String err = result.getString("ErrMsg");
+                        if (success == "true") {
+                            Intent intent = new Intent(TuikaunActivity.this, TousuActivity.class);
+                            startActivity(intent);
+                            finish();
+                        } else if (success == "false") {
+                            Toast.makeText(TuikaunActivity.this, err, Toast.LENGTH_LONG).show();
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    break;
+            }
+        }
+    };
+
+    private final void showDialog() {
+        DataPickerDialog.Builder builder = new DataPickerDialog.Builder(this);
+        List<String> data = Arrays.asList(new String[]{"退款", "赔偿"});
+        DataPickerDialog dialog = builder.setUnit("").setData(data).setSelection(1).setTitle("")
+                .setOnDataSelectedListener(new DataPickerDialog.OnDataSelectedListener() {
+                    @Override
+                    public void onDataSelected(String itemValue) {
+                        tuikuan_type.setText(itemValue);
+                        msg = itemValue;
+                        if (tuikuan_type.getText().toString() == "赔偿") {
+                            typee = 2;
+                            peiqian.setVisibility(View.VISIBLE);
+                        } else if (tuikuan_type.getText().toString() == "退款") {
+                            typee = 1;
+                            peiqian.setVisibility(View.GONE);
+                        }
+                    }
+                }).create();
+        dialog.show();
+    }
+
+    public void showChoosePicDialog() {
+        // TODO Auto-generated method stub
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("选择图片");
+        String[] items = {"选择本地照片", "拍照"};
+        builder.setItems(items, new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dailog, int witch) {
+                // TODO Auto-generated method stub
+                switch (witch) {
+                    case CHOOSE_PICTURE://选择本地照片
+                        Intent intent = new Intent(
+                                Intent.ACTION_PICK,
+                                android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                        intent.setDataAndType(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
+                        startActivityForResult(intent, CHOOSE_PICTURE);
+                        break;
+                    case TAKE_PICTURE://拍照
+                        Intent openCameraIntent = new Intent(
+                                MediaStore.ACTION_IMAGE_CAPTURE);
+                        tempUri = Uri.fromFile(new File(Environment
+                                .getExternalStorageDirectory(), "image.jpg"));
+                        //指定图片保存路径，image.jpg为一个临时文件，每次拍照后都会被替换
+                        openCameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, tempUri);
+                        startActivityForResult(openCameraIntent, TAKE_PICTURE);
+                }
+            }
+        });
+        builder.create().show();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        // TODO Auto-generated method stub
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == RESULT_OK) {//如果返回码可以用
+            Uri uri = null;
+            switch (requestCode) {
+                case TAKE_PICTURE: {
+                    uri = tempUri;
+                    //startPhotoZoom(tempUri);
+                    break;
+                }
+                case CHOOSE_PICTURE: {
+                    uri = data.getData();
+                    //startPhotoZoom(data.getData());//裁剪图片
+                    break;
+                }
+                case CROP_SMALL_PICTURE:
+                    if (data != null) {
+                        setImageToView(data);//将裁剪的图片显示在界面上
+                    }
+                    break;
+                default:
+                    break;
+            }
+            if (uri != null) {
+                final Uri finalUri = uri;
+                EasyLoading.doWork(this, "处理中，请稍后...", new EasyLoading.WorkerListener() {
+                    @Override
+                    public void run(StatusControl statusControl) {
+                        try {
+                            Bitmap bitmap = BitmapFactory.decodeStream(getContentResolver().openInputStream(finalUri));
+                            //Bitmap bmp1 = Utils.toRoundBitmap(bitmap); // 这个时候的图片已经被处理成圆形的了
+                            //bitmap.recycle();
+                            statusControl.update("上传中，请稍后...");
+                            imagePath = Utils.savePhoto(bitmap,
+                                    Environment.getExternalStorageDirectory().getAbsolutePath(),
+                                    String.valueOf(System.currentTimeMillis()));
+                            uploadFile();
+                            Message msg = new Message();
+                            msg.what = 1;
+                            msg.obj = bitmap;
+                            handlerUpdatePhotoSelect.sendMessage(msg);
+                        } catch (FileNotFoundException e) {
+                            handlerUpdatePhotoSelect.sendEmptyMessage(0);
+                        }
+                    }
+                });
+            }
+        }
+    }
+
+    Handler handlerUpdatePhotoSelect = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            if (msg.what == 0)
+                Toast.makeText(TuikaunActivity.this, "文件读取失败", Toast.LENGTH_SHORT).show();
+            else {
+                Bitmap photo = (Bitmap) msg.obj;
+                if (s == "1") {
+                    zj1.setImageBitmap(photo);
+                } else if (s == "2") {
+                    zj2.setImageBitmap(photo);
+                } else if (s == "3") {
+                    zj3.setImageBitmap(photo);
+                }
+                Toast.makeText(TuikaunActivity.this, "上传成功", Toast.LENGTH_LONG).show();
+                //uploadPic(photo);
+            }
+        }
+    };
+
+    /***
+     * 裁剪图片方法
+     */
+    private void startPhotoZoom(Uri uri) {
+        // TODO Auto-generated method stub
+        if (uri == null) {
+            Log.i("tag", "the uri is not exist");
+        }
+        tempUri = uri;
+        Intent intent = new Intent("com.android.camera.action.CROP");
+        intent.setDataAndType(uri, "image/*");
+        //设置裁剪
+        intent.putExtra("crop", "true");
+        // aspectX aspectY 是宽高的比例
+        intent.putExtra("aspectX", 0.8);
+        intent.putExtra("aspectY", 1);
+        // outputX outputY 是裁剪图片宽高
+        intent.putExtra("outputX", 320);
+        intent.putExtra("outputY", 400);
+        intent.putExtra("return-data", true);
+        startActivityForResult(intent, CROP_SMALL_PICTURE);
+    }
+
+    /**
+     * 保存裁剪后的图片
+     **/
+    private void setImageToView(Intent data) {
+        // TODO Auto-generated method stub
+        Bundle extras = data.getExtras();
+        if (extras != null) {
+            Bitmap photo = extras.getParcelable("data");
+            photo = Utils.toRoundBitmap(photo); // 这个时候的图片已经被处理成圆形的了
+            if (s == "1") {
+                zj1.setImageBitmap(photo);
+            } else if (s == "2") {
+                zj2.setImageBitmap(photo);
+            } else if (s == "3") {
+                zj3.setImageBitmap(photo);
+            }
+            uploadPic(photo);
+        }
+    }
+
+    private void uploadPic(Bitmap bitmap) {
+        // TODO Auto-generated method stub
+        imagePath = Utils.savePhoto(bitmap,
+                Environment.getExternalStorageDirectory().getAbsolutePath(),
+                String.valueOf(System.currentTimeMillis()));
+        if (imagePath != null) {
+            //imagePath上传了
+            Thread thread = new Thread(runnable);
+            thread.start();
+        }
+    }
+
+    //上传文件至server的方法
+    private void uploadFile() {
+        // TODO Auto-generated method stub
+        String end = "\r\n";
+        String twoHyphens = "--";
+        String boundary = "******";
+        String Ticket = HttpPostUtils.getTicket();
+        try {
+            String actionUrl = Url.urlUploadFile + "refund";
+            URL url = new URL(actionUrl);//服务器地址
+            HttpURLConnection con = (HttpURLConnection) url.openConnection();
+
+			/* 允许Input、Output，不使用Cache */
+            con.setDoInput(true);
+            con.setDoOutput(true);
+            con.setUseCaches(false);
+            /* 设置传送的method=POST */
+            con.setRequestMethod("POST");
+			/* setRequestProperty *///设置请求属性
+            con.setRequestProperty("Authorization", "BasicAuth" + " " + Ticket);
+            con.setRequestProperty("Connection", "Keep-Alive");
+            con.setRequestProperty("Charset", "utf-8");
+            con.setRequestProperty("Content-Type",
+                    "multipart/form-data;boundary=" + boundary);
+			/* 设置DataOutputStream *///数据输出流
+            //heading为服务器接收的键
+            DataOutputStream ds = new DataOutputStream(con.getOutputStream());
+            ds.writeBytes(twoHyphens + boundary + end);
+            ds.writeBytes("Content-Disposition: form-data; "
+                    + "name=\"headimg\";filename=\"" + newName + "\"" + end);
+            ds.writeBytes(end);
+			/* 取得文件的FileInputStream */ //文件输入流
+            FileInputStream fStream = new FileInputStream(imagePath);//要上传的图片路径，
+			/* 设置每次写入1024bytes */
+            int bufferSize = 1024;
+            byte[] buffer = new byte[bufferSize];
+            int length = -1;
+			/* 从文件读取数据至缓冲区 */
+            while ((length = fStream.read(buffer)) != -1) {
+				/* 将资料写入DataOutputStream中 */
+                ds.write(buffer, 0, length);
+            }
+            ds.writeBytes(end);
+            ds.writeBytes(twoHyphens + boundary + twoHyphens + end);
+			/* close streams */
+            fStream.close();
+            ds.flush();
+			/* 取得Response内容 */
+            InputStream is = con.getInputStream();
+            int ch;
+            StringBuffer b = new StringBuffer();
+            while ((ch = is.read()) != -1) {
+                b.append((char) ch);
+            }
+			/* 将Response显示于Dialog */
+            //showDialog("上传结果" + b.toString().trim());
+            if (s == "1") {
+                JSONObject result = new JSONObject(b.toString().trim());
+                String data = result.getString("Data");
+                imageName1 = data;
+            }
+            if (s == "2") {
+                JSONObject result = new JSONObject(b.toString().trim());
+                String data = result.getString("Data");
+                imageName2 = data;
+            }
+            if (s == "3") {
+                JSONObject result = new JSONObject(b.toString().trim());
+                String data = result.getString("Data");
+                imageName3 = data;
+            }
+			/* 关闭DataOutputStream */
+            ds.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+            //Toast.makeText(TuikaunActivity.this, "上传失败，请检查网络", Toast.LENGTH_LONG).show();
+        }
+    }
+
+    Runnable runnable = new Runnable() {
+
+        @Override
+        public void run() {
+            // TODO Auto-generated method stub
+            Looper.prepare();//创建消息循环
+            uploadFile();
+            Message msg = new Message();
+            // handler.sendMessage(msg);
+            Looper.loop();//从消息队列取消
+        }
+
+    };
+}
