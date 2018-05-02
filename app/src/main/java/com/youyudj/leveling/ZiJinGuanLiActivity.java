@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.youyudj.leveling.entity.AccountMoney;
+import com.youyudj.leveling.entity.OrderInfo;
 import com.youyudj.leveling.entity.Type;
 import com.youyudj.leveling.pay.AddMoney1Activity;
 import com.youyudj.leveling.pay.AddMoneyActivity;
@@ -55,9 +56,10 @@ public class ZiJinGuanLiActivity extends AppCompatActivity {
                 AccountMoney.money = money;
                 useful.setText(money);
             }
-            else
+            else if(OrderInfo.WXPayType==0)
                 res = "充值失败";
-            Toast.makeText(ZiJinGuanLiActivity.this, res, Toast.LENGTH_SHORT).show();
+            if(!res.isEmpty())
+                Toast.makeText(ZiJinGuanLiActivity.this, res, Toast.LENGTH_SHORT).show();
         }
     }
 

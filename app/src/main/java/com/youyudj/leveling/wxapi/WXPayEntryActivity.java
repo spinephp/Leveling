@@ -84,6 +84,8 @@ public class WXPayEntryActivity extends Activity implements IWXAPIEventHandler {
                     startActivity(intent);
                     break;
                 }
+                default:
+                    break;
             }
             /*
             startActivity(intent);
@@ -109,8 +111,9 @@ public class WXPayEntryActivity extends Activity implements IWXAPIEventHandler {
             // 其他错误
             Toast.makeText(WXPayEntryActivity.this, "微信支付错误！", Toast.LENGTH_SHORT).show();
         }
-        //Intent intent = new Intent(this, ReleaseOrderFailedActivity.class);
-        //startActivity(intent);
+        OrderInfo.WXPayType = 0;
+        Intent intent = new Intent();
+        this.setResult(1,intent);
         this.finish();
     }
 

@@ -311,6 +311,7 @@
                         />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_marginTop="@dimen/y2"
                     style="@style/OrderetialLayouStyle"

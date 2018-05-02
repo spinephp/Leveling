@@ -48,5 +48,5 @@ public class OrderInfo {
 	public static String order_id;
 	public static String pay_money;
 
-	public static int WXPayType;
+	public static int WXPayType = 0;
 }
