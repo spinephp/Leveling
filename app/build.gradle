@@ -24,8 +24,10 @@ android {
         applicationId "com.youyudj.leveling"
         minSdkVersion 16
         targetSdkVersion 22
+
         versionCode 22
         versionName "1.0.22"
+
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         //multiDexEnabled true
         ndk {
