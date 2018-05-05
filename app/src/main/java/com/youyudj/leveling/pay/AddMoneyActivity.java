@@ -109,15 +109,6 @@ public class AddMoneyActivity extends AppCompatActivity implements View.OnClickL
         else if (type.equals("RechargeCashPledge2"))
             url = "/api/Pay/RechargeCashPledge2?money=" + money;
         HttpGetUtils.httpGetFile(1, url, handler);
-
-        String urlWX = null;
-        if (type.equals("Recharge"))
-            urlWX = "/api/Pay/WXRecharge?money=" + money;
-        else if (type.equals("RechargeCashPledge"))
-            urlWX = "/api/Pay/WXRechargeCashPledge?money=" + money;
-        else if (type.equals("RechargeCashPledge2"))
-            urlWX = "/api/Pay/WXRechargeCashPledge2?money=" + money;
-        HttpGetUtils.httpGetFile(WECHAT_COMMON_ORDER_API, urlWX, handler);
     }
 
     private Handler handler = new Handler() {
@@ -138,6 +129,8 @@ public class AddMoneyActivity extends AppCompatActivity implements View.OnClickL
                     break;
                 case WECHAT_COMMON_ORDER_API: {
                     wxRes = (String) msg.obj;
+                    WechatPay.payByWechat(wxRes,1,getApplicationContext(),AddMoneyActivity.this);
+                    AddMoneyActivity.this.finish();
 /*                    if (res != null) {
                         wxOrderInfo = res;
                         if (res.startsWith("\""))
@@ -228,8 +221,15 @@ public class AddMoneyActivity extends AppCompatActivity implements View.OnClickL
                 new Thread(payRunnable).start();
                 break;
             case R.id.pay_by_wechat:
-                WechatPay.payByWechat(wxRes,1,getApplicationContext(),AddMoneyActivity.this);
-                AddMoneyActivity.this.finish();
+
+                String urlWX = null;
+                if (type.equals("Recharge"))
+                    urlWX = "/api/Pay/WXRecharge?money=" + money;
+                else if (type.equals("RechargeCashPledge"))
+                    urlWX = "/api/Pay/WXRechargeCashPledge?money=" + money;
+                else if (type.equals("RechargeCashPledge2"))
+                    urlWX = "/api/Pay/WXRechargeCashPledge2?money=" + money;
+                HttpGetUtils.httpGetFile(WECHAT_COMMON_ORDER_API, urlWX, handler);
 /*                try {
                     WechatPay wechatPay = new Gson().fromJson(wxOrderInfo, WechatPay.class);
                     if (wechatPay.getPrepayid() != null) {
