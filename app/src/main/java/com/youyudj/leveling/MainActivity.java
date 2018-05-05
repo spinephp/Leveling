@@ -74,6 +74,22 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * 获取版本号
+     * @return 当前应用的版本号
+     */
+    public static int getVersionIn() {
+        try {
+            PackageManager manager = ChatApplication.getInstance().getPackageManager();
+            PackageInfo info = manager.getPackageInfo(ChatApplication.getInstance().getPackageName(), 0);
+            return info.versionCode;
+            //return version;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return -1;
+        }
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -293,29 +309,34 @@ public class MainActivity extends AppCompatActivity {
                             String err = result.getString("ErrMsg");
                             String data = result.getString("Data");
                             if (success == "true") {
-                                JSONObject jj = new JSONObject(data);
-                                dd = jj.getString("VersionNumber");
-                                name = jj.getString("FileName");
-                                String version = getVersion();
-                                if (!version.equals(dd)) {
-                                    new AlertDialog.Builder(MainActivity.this).setTitle("提示")//设置对话框标题
-                                            .setMessage("发现新版本，是否立刻更新?")//设置显示的内容
-                                            .setPositiveButton("立即更新", new DialogInterface.OnClickListener() {//添加确定按钮
-                                                @Override
-                                                public void onClick(DialogInterface dialog, int which) {//确定按钮的响应事件
-                                                    dia.show();
-                                                    text_percent.setVisibility(View.VISIBLE);
-                                                    progress.setVisibility(View.VISIBLE);
-                                                    // TODO Auto-generated method stub
-                                                    String uuq = "/api/File/GetAppFile?filename=" + name;
-                                                    HttpFileHelper.httpGetFileWithProgress(uuq, handlerDownloadNewVersionProgress);
-                                                }
-                                            }).setNegativeButton("暂不更新", new DialogInterface.OnClickListener() {//添加返回按钮
-                                        @Override
-                                        public void onClick(DialogInterface dialog, int which) {//响应事件
-                                            // TODO Auto-generated method stub
-                                        }
-                                    }).show();//在按键响应事件中显示此对话框
+                                try {
+                                    JSONObject jj = new JSONObject(data);
+                                    dd = jj.getString("VersionNumber");
+                                    int idd = Integer.parseInt(dd);
+                                    name = jj.getString("FileName");
+                                    int version = getVersionIn();
+                                    if (idd > version) {
+                                        new AlertDialog.Builder(MainActivity.this).setTitle("提示")//设置对话框标题
+                                                .setMessage("发现新版本，是否立刻更新?")//设置显示的内容
+                                                .setPositiveButton("立即更新", new DialogInterface.OnClickListener() {//添加确定按钮
+                                                    @Override
+                                                    public void onClick(DialogInterface dialog, int which) {//确定按钮的响应事件
+                                                        dia.show();
+                                                        text_percent.setVisibility(View.VISIBLE);
+                                                        progress.setVisibility(View.VISIBLE);
+                                                        // TODO Auto-generated method stub
+                                                        String uuq = "/api/File/GetAppFile?filename=" + name;
+                                                        HttpFileHelper.httpGetFileWithProgress(uuq, handlerDownloadNewVersionProgress);
+                                                    }
+                                                }).setNegativeButton("暂不更新", new DialogInterface.OnClickListener() {//添加返回按钮
+                                            @Override
+                                            public void onClick(DialogInterface dialog, int which) {//响应事件
+                                                // TODO Auto-generated method stub
+                                            }
+                                        }).show();//在按键响应事件中显示此对话框
+                                    }
+                                }catch(JSONException e){
+                                    e.printStackTrace();
                                 }
                             } else {
                                 return;

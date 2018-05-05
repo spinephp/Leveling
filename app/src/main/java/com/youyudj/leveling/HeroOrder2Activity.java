@@ -70,9 +70,9 @@ public class HeroOrder2Activity extends AppCompatActivity implements View.OnClic
                 }else if (wcsj.getText().toString().equals("")){
                     Toast.makeText(HeroOrder2Activity.this,"请输入完成时间",Toast.LENGTH_LONG).show();
                 }else if (yxzh.getText().toString().equals("")){
-                    Toast.makeText(HeroOrder2Activity.this,"请输入联系电话",Toast.LENGTH_LONG).show();
+                    Toast.makeText(HeroOrder2Activity.this,"请输入游戏账号",Toast.LENGTH_LONG).show();
                 }else if (yxmm.getText().toString().equals("")){
-                    Toast.makeText(HeroOrder2Activity.this,"请输入微信号",Toast.LENGTH_LONG).show();
+                    Toast.makeText(HeroOrder2Activity.this,"请输入游戏密码",Toast.LENGTH_LONG).show();
                 }else{
                     qfk.setClickable(false);
                     getData(json);

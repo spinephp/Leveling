@@ -19,11 +19,14 @@ import android.widget.Toast;
 import com.alipay.sdk.app.EnvUtils;
 import com.alipay.sdk.app.PayTask;
 import com.alipay.sdk.util.H5PayResultModel;
+import com.google.gson.Gson;
+import com.youyudj.leveling.PayOrderActivity;
 import com.youyudj.leveling.R;
 import com.youyudj.leveling.alipay.AuthResult;
 import com.youyudj.leveling.alipay.PayResult;
 import com.youyudj.leveling.alipay.util.OrderInfoUtil2_0;
 import com.youyudj.leveling.chat.utils.FileSaveUtil;
+import com.youyudj.leveling.entity.OrderInfo;
 import com.youyudj.leveling.utils.HttpGetUtils;
 import com.youyudj.leveling.utils.HttpPostUtils;
 
@@ -42,7 +45,8 @@ public class AddMoneyActivity extends AppCompatActivity implements View.OnClickL
     private LinearLayout GetPayMoney_btn_new, img_shouyintai_back;
     private String money, type;
     String res;
-    String orderInfo;
+    String orderInfo, wxOrderInfo,wxRes;
+    final int WECHAT_COMMON_ORDER_API = 20;
 
     @SuppressLint("HandlerLeak")
     private Handler mHandler = new Handler() {
@@ -98,13 +102,22 @@ public class AddMoneyActivity extends AppCompatActivity implements View.OnClickL
         pay_by_alipay.setOnClickListener(this);
         GetPayMoney_btn_new.setOnClickListener(this);
         String url = null;
-        if(type.equals("Recharge"))
+        if (type.equals("Recharge"))
             url = "/api/Pay/Recharge?money=" + money;
-        else if(type.equals("RechargeCashPledge"))
+        else if (type.equals("RechargeCashPledge"))
             url = "/api/Pay/RechargeCashPledge?money=" + money;
-        else if(type.equals("RechargeCashPledge2"))
+        else if (type.equals("RechargeCashPledge2"))
             url = "/api/Pay/RechargeCashPledge2?money=" + money;
         HttpGetUtils.httpGetFile(1, url, handler);
+
+        String urlWX = null;
+        if (type.equals("Recharge"))
+            urlWX = "/api/Pay/WXRecharge?money=" + money;
+        else if (type.equals("RechargeCashPledge"))
+            urlWX = "/api/Pay/WXRechargeCashPledge?money=" + money;
+        else if (type.equals("RechargeCashPledge2"))
+            urlWX = "/api/Pay/WXRechargeCashPledge2?money=" + money;
+        HttpGetUtils.httpGetFile(WECHAT_COMMON_ORDER_API, urlWX, handler);
     }
 
     private Handler handler = new Handler() {
@@ -123,14 +136,46 @@ public class AddMoneyActivity extends AppCompatActivity implements View.OnClickL
                         Toast.makeText(AddMoneyActivity.this, "获取支付授权失败", Toast.LENGTH_SHORT).show();
                     }
                     break;
+                case WECHAT_COMMON_ORDER_API: {
+                    wxRes = (String) msg.obj;
+/*                    if (res != null) {
+                        wxOrderInfo = res;
+                        if (res.startsWith("\""))
+                            wxOrderInfo = wxOrderInfo.substring(1, wxOrderInfo.length() - 1);
+                        wxOrderInfo= wxOrderInfo.replace("\\", "");
+                    } else {
+                        Toast.makeText(AddMoneyActivity.this, "获取支付授权失败", Toast.LENGTH_SHORT).show();
+                    }*/
+                    break;
+                }
                 case 2: {
                     res = (String) msg.obj;
-                    if(res == null || res.length() == 0)
+                    if (res == null || res.length() == 0)
                         setResult(0);
                     else {
                         Intent intent = new Intent();
                         intent.putExtra("balance", res);
                         setResult(1, intent);
+                    }
+                    AddMoneyActivity.this.finish();
+                    break;
+                }
+                case 3:{
+                    String res = (String) msg.obj;
+                    JSONObject obj = null;
+                    try {
+                        obj = new JSONObject(res);
+                        String success = obj.getString("Success");
+                        if (success == "true") {
+                            money = obj.getString("Data");
+                            Intent intent = new Intent();
+                            intent.putExtra("balance", money);
+                            setResult(1, intent);
+                        }else{
+                            setResult(0);
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
                     }
                     AddMoneyActivity.this.finish();
                     break;
@@ -183,7 +228,21 @@ public class AddMoneyActivity extends AppCompatActivity implements View.OnClickL
                 new Thread(payRunnable).start();
                 break;
             case R.id.pay_by_wechat:
+                WechatPay.payByWechat(wxRes,1,getApplicationContext(),AddMoneyActivity.this);
+                AddMoneyActivity.this.finish();
+/*                try {
+                    WechatPay wechatPay = new Gson().fromJson(wxOrderInfo, WechatPay.class);
+                    if (wechatPay.getPrepayid() != null) {
+                        OrderInfo.WXPayType = 1;
+                        wechatPay.pay(getApplicationContext());
+                    } else {
+                        Toast.makeText(AddMoneyActivity.this, "支付失败", Toast.LENGTH_SHORT).show();
+                    }
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }*/
                 break;
+            
             case R.id.GetPayMoney_btn_new:
                 break;
             default:

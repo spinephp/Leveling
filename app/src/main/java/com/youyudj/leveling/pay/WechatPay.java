@@ -1,10 +1,13 @@
 package com.youyudj.leveling.pay;
 
 import android.content.Context;
+import android.widget.Toast;
 
+import com.google.gson.Gson;
 import com.tencent.mm.opensdk.modelpay.PayReq;
 import com.tencent.mm.opensdk.openapi.IWXAPI;
 import com.tencent.mm.opensdk.openapi.WXAPIFactory;
+import com.youyudj.leveling.entity.OrderInfo;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -24,7 +27,7 @@ public class WechatPay {
     private final String package_value = "Sign=WXPay";
 
     public void pay(Context context) {
-        IWXAPI msgApi = WXAPIFactory.createWXAPI(context, null);
+        final IWXAPI msgApi = WXAPIFactory.createWXAPI(context, null);
         msgApi.registerApp(appid);
 
         PayReq req = new PayReq();
@@ -36,6 +39,26 @@ public class WechatPay {
         req.packageValue = package_value;
         req.sign = sign;
         msgApi.sendReq(req);
+    }
+
+    public static void payByWechat(String res,int type,Context context,Context activityContext) {
+        try {
+            if (res != null) {
+                String wxOrderInfo = res;
+                if (res.startsWith("\""))
+                    wxOrderInfo = wxOrderInfo.substring(1, wxOrderInfo.length() - 1);
+                wxOrderInfo = wxOrderInfo.replace("\\", "");
+                WechatPay wechatPay = new Gson().fromJson(wxOrderInfo, WechatPay.class);
+                if (wechatPay.getPrepayid() != null) {
+                    OrderInfo.WXPayType = type;
+                    wechatPay.pay(context);
+                } else {
+                    Toast.makeText(activityContext, "支付失败", Toast.LENGTH_SHORT).show();
+                }
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
     }
 
     public String getAppid() {

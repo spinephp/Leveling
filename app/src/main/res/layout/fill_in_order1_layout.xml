@@ -17,7 +17,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:weightSum="1">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -82,7 +83,7 @@
 
                     android:drawablePadding="@dimen/x20"
                     android:gravity="center_vertical"
-                    android:text="联系电话"
+                    android:text="游戏账号"
 
                     />
                 <!--android:drawableLeft="@drawable/order_account"-->
@@ -93,7 +94,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="@dimen/x25"
-                    android:hint="请输入联系电话(必填)"
+                    android:hint="请输入游戏账号(必填)"
                     android:maxLength="20"
                     android:singleLine="true"
                     android:textSize="12sp" />
@@ -120,7 +121,7 @@
 
                     android:drawablePadding="@dimen/x20"
                     android:gravity="center_vertical"
-                    android:text="微信号"
+                    android:text="游戏密码"
 
                     />
                 <!--android:drawableLeft="@drawable/order_password"-->
@@ -130,7 +131,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="@dimen/x25"
-                    android:hint="请输入微信号(必填)"
+                    android:hint="请输入游戏密码(必填)"
                     android:maxLength="20"
                     android:singleLine="true"
                     android:textSize="12sp" />
@@ -534,6 +535,15 @@
 
 
             </RelativeLayout>
+
+            <TextView
+                android:layout_marginTop="13.33px"
+                android:layout_marginLeft="17.77px"
+                android:layout_width="364dp"
+                android:layout_height="90px"
+                android:text="放心下单，打手已交 300-3000 元不等押金到平台。"
+                android:id="@+id/textView3"
+                android:layout_weight="0.56" />
 
 
         </LinearLayout>

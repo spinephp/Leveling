@@ -150,11 +150,11 @@ public class TixianDailianActivity extends AppCompatActivity implements View.OnC
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
-            switch (msg.what){
+            switch (msg.what) {
                 case 1:
                     try {
                         String res = (String) msg.obj;
-                        if (res==null){
+                        if (res == null) {
                             return;
                         }
                         JSONObject result = new JSONObject(res);
@@ -166,15 +166,15 @@ public class TixianDailianActivity extends AppCompatActivity implements View.OnC
                             String cardNumber = js.getString("CardNumber");
                             String wechat = js.getString("WeChat");
                             String alipay = js.getString("Alipay");
-                            if (!cardNumber.equals("null")){
+                            if (!cardNumber.equals("null")) {
                                 card_update22.setVisibility(View.VISIBLE);
                                 card_account.setText(cardNumber);
                             }
-                            if (!wechat.equals("null")){
+                            if (!wechat.equals("null")) {
                                 weixin_update.setVisibility(View.VISIBLE);
                                 wc_account.setText(wechat);
                             }
-                            if (!alipay.equals("null")){
+                            if (!alipay.equals("null")) {
                                 zhifubao_update.setVisibility(View.VISIBLE);
                                 zfb_account.setText(alipay);
                             }

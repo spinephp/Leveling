@@ -249,7 +249,7 @@
             android:layout_width="@dimen/x250"
             android:layout_height="match_parent"
             android:gravity="center|left"
-            android:text="联系电话" />
+            android:text="游戏账号" />
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -258,7 +258,7 @@
                 style="@style/GrayTextStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:hint="请输入您的联系电话"
+                android:hint="请输入您的游戏账号"
                 android:maxLength="20"
                 android:paddingLeft="@dimen/x30"
                 android:gravity="center_vertical"
@@ -276,7 +276,7 @@
             android:layout_width="@dimen/x250"
             android:layout_height="match_parent"
             android:gravity="center|left"
-            android:text="微信号" />
+            android:text="游戏密码" />
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -285,7 +285,7 @@
                 style="@style/GrayTextStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:hint="请输入微信号"
+                android:hint="请输入游戏密码"
                 android:paddingLeft="@dimen/x30"
                 android:gravity="center_vertical"
                 android:maxLength="20"

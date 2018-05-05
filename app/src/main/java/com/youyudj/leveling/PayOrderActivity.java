@@ -28,7 +28,7 @@ import com.youyudj.leveling.pay.WechatPay;
 import com.youyudj.leveling.utils.HttpGetUtils;
 import com.youyudj.leveling.utils.HttpPostUtils;
 
-import org.apache.http.client.ClientProtocolException;
+//import org.apache.http.client.ClientProtocolException;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -93,76 +93,43 @@ public class PayOrderActivity extends AppCompatActivity implements PayPwdView.In
         GetPayMoney.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (payMethod == null) {
-                    Toast.makeText(PayOrderActivity.this, "请选择支付方式", Toast.LENGTH_LONG).show();
+            if (payMethod == null) {
+                Toast.makeText(PayOrderActivity.this, "请选择支付方式", Toast.LENGTH_LONG).show();
+                return;
+            }
+            if (payMethod.equals(PM_YuE)) {
+                Bundle bundle = new Bundle();
+                bundle.putString(PayFragment.EXTRA_CONTENT, "支付：¥ " + OrderInfo.pay_money);
+                PayFragment fragment = new PayFragment();
+                fragment.setArguments(bundle);
+                fragment.setPaySuccessCallBack(PayOrderActivity.this);
+                fragment.show(getSupportFragmentManager(), "Pay");
+            } else if (payMethod.equals(PM_AliPay)) {
+                if (TextUtils.isEmpty(orderInfo)) {
+                    Toast.makeText(PayOrderActivity.this, "获取支付授权失败", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                if (payMethod.equals(PM_YuE)) {
-                    Bundle bundle = new Bundle();
-                    bundle.putString(PayFragment.EXTRA_CONTENT, "支付：¥ " + OrderInfo.pay_money);
-                    PayFragment fragment = new PayFragment();
-                    fragment.setArguments(bundle);
-                    fragment.setPaySuccessCallBack(PayOrderActivity.this);
-                    fragment.show(getSupportFragmentManager(), "Pay");
-                } else if (payMethod.equals(PM_AliPay)) {
-                    if (TextUtils.isEmpty(orderInfo)) {
-                        Toast.makeText(PayOrderActivity.this, "获取支付授权失败", Toast.LENGTH_SHORT).show();
-                        return;
+                Runnable payRunnable = new Runnable() {
+                    @Override
+                    public void run() {
+                        PayTask alipay = new PayTask(PayOrderActivity.this);
+                        Map<String, String> result = alipay.payV2(orderInfo, true);
+                        Log.i("msp", result.toString());
+                        Message msg = new Message();
+                        msg.what = 2;
+                        msg.obj = result;
+                        handler.sendMessage(msg);
                     }
-                    Runnable payRunnable = new Runnable() {
-                        @Override
-                        public void run() {
-                            PayTask alipay = new PayTask(PayOrderActivity.this);
-                            Map<String, String> result = alipay.payV2(orderInfo, true);
-                            Log.i("msp", result.toString());
-                            Message msg = new Message();
-                            msg.what = 2;
-                            msg.obj = result;
-                            handler.sendMessage(msg);
-                        }
-                    };
-                    new Thread(payRunnable).start();
-                }else if(payMethod.equals(PM_Wechat)){
-                    // 请求微信统一下单API
-                    String s = "{\"appid\":\"wx2b71a85ff6be04b2\",\"partnerid\":\"1502427041\",\"prepayid\":\"wx27163930705233e077eb22033011264211\",\"package\":\"Sign=WXPay\",\"noncestr\":\"fwnbCiIJmr9FDxGD\",\"timestamp\":\"1524818382\",\"sign\":\"DD929536AAAC25017A0CCF946138183A\"}";
-                    WechatPay wechatPay = new Gson().fromJson(s, WechatPay.class);
-                    if (wechatPay.getPrepayid() != null) {
-                        wechatPay.pay(getApplicationContext());
-                    } else {
-                        Toast.makeText(PayOrderActivity.this, "支付失败", Toast.LENGTH_SHORT).show();
-                    }
-/*
-                    String url = "/api/Pay/WXUnifiedorder";
-                    // TODO: 把微信统一下单API需要的信息放入json中发送给后端
-                    String[] values = OrderInfo.pay_money.split("\\.");
+                };
+                new Thread(payRunnable).start();
+            } else if (payMethod.equals(PM_Wechat)) {
+                // 请求微信统一下单API
+                String url = "/api/Pay/WXPayForOrder?orderID=" + OrderInfo.order_id;
+                // TODO: 把微信统一下单API需要的信息放入json中发送给后端
 
-                    // 把支付金额转化为分为单位
-                    int money = 0;
-                    for (char c: values[0].toCharArray()) {
-                        money *= 10;
-                        money += c - '0';
-                    }
-                    if (values.length == 2) {
-                        int size = Math.min(2, values[1].length());
-                        for (int i = 0; i < size; i++) {
-                            char c = values[1].charAt(i);
-                            money *= 10;
-                            money += c - '0';
-                        }
-                    }
-
-                    try {
-                        JSONObject json = new JSONObject();
-                        json.put("TotalFee", money);
-                        json.put("TradeNo", OrderInfo.order_id);
-                        json.put("Des", "超溜电竞-代练费用");
-                        json.put("FeeType", "CNY");
-                        HttpPostUtils.httpPostFile(WECHAT_COMMON_ORDER_API, url, json, handler);
-                    }catch (JSONException e){
-
-                    }*/
-                    return;
-                }
+                HttpGetUtils.httpGetFile(WECHAT_COMMON_ORDER_API, url, handler);
+                return;
+            }
             }
         });
         //String urlUploadFile = "/api/Pay/Recharge?money=" + "10.00";
@@ -273,7 +240,7 @@ public class PayOrderActivity extends AppCompatActivity implements PayPwdView.In
                             String bla = obj.getString("Data");
                             double dblBla = Double.parseDouble(bla);
                             double dblPay = Double.parseDouble(OrderInfo.pay_money);
-                            if(dblBla < dblPay)
+                            if (dblBla < dblPay)
                                 findViewById(R.id.tv_no_enough_balance).setVisibility(View.VISIBLE);
                             else
                                 findViewById(R.id.tv_no_enough_balance).setVisibility(View.INVISIBLE);
@@ -287,17 +254,27 @@ public class PayOrderActivity extends AppCompatActivity implements PayPwdView.In
                     }
                     break;
                 case WECHAT_COMMON_ORDER_API: {
-                    WechatPay wechatPay = new Gson().fromJson((String)msg.obj, WechatPay.class);
-                    if (wechatPay.getPrepayid() != null) {
-                        wechatPay.pay(getApplicationContext());
-                    } else {
-                        Toast.makeText(PayOrderActivity.this, "支付失败", Toast.LENGTH_SHORT).show();
-                    }
+                    String res = (String) msg.obj;
+                    WechatPay.payByWechat(res, 3, getApplicationContext(), PayOrderActivity.this);
+                        /*
+                    if (res != null) {
+                        String wxOrderInfo = res;
+                        if (res.startsWith("\""))
+                            wxOrderInfo = wxOrderInfo.substring(1, wxOrderInfo.length() - 1);
+                        wxOrderInfo = wxOrderInfo.replace("\\", "");
+                        WechatPay.payByWechat(wxOrderInfo,3,getApplicationContext(),PayOrderActivity.this);
+                        WechatPay wechatPay = new Gson().fromJson(wxOrderInfo, WechatPay.class);
+                        if (wechatPay.getPrepayid() != null) {
+                            OrderInfo.WXPayType = 3;
+                            wechatPay.pay(getApplicationContext());
+                        } else {
+                            Toast.makeText(PayOrderActivity.this, "支付失败", Toast.LENGTH_SHORT).show();
+                        }
+                    }*/
                 }
             }
         }
-
     };
-
 }
+
 

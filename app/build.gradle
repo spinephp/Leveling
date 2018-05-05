@@ -24,8 +24,8 @@ android {
         applicationId "com.youyudj.leveling"
         minSdkVersion 16
         targetSdkVersion 22
-        versionCode 8
-        versionName "1.0.25"
+        versionCode 22
+        versionName "1.0.22"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         //multiDexEnabled true
         ndk {
@@ -93,7 +93,7 @@ dependencies {
     compile 'com.yanzhenjie.nohttp:nohttp:1.1.9'
     compile 'in.srain.cube:ptr-load-more:1.0.2'
     compile 'com.zhy:flowlayout-lib:1.0.3'
-    compile 'com.android.support:recyclerview-v7:23.4.0'
+    compile 'com.android.support:recyclerview-v7:25.3.1'
 
     //compile 'com.android.support:multidex:1.0.1'
     //信鸽jar
