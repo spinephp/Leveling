@@ -227,7 +227,7 @@ public class PayOrderActivity extends AppCompatActivity implements PayPwdView.In
                         e.printStackTrace();
                     }
                     break;
-                case 18:
+                case 18: // 取账户余额
                     try {
                         String res = (String) msg.obj;
                         if (res == null) {
