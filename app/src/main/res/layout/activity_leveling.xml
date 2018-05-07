@@ -319,7 +319,7 @@
 
                     <TextView
                         style="@style/LeftTextStyle"
-                        android:text="联系电话"/>
+                        android:text="游戏账号"/>
 
                     <TextView
                         android:id="@+id/your_zhanghao"
@@ -335,7 +335,7 @@
 
                     <TextView
                         style="@style/LeftTextStyle"
-                        android:text="微信号"/>
+                        android:text="游戏密码"/>
 
                     <TextView
                         android:id="@+id/your_mima"

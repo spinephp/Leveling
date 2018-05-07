@@ -13,11 +13,13 @@ public static String urlIM = "http://im.youyudj.com";
 public static String html = "http://admin.youyudj.com/index.php/Public/notice?id=";
 public static String video_url = "http://admin.youyudj.com/Uploads/video/";
 
-//   public static String urlUploadFile = "http://dailianapi.myipp.cn/api/File/PostUploadFile?catalog=";
-//   public static String urlShort = "http://dailianapi.myipp.cn";
-//   public static String urlIM = "http://im.myipp.cn";
-//   public static String html = "http://dailian.myipp.cn/index.php/Public/notice?id=";
-//   public static String video_url = "http://dailian.myipp.cn/Uploads/video/";
+/*
+  public static String urlUploadFile = "http://dailianapi.myipp.cn/api/File/PostUploadFile?catalog=";
+   public static String urlShort = "http://dailianapi.myipp.cn";
+   public static String urlIM = "http://im.myipp.cn";
+   public static String html = "http://dailian.myipp.cn/index.php/Public/notice?id=";
+   public static String video_url = "http://dailian.myipp.cn/Uploads/video/";
+*/
 
 //    public static String urlUploadFile = "http://192.168.1.50:8082/api/File/PostUploadFile?catalog=";
 //    public static String urlShort = "http://192.168.1.50:8082";

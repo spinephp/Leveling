@@ -210,7 +210,7 @@ public class MyWalletActivity extends AppCompatActivity implements View.OnClickL
             //data = Arrays.asList(new String[]{"钱包提现", "代练押金提现", "陪练押金提现"});
             data = Arrays.asList(new String[]{"钱包提现", "陪练押金提现"});
         } else {
-            data = Arrays.asList(new String[]{"钱包提现", "代练押金提现"});
+            data = Arrays.asList(new String[]{"钱包提现", "押金提现"});
         }
         DataPickerDialog dialog = builder.setUnit("").setData(data).setSelection(1).setTitle("")
                 .setOnDataSelectedListener(new DataPickerDialog.OnDataSelectedListener() {
@@ -221,7 +221,7 @@ public class MyWalletActivity extends AppCompatActivity implements View.OnClickL
                             message = "1";
                             Intent intent = new Intent(MyWalletActivity.this, TixianPackageActivity.class);
                             startActivity(intent);
-                        } else if (mess == "代练押金提现") {
+                        } else if (mess == "押金提现") {
                             message = "2";
                             Intent intent = new Intent(MyWalletActivity.this, TixianDailianActivity.class);
                             startActivity(intent);
