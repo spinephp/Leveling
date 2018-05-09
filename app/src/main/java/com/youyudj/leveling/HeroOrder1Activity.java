@@ -381,16 +381,20 @@ public class HeroOrder1Activity extends AppCompatActivity implements View.OnClic
                 .setOnDataSelectedListener(new DataPickerDialog.OnDataSelectedListener() {
                     @Override
                     public void onDataSelected(String itemValue) {
-                        if(data1 == null || data1.indexOf(ms)>=data2.indexOf(itemValue)){
-                            Toast.makeText(HeroOrder1Activity.this,"请选择正确的段位！",Toast.LENGTH_LONG).show();
-                        }else{
-                            end_level.setText(itemValue);
-                            yincang.setVisibility(View.GONE);
-                            suanprice.setVisibility(View.VISIBLE);
-                            suanpricenext.setVisibility(View.GONE);
-                            dw2 = itemValue;
-                            mb = itemValue.substring(0,2);
-                            mb1 = itemValue.substring(itemValue.length()-1,itemValue.length());
+                        try {
+                            if (data1 ==null && data1.indexOf(ms) >= data2.indexOf(itemValue)) {
+                                Toast.makeText(HeroOrder1Activity.this, "请选择正确的段位！", Toast.LENGTH_LONG).show();
+                            } else {
+                                end_level.setText(itemValue);
+                                yincang.setVisibility(View.GONE);
+                                suanprice.setVisibility(View.VISIBLE);
+                                suanpricenext.setVisibility(View.GONE);
+                                dw2 = itemValue;
+                                mb = itemValue.substring(0, 2);
+                                mb1 = itemValue.substring(itemValue.length() - 1, itemValue.length());
+                            }
+                        }catch (Exception e){
+                            e.printStackTrace();
                         }
                     }
                 }).create();

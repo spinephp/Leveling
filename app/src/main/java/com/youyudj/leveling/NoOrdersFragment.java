@@ -360,7 +360,7 @@ public class NoOrdersFragment extends Fragment implements View.OnClickListener {
                 }
                 int pos = msg.what;
                 if ( MyAdapter.this.holders.containsKey(pos)){
-                    byte[] data = (byte[]) msg.obj;
+                    byte[] data = (byte[])msg.obj;
                     Bitmap bitmap = BitmapFactory.decodeByteArray(data, 0, data.length);
                     ViewHold holder = MyAdapter.this.holders.get(pos);
                     holder.publisher_picture.setImageBitmap(bitmap);
@@ -374,4 +374,5 @@ public class NoOrdersFragment extends Fragment implements View.OnClickListener {
         String url = "/api/Order/GetOrder1?Page="+1+"&type="+0;
         HttpGetUtils.httpGetFile(15,url, handler);
     }
+
 }

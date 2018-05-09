@@ -308,6 +308,26 @@
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginTop="15px"
+        android:layout_gravity="center"
+        android:gravity="left"
+        android:paddingLeft="@dimen/x35"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_marginTop="3.33px"
+            android:layout_marginLeft="0px"
+            android:layout_width="331dp"
+            android:layout_height="90px"
+            android:textColor="@color/red"
+            android:text=" 放心下单，打手已交 300-3000 元不等押金到平台。"
+            android:id="@+id/textView3"
+            android:layout_weight="0.29" />
+    </LinearLayout>
+k
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="@dimen/y2"
         android:layout_gravity="center"

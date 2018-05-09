@@ -15,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.youyudj.leveling.chat.utils.ImageCheckoutUtil;
 import com.youyudj.leveling.entity.OrderType;
 import com.youyudj.leveling.personcenter.AllOrdersActivity;
 import com.youyudj.leveling.personcenter.PublicActivity;
@@ -252,12 +253,9 @@ public class PersonalCenterFragment extends Fragment {
                     }
                     break;
                 case 6:
-                    byte[] data1 = (byte[]) msg.obj;
-                    if (data1 == null) {
-                        return;
-                    }
-                    Bitmap bitmap = BitmapFactory.decodeByteArray(data1, 0, data1.length);
-                    picture.setImageBitmap(bitmap);
+                    Bitmap bitmap = ImageCheckoutUtil.objToBitmap(msg.obj);
+                    if(bitmap!=null)
+                        picture.setImageBitmap(bitmap);
                     break;
                 default:
                     break;

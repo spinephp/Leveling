@@ -66,7 +66,7 @@ public class HttpFileHelper {
 						//下载apk
 						fos.write(buffer, 0, len);
 
-						out.write(buffer, 0, len);
+						out.write(buffer, 0, len);// BAIDU OutOfMemoryError
 						readTotal += len;
 						if(totalLength > 0 && handlerProgress != null) {
 							int per = (int) ((double) readTotal / totalLength * 100);

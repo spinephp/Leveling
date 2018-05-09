@@ -26,6 +26,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.youyudj.leveling.chat.utils.ImageCheckoutUtil;
 import com.youyudj.leveling.entity.Url;
 import com.youyudj.leveling.entity.UserInfo;
 import com.youyudj.leveling.personcenter.ChangeLoginPasswordActivity;
@@ -348,12 +349,9 @@ public class SetingActivity extends AppCompatActivity {
                     }
                     break;
                 case 6:
-                    byte[] data1 = (byte[])msg.obj;
-                    if (data1 == null){
-                        return;
-                    }
-                    Bitmap bitmap1 = BitmapFactory.decodeByteArray(data1, 0, data1.length);
-                    picture.setImageBitmap(bitmap1);
+                    Bitmap bitmap = ImageCheckoutUtil.objToBitmap(msg.obj);
+                    if(bitmap!=null)
+                        picture.setImageBitmap(bitmap);
                     break;
                 case 9:
                     String res2 = (String) msg.obj;

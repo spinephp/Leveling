@@ -265,6 +265,9 @@ public class GodShowFragmentNew extends Fragment implements View.OnClickListener
                     try {
                         String res = (String)msg.obj;
                         JSONObject result = null;
+                        if(res == null){
+                            return;
+                        }
                         result = new JSONObject(res);
                         String success = result.getString("Success");
                         String err = result.getString("ErrMsg");

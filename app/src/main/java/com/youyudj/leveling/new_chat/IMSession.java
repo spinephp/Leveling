@@ -95,7 +95,7 @@ public class IMSession implements Runnable {
 
     @Override
     public void run() {
-        while (!queryThread.isInterrupted()) {
+        while (queryThread!=null && !queryThread.isInterrupted()) {
             long st = System.currentTimeMillis();
             doWork();
             long ct = 1000 - (System.currentTimeMillis() - st);
