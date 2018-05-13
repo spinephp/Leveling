@@ -146,7 +146,8 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener 
                             Intent i = new Intent(LoginActivity.this, MainActivity.class);
                             startActivity(i);
                         } else if (success == "false") {
-                            Toast.makeText(LoginActivity.this, "用户名或密码错误", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginActivity.this, err, Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(LoginActivity.this, "用户名或密码错误", Toast.LENGTH_SHORT).show();
                             userInfo.setUserInfo(ISSAVEPASS, false);
                             userInfo.setUserInfo(AUTOLOGIN, false);
                         }

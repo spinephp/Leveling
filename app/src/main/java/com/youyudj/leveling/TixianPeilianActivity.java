@@ -78,19 +78,19 @@ public class TixianPeilianActivity extends AppCompatActivity implements View.OnC
         switch (id){
             case R.id.zhifubao_update33:
                 str = "1";
-                Intent intet = new Intent(TixianPeilianActivity.this,TixianActivity.class);
+                Intent intet = new Intent(TixianPeilianActivity.this,PeilianTixianActivity.class);
                 startActivity(intet);
                 finish();
                 break;
             case R.id.weixin_update33:
                 str = "2";
-                Intent intetn = new Intent(TixianPeilianActivity.this,TixianActivity.class);
+                Intent intetn = new Intent(TixianPeilianActivity.this,PeilianTixianActivity.class);
                 startActivity(intetn);
                 finish();
                 break;
             case R.id.card_update33:
                 str = "2";
-                Intent intetn1 = new Intent(TixianPeilianActivity.this,TixianActivity.class);
+                Intent intetn1 = new Intent(TixianPeilianActivity.this,PeilianTixianActivity.class);
                 startActivity(intetn1);
                 finish();
                 break;

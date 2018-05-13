@@ -481,16 +481,18 @@ public class ReleaseOrderActivity extends AppCompatActivity implements OnClickLi
                     }).create();
             dialog.show();
         } else if (gameos == "2") {
-            List<String> data = Arrays.asList(arr);
-            DataPickerDialog dialog = builder.setUnit("").setData(data).setSelection(1).setTitle("")
-                    .setOnDataSelectedListener(new DataPickerDialog.OnDataSelectedListener() {
-                        @Override
-                        public void onDataSelected(String itemValue) {
-                            qufu.setText(itemValue);
-                            //Toast.makeText(getApplicationContext(), itemValue, Toast.LENGTH_SHORT).show();
-                        }
-                    }).create();
-            dialog.show();
+            if(arr != null) {
+                List<String> data = Arrays.asList(arr);
+                DataPickerDialog dialog = builder.setUnit("").setData(data).setSelection(1).setTitle("")
+                        .setOnDataSelectedListener(new DataPickerDialog.OnDataSelectedListener() {
+                            @Override
+                            public void onDataSelected(String itemValue) {
+                                qufu.setText(itemValue);
+                                //Toast.makeText(getApplicationContext(), itemValue, Toast.LENGTH_SHORT).show();
+                            }
+                        }).create();
+                dialog.show();
+            }
         } else if (gameos == "3") {
             List<String> data = Arrays.asList(arr);
             DataPickerDialog dialog = builder.setUnit("").setData(data).setSelection(1).setTitle("")

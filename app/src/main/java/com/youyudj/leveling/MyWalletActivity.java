@@ -206,12 +206,12 @@ public class MyWalletActivity extends AppCompatActivity implements View.OnClickL
     private final void showDialog() {
         DataPickerDialog.Builder builder = new DataPickerDialog.Builder(this);
         List<String> data;
-        if (HttpPostUtils.getRole() == 3 || HttpPostUtils.getRole() == 4 || HttpPostUtils.getRole() == 7 || HttpPostUtils.getRole() == 8) {
+        //if (HttpPostUtils.getRole() == 3 || HttpPostUtils.getRole() == 4 || HttpPostUtils.getRole() == 7 || HttpPostUtils.getRole() == 8) {
             //data = Arrays.asList(new String[]{"钱包提现", "代练押金提现", "陪练押金提现"});
-            data = Arrays.asList(new String[]{"钱包提现", "陪练押金提现"});
-        } else {
+            //data = Arrays.asList(new String[]{"钱包提现", "陪练押金提现"});
+        //} else {
             data = Arrays.asList(new String[]{"钱包提现", "押金提现"});
-        }
+        //}
         DataPickerDialog dialog = builder.setUnit("").setData(data).setSelection(1).setTitle("")
                 .setOnDataSelectedListener(new DataPickerDialog.OnDataSelectedListener() {
                     @Override
